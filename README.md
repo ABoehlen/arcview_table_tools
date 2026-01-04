@@ -18,7 +18,7 @@ Download the repository into your desired directory:
 
 ```
 cd <directory>
-git clone https://github.com/ABoehlen/table_tools
+git clone https://github.com/ABoehlen/arcview_table_tools
 ```
 
 * Copy TableTools.avx into the ext32 directory of your ArcView installation.
