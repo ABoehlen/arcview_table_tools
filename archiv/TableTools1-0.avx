@@ -5,6 +5,11 @@
 	FirstRootClassName:	"Butn"
 	Roots:	2
 	Roots:	4
+	Roots:	139
+	Roots:	140
+	Roots:	141
+	Roots:	142
+	Roots:	143
 	Roots:	144
 	Roots:	145
 	Roots:	146
@@ -30,19 +35,11 @@
 	Roots:	166
 	Roots:	167
 	Roots:	168
-	Roots:	169
-	Roots:	170
-	Roots:	171
-	Roots:	172
-	Roots:	173
-	Roots:	174
-	Roots:	175
-	Roots:	176
 	Version:	32
-	About:	"TableTools Toolbar (v1.6) "
-	UnloadScript:	177
-	InstallScript:	178
-	UninstallScript:	179
+	About:	"TableTools Toolbar (v1.0) "
+	UnloadScript:	169
+	InstallScript:	170
+	UninstallScript:	171
 	ExtVersion:	1
 )
 
@@ -149,9 +146,9 @@
 
 (AVDLog.4
 	Name:	"TableTools"
-	X:	326
-	Y:	185
-	W:	789
+	X:	186
+	Y:	253
+	W:	759
 	H:	40
 	ConstrainedControlNames:	5
 	ConstrainedControlNames:	6
@@ -179,7 +176,7 @@
 	ConstrainedControlNames:	28
 	ConstrainedControlNames:	29
 	ConstrainedControlNames:	30
-	ConstrainedControlNames:	31
+	Constraints:	31
 	Constraints:	32
 	Constraints:	33
 	Constraints:	34
@@ -205,16 +202,14 @@
 	Constraints:	54
 	Constraints:	55
 	Constraints:	56
-	Constraints:	57
-	Constraints:	58
-	Server:	59
-	ControlPanel:	60
+	Server:	57
+	ControlPanel:	58
 	Title:	"Table Tools"
 	EscapeEnabled:	1
 	AlwaysOnTop:	1
 	HasTitleBar:	1
 	Closeable:	1
-	DefaultButton:	143
+	DefaultButton:	138
 )
 
 (AVStr.5
@@ -254,75 +249,75 @@
 )
 
 (AVStr.14
-	S:	"SaveLoadAliasFile"
+	S:	"DD2DMS"
 )
 
 (AVStr.15
-	S:	"ExportHTML"
+	S:	"DMS2DD"
 )
 
 (AVStr.16
-	S:	"ChangeFieldType"
+	S:	"ExportHTML"
 )
 
 (AVStr.17
-	S:	"AddField"
+	S:	"ChangeFieldType"
 )
 
 (AVStr.18
-	S:	"CalculateTable"
+	S:	"AddField"
 )
 
 (AVStr.19
-	S:	"Table_New"
+	S:	"CalculateTable"
 )
 
 (AVStr.20
-	S:	"MoveField"
+	S:	"Table_New"
 )
 
 (AVStr.21
-	S:	"Concatenate"
+	S:	"MoveField"
 )
 
 (AVStr.22
-	S:	"PasteRecords"
+	S:	"Concatenate"
 )
 
 (AVStr.23
-	S:	"CopyRecords"
+	S:	"PasteRecords"
 )
 
 (AVStr.24
-	S:	"Copy Field Content"
+	S:	"CopyRecords"
 )
 
 (AVStr.25
-	S:	"SetFieldDisplayWidth"
+	S:	"Copy Field Content"
 )
 
 (AVStr.26
-	S:	"FindDuplicateValues"
+	S:	"SetFieldDisplayWidth"
 )
 
 (AVStr.27
-	S:	"Date"
+	S:	"FindDuplicateValues"
 )
 
 (AVStr.28
-	S:	"GetFieldProperties"
+	S:	"Date"
 )
 
 (AVStr.29
-	S:	"Unselect"
+	S:	"aTool3"
 )
 
 (AVStr.30
-	S:	"Edit"
+	S:	"Select"
 )
 
-(AVStr.31
-	S:	"Select"
+(Numb.31
+	N:	85.00000000000000
 )
 
 (Numb.32
@@ -425,27 +420,20 @@
 	N:	85.00000000000000
 )
 
-(Numb.57
-	N:	85.00000000000000
+(Nil.57
 )
 
-(Numb.58
-	N:	85.00000000000000
-)
-
-(Nil.59
-)
-
-(CPanel.60
-	Child:	61
-	ResBox:	142
+(CPanel.58
+	Child:	59
+	ResBox:	137
 	Listening:	1
 )
 
-(CPanel.61
+(CPanel.59
 	InternalName:	"aControlPanel2"
+	Child:	60
 	Child:	62
-	Child:	64
+	Child:	63
 	Child:	65
 	Child:	67
 	Child:	69
@@ -469,9 +457,11 @@
 	Child:	105
 	Child:	107
 	Child:	109
-	Child:	111
-	Child:	113
 	Constraints:	0x55
+	ResBox:	111
+	ResBox:	112
+	ResBox:	113
+	ResBox:	114
 	ResBox:	115
 	ResBox:	116
 	ResBox:	117
@@ -494,69 +484,64 @@
 	ResBox:	134
 	ResBox:	135
 	ResBox:	136
-	ResBox:	137
-	ResBox:	138
-	ResBox:	139
-	ResBox:	140
-	ResBox:	141
 	VisibleBorder:	1
 	Listening:	1
 )
 
-(Butn.62
+(Butn.60
 	InternalName:	"SimpleSum"
 	Help:	"Calculates the sum and writes it into the selected cell//"
-	Icon:	63
+	Icon:	61
 	Click:	"TableTools.SimpleSum"
 )
 
-(AVIcon.63
+(AVIcon.61
 	Name:	"Summarize2"
 	Res:	"Icons.Summarize2"
 
 )
 
-(LButn.64
+(LButn.62
 	InternalName:	"Close"
 	Help:	"Close Table Tools toolbar//"
 	Label:	"Close"
 	Click:	"TableTools.close"
 )
 
-(Butn.65
+(Butn.63
 	InternalName:	"DeleteRecordOrField"
 	Help:	"Deletes the selected record(s) or the selected field from the table//"
-	Icon:	66
+	Icon:	64
 	Click:	"TableTools.DeleteRecordOrField"
 )
 
-(AVIcon.66
+(AVIcon.64
 	Name:	"AlignNone"
 	Res:	"Icons.AlignNone"
 
 )
 
-(Butn.67
+(Butn.65
 	InternalName:	"Sort"
 	Help:	"Sorts the table ascending or descending permanently//"
-	Icon:	68
+	Icon:	66
 	Click:	"TableTools.Sort"
 )
 
-(AVIcon.68
+(AVIcon.66
 	Name:	"SortAscending2"
 	Res:	"Icons.SortAscending2"
 
 )
 
-(Butn.69
+(Butn.67
 	InternalName:	"StartEditing"
 	Help:	"Starts or stops edit session//"
-	Icon:	70
+	Icon:	68
 	Click:	"TableTools.ToggleEditing"
 )
 
-(AVIcon.70
+(AVIcon.68
 	Name:	"start_editing2.bmp"
 	Data:	4e442049 6d616765 00010016 00170000 
 	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
@@ -662,14 +647,14 @@
 	Data:	0000
 )
 
-(Butn.71
+(Butn.69
 	InternalName:	"Index"
 	Help:	"Calculates index//"
-	Icon:	72
+	Icon:	70
 	Click:	"TableTools.Index"
 )
 
-(AVIcon.72
+(AVIcon.70
 	Name:	"id.bmp"
 	Data:	4e442049 6d616765 00010013 00130000 
 	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -764,27 +749,27 @@
 	Data:	00000000 0000
 )
 
-(Butn.73
+(Butn.71
 	InternalName:	"SelectMany"
 	Help:	"Selects rows between two defined records//"
-	Icon:	74
+	Icon:	72
 	Click:	"TableTools.SelectMany"
 )
 
-(AVIcon.74
+(AVIcon.72
 	Name:	"SelectSubCategory"
 	Res:	"Icons.SelectSubCategory"
 
 )
 
-(Butn.75
+(Butn.73
 	InternalName:	"AddRecords"
 	Help:	"Adds one or more records to the table//"
-	Icon:	76
+	Icon:	74
 	Click:	"TableTools.AddRecords"
 )
 
-(AVIcon.76
+(AVIcon.74
 	Name:	"add_records.bmp"
 	Data:	4e442049 6d616765 00010011 00120000 
 	Data:	03a8c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
@@ -850,14 +835,14 @@
 	Data:	0000
 )
 
-(Butn.77
+(Butn.75
 	InternalName:	"AdvancedSum"
 	Help:	"Calculates the sum from selected cells and writes it into the defined cell//"
-	Icon:	78
+	Icon:	76
 	Click:	"TableTools.AdvancedSum"
 )
 
-(AVIcon.78
+(AVIcon.76
 	Name:	"advanced_sum.bmp"
 	Data:	4e442049 6d616765 00010013 00130000 
 	Data:	0474c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
@@ -935,105 +920,208 @@
 	Data:	00200001 00020000 00000000 0000
 )
 
+(Butn.77
+	InternalName:	"DD2DMS"
+	Help:	"Converts Decimal Degrees to DegreesMinutesSeconds//"
+	Icon:	78
+	Click:	"TableTools.DD2DMS"
+)
+
+(AVIcon.78
+	Name:	"dd2dms.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d000 000b40ba d000d0d0 
+	Data:	d000d0d0 00000d71 d000d000 d0c2583c 
+	Data:	d000cc1a cd00d0d0 d0cfa507 d000d000 
+	Data:	d0d0c408 d0009f00 9f00d0d0 cc995724 
+	Data:	d000d000 d0d0c308 d0006508 6500d0d0 
+	Data:	362763b9 d000d000 d0c2583c d0002a69 
+	Data:	2b00d0d0 08a3cfd0 d000d000 000c41ba 
+	Data:	d0000cc7 0c00d0d0 7b140000 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d000 
+	Data:	000b40ba d000000b 40bad0d0 d0d0d0d0 
+	Data:	d000d000 d0c2583c d000d0c2 583cd0d0 
+	Data:	d0d0d0d0 d000d000 d0d0c408 d000d0d0 
+	Data:	c408d0d0 d0d0d0d0 d000d000 d0d0c308 
+	Data:	d000d0d0 c308d0d0 d0d0d0d0 d000d000 
+	Data:	d0c2583c d000d0c2 583cd0d0 d0d0d0d0 
+	Data:	d000d000 000c41ba d000000c 41bad0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
 (Butn.79
-	InternalName:	"SaveLoadAliasFile"
-	Help:	"Click: Exports Field-Aliases into alias file\nShift-Click: Loads alias file and attaches them to the appropriate field\n// "
+	InternalName:	"DMS2DD"
+	Help:	"Converts DegreesMinutesSeconds to Decimal Degrees//"
 	Icon:	80
-	Click:	"TableTools.SaveLoadAliasFile"
+	Click:	"TableTools.DMS2DD"
 )
 
 (AVIcon.80
-	Name:	"saveload_alias.bmp"
-	Data:	4e442049 6d616765 00010011 00120000 
-	Data:	0168d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d000 0000d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d000 
-	Data:	d0d0d0d0 d000d0d0 d0d0d000 0000d0d0 
-	Data:	d0d00000 00d0d0d0 d000d0d0 d0d0d000 
-	Data:	0000d0d0 d0000000 0000d0d0 d000d0d0 
-	Data:	d0d0d000 0000d0d0 d0d0d000 d0d0d0d0 
-	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
-	Data:	d0d0d0d0 d000d0d0 d0d0d000 0000d0d0 
-	Data:	d0d0d000 d0d0d000 00010000 d0d0d000 
-	Data:	0000d0d0 d0d0d000 d0d0d0d0 000200d0 
-	Data:	d0d0d000 0000d0d0 d0d0d000 d0d0d0d0 
-	Data:	d014d0d0 d0d0d000 0000d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d0d0d0 d0d0d000 0000d0d0 
-	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
-	Data:	0000d0d0 00000000 00000000 00000000 
-	Data:	00d0d000 0000d0d0 00d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 00d0d000 0000d0d0 00d0d0d0 
-	Data:	d0d0d0d0 d0d0d0d0 00d0d000 0000d0d0 
-	Data:	00000000 00000000 00000000 00d0d000 
-	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d000 0000d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d0d000 00000000 04000000 
-	Data:	00000101 01000202 02000303 03000404 
-	Data:	04000505 05000606 06000707 07000808 
-	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
-	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
-	Data:	10001111 11001212 12001313 13001414 
-	Data:	14001515 15001616 16001717 17001818 
-	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
-	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
-	Data:	20002121 21002222 22002323 23002424 
-	Data:	24002525 25002626 26002727 27002828 
-	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
-	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
-	Data:	30003131 31003232 32003333 33003434 
-	Data:	34003535 35003636 36003737 37003838 
-	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
-	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
-	Data:	40004141 41004242 42004343 43004444 
-	Data:	44004545 45004646 46004747 47004848 
-	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
-	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
-	Data:	50005151 51005252 52005353 53005454 
-	Data:	54005555 55005656 56005757 57005858 
-	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
-	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
-	Data:	60006161 61006262 62006363 63006464 
-	Data:	64006565 65006666 66006767 67006868 
-	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
-	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
-	Data:	70007171 71007272 72007373 73007474 
-	Data:	74007575 75007676 76007777 77007878 
-	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
-	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
-	Data:	80008181 81008282 82008383 83008484 
-	Data:	84008585 85008686 86008787 87008888 
-	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
-	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
-	Data:	90009191 91009292 92009393 93009494 
-	Data:	94009595 95009696 96009797 97009898 
-	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
-	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
-	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
-	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
-	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
-	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
-	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
-	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
-	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
-	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
-	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
-	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
-	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
-	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
-	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
-	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
-	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
-	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
-	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
-	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
-	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
-	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
-	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
-	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
-	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
-	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
-	Data:	00080007 00200001 00020000 00000000 
-	Data:	0000
+	Name:	"dms2dd.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d000 000b40ba d000000b 
+	Data:	40bad0d0 d0d0d0d0 d000d000 d0c2583c 
+	Data:	d000d0c2 583cd0d0 d0d0d0d0 d000d000 
+	Data:	d0d0c408 d000d0d0 c408d0d0 d0d0d0d0 
+	Data:	d000d000 d0d0c308 d000d0d0 c308d0d0 
+	Data:	d0d0d0d0 d000d000 d0c2583c d000d0c2 
+	Data:	583cd0d0 d0d0d0d0 d000d000 000c41ba 
+	Data:	d000000c 41bad0d0 d0d0d0d0 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d000 
+	Data:	000b40ba d000d0d0 d000d0d0 00000d71 
+	Data:	d000d000 d0c2583c d000cc1a cd00d0d0 
+	Data:	d0cfa507 d000d000 d0d0c408 d0009f00 
+	Data:	9f00d0d0 cc995724 d000d000 d0d0c308 
+	Data:	d0006508 6500d0d0 362763b9 d000d000 
+	Data:	d0c2583c d0002a69 2b00d0d0 08a3cfd0 
+	Data:	d000d000 000c41ba d0000cc7 0c00d0d0 
+	Data:	7b140000 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
 )
 
 (Butn.81
@@ -1333,7 +1421,7 @@
 
 (Butn.87
 	InternalName:	"CalculateTable"
-	Help:	"Calculates the expression from the second row\nIf you use variables they must be initialized in the first row\n// "
+	Help:	"Calculates the expression from the second row\nIf you use variables they must be initialized in the first row\n// If you use variables they must be initialized in the first row"
 	Icon:	88
 	Click:	"TableTools.CalculateTable"
 )
@@ -1536,11 +1624,11 @@
 )
 
 (Tool.91
-	InternalName:	"Edit"
+	InternalName:	"aTool3"
 	Help:	"Edits cell//"
 	Icon:	92
 	Cursor:	"Cursors.Default"
-	Apply:	"TableTools.Edit"
+	Apply:	"TableTools.EditAttributes"
 )
 
 (AVIcon.92
@@ -2171,285 +2259,246 @@
 	Data:	00000000 0000
 )
 
-(Butn.111
-	InternalName:	"GetFieldProperties"
-	Help:	"Shows the properties of the active field//"
-	Icon:	112
-	Click:	"TableTools.GetFieldProperties"
-)
-
-(AVIcon.112
-	Name:	"Props"
-	Res:	"Icons.Props"
-
-)
-
-(Butn.113
-	InternalName:	"Unselect"
-	Help:	"Select None//"
-	Icon:	114
-	Click:	"TableTools.Unselect"
-)
-
-(AVIcon.114
-	Name:	"SelectNone"
-	Res:	"Icons.SelectNone"
-
-)
-
-(RectD.115
-	Left:	481.00000000000000
-	Top:	30.00000000000000
-	Right:	506.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.116
-	Left:	729.00000000000000
-	Top:	30.00000000000000
-	Right:	776.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.117
-	Left:	227.00000000000000
-	Top:	30.00000000000000
-	Right:	252.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.118
-	Left:	369.00000000000000
-	Top:	30.00000000000000
-	Right:	394.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.119
-	Left:	4.00000000000000
-	Top:	30.00000000000000
-	Right:	29.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.120
-	Left:	564.00000000000000
-	Top:	30.00000000000000
-	Right:	589.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.121
-	Left:	255.00000000000000
-	Top:	30.00000000000000
-	Right:	280.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.122
-	Left:	117.00000000000000
-	Top:	30.00000000000000
-	Right:	143.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.123
-	Left:	508.00000000000000
-	Top:	30.00000000000000
-	Right:	534.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.124
-	Left:	673.00000000000000
-	Top:	30.00000000000000
-	Right:	698.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.125
-	Left:	701.00000000000000
-	Top:	30.00000000000000
-	Right:	726.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.126
-	Left:	397.00000000000000
-	Top:	30.00000000000000
-	Right:	422.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.127
-	Left:	145.00000000000000
-	Top:	30.00000000000000
-	Right:	170.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.128
-	Left:	536.00000000000000
-	Top:	30.00000000000000
-	Right:	561.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.129
-	Left:	32.00000000000000
-	Top:	30.00000000000000
-	Right:	57.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.130
-	Left:	313.00000000000000
-	Top:	30.00000000000000
-	Right:	339.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.131
-	Left:	284.00000000000000
-	Top:	30.00000000000000
-	Right:	310.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.132
-	Left:	172.00000000000000
-	Top:	30.00000000000000
-	Right:	197.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.133
+(RectD.111
 	Left:	453.00000000000000
 	Top:	30.00000000000000
 	Right:	478.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.134
-	Left:	88.00000000000000
+(RectD.112
+	Left:	700.00000000000000
 	Top:	30.00000000000000
-	Right:	114.00000000000000
+	Right:	747.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.135
-	Left:	60.00000000000000
+(RectD.113
+	Left:	227.00000000000000
 	Top:	30.00000000000000
-	Right:	86.00000000000000
+	Right:	252.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.136
+(RectD.114
+	Left:	341.00000000000000
+	Top:	30.00000000000000
+	Right:	366.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.115
+	Left:	4.00000000000000
+	Top:	30.00000000000000
+	Right:	29.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.116
+	Left:	536.00000000000000
+	Top:	30.00000000000000
+	Right:	561.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.117
+	Left:	255.00000000000000
+	Top:	30.00000000000000
+	Right:	280.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.118
+	Left:	117.00000000000000
+	Top:	30.00000000000000
+	Right:	143.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.119
+	Left:	480.00000000000000
+	Top:	30.00000000000000
+	Right:	506.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.120
+	Left:	617.00000000000000
+	Top:	30.00000000000000
+	Right:	642.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.121
+	Left:	644.00000000000000
+	Top:	30.00000000000000
+	Right:	670.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.122
+	Left:	672.00000000000000
+	Top:	30.00000000000000
+	Right:	697.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.123
+	Left:	369.00000000000000
+	Top:	30.00000000000000
+	Right:	394.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.124
+	Left:	145.00000000000000
+	Top:	30.00000000000000
+	Right:	170.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.125
+	Left:	508.00000000000000
+	Top:	30.00000000000000
+	Right:	533.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.126
+	Left:	32.00000000000000
+	Top:	30.00000000000000
+	Right:	57.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.127
+	Left:	313.00000000000000
+	Top:	30.00000000000000
+	Right:	339.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.128
+	Left:	284.00000000000000
+	Top:	30.00000000000000
+	Right:	310.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.129
+	Left:	172.00000000000000
+	Top:	30.00000000000000
+	Right:	197.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.130
 	Left:	425.00000000000000
 	Top:	30.00000000000000
 	Right:	450.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.137
+(RectD.131
+	Left:	88.00000000000000
+	Top:	30.00000000000000
+	Right:	114.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.132
+	Left:	60.00000000000000
+	Top:	30.00000000000000
+	Right:	86.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.133
+	Left:	397.00000000000000
+	Top:	30.00000000000000
+	Right:	422.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.134
 	Left:	199.00000000000000
 	Top:	30.00000000000000
 	Right:	224.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.138
-	Left:	618.00000000000000
+(RectD.135
+	Left:	590.00000000000000
 	Top:	30.00000000000000
-	Right:	643.00000000000000
+	Right:	615.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.139
-	Left:	591.00000000000000
+(RectD.136
+	Left:	563.00000000000000
 	Top:	30.00000000000000
-	Right:	616.00000000000000
+	Right:	588.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.140
-	Left:	645.00000000000000
-	Top:	30.00000000000000
-	Right:	670.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.141
-	Left:	342.00000000000000
-	Top:	30.00000000000000
-	Right:	367.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.142
+(RectD.137
 	Left:	5.00000000000000
 	Top:	37.00000000000000
-	Right:	787.00000000000000
+	Right:	757.00000000000000
 	Bottom:	2.00000000000000
 )
 
-(Nil.143
+(Nil.138
 )
 
-(Script.144
+(Script.139
 	Name:	"TableTools.AddField"
-	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_AddField.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.05.2014\n'# Version:      0.2\n'# Based on:     Table.AddField\n'#\n'# Purpose:      fuegt ein neues Feld der Tabelle hinzu             \n'#\n'########################################################\n\n'# die Tabelle muss aktiv und im Edit-Modus sein\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Ta
-ble.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\ntheTable = av.GetActiveDoc\ntheFld = theTable.MakeField\n\nif (theFld <> NIL) then\n  theTable.GetVTab.AddFields({theFld})\n  theTable.SetActiveField(theFld)\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\nif (th
-eEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_AddField.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.05.2014\n'# Version:      0.2\n'# Based on:     Table.AddField\n'#\n'# Purpose:      fuegt ein neues Feld der Tabelle hinzu             \n'#\n'########################################################\n\n'# die Tabelle muss aktiv und im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active T
+able.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\ntheTable = av.GetActiveDoc\ntheFld = theTable.MakeField\n\nif (theFld <> NIL) then\n  theTable.GetVTab.AddFields({theFld})\n  theTable.SetActiveField(theFld)\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (
+theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
 )
 
-(Script.145
+(Script.140
 	Name:	"TableTools.AddRecords"
-	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_AddRecords.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.05.2014\n'# Version:      0.7\n'#\n'# Purpose:      fuegt die gewuenschte Anzahl Records\n'#               der Tabelle hinzu\n'#\n'########################################################\n\n'# die Tabelle muss aktiv und im Edit-Modus sein\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n
-  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# zu ergaenzende Zeilen definieren und pruefen\ntheRecords = MsgBox.Input(\"Geben Sie die Anzahl zu ergaenzender Zeilen ein\", \"Hinzuzufuegende Zeilen definieren\",1.AsString)\n\nif (theRecords = nil) then\n  return nil\nelseif (theReco
-rds.IsNumber.Not) then\n  MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif (theRecords.AsNumber < 1) then\n  MsgBox.Warning(\"Anzahl Zeilen ist zu gering\",\"Abbruch\")\n  return nil\nend\n\n'# neue Zeilen ergaenzen\nfor each rec in 1..theRecords.AsNumber\n  theTable.GetVTab.BeginTransaction\n  theTable.GetVTab.AddRecord\n  theTable.GetVtab.EndTransaction\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_AddRecords.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.05.2014\n'# Version:      0.7\n'#\n'# Purpose:      fuegt die gewuenschte Anzahl Records\n'#               der Tabelle hinzu\n'#\n'########################################################\n\n'# die Tabelle muss aktiv und im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")
+\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# zu ergaenzende Zeilen definieren und pruefen\n\ntheRecords = MsgBox.Input(\"Geben Sie die Anzahl zu ergaenzender Zeilen ein\", \"Hinzuzufuegende Zeilen definieren\",1.AsString)\n\nif (theRecords = nil) then\n  return nil\nelseif (theRe
+cords.IsNumber.Not) then\n  MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif (theRecords.AsNumber < 1) then\n  MsgBox.Warning(\"Anzahl Zeilen ist zu gering\",\"Abbruch\")\n  return nil\nend\n\n'# neue Zeilen ergaenzen\n\nfor each rec in 1..theRecords.AsNumber\n  theTable.GetVTab.BeginTransaction\n  theTable.GetVTab.AddRecord\n  theTable.GetVtab.EndTransaction\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
 )
 
-(Script.146
+(Script.141
 	Name:	"TableTools.AdvancedSum"
 	SourceCode:	"'############################################################\n'#\n'# Filename:     TableTools_AdvancedSum.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.06.2014\n'# Version:      0.10\n'#\n'# Purpose:      Summiert die Werte selektierter Zeilen\n'#               eines Feldes und schreibt das Ergebnis in\n'#               die zu definierende Zeile\n'#\n'#               Funktioniert in numerischen und Textfeldern\n'#\n'############################################################\n\n'# die Tabelle muss aktiv und 
-im Edit-Modus sein\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Info(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld aktiv sein\nif (theTable.GetActiveField = nil) then\n  MsgBox.Warning(\"
-Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\n\nif ((theField.getType.AsString = \"FIELD_DATE\") or (theField.getType.AsString = \"FIELD_LOGICAL\")) then\n  MsgBox.Warning(\"Der Feldtyp muss \"\"String\"\" oder \"\"Number\"\" sein\",\"Abbruch\")\n  return nil\nend\n\n'# Definieren der Anzahl Nachkommastellen in Textfeldern\nif (theField.getType.AsString = \"FIELD_CHAR\") then\n  dez = MsgBox.Input(\"Geben Sie die Anzahl Nachkommastellen ein\", \"Anzahl Nachkommastellen\",3.AsString)\n  if (dez = 
-nil) then\n    return nil  \n  elseif (dez.IsNumber.Not) then\n    MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n    return nil\n  elseif (dez.AsNumber < 0) then\n    MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n    return nil  \n  end\nend\n\n'# Es muessen mindestens zwei Zeilen selektiert sein\nif ( theVTab.GetSelection.Count < 2) then\n  MsgBox.Warning(\"Zu summierende Zeilen (mindestens 2) muessen selektiert sein\",\"Abbruch\")\n  return nil\nend\n\n'# Selektion speichern\ntheSelected = theVTab.GetSelection\ntheStack = S
-tack.Make\ntheStack.Push (theSelected.Clone)\n\n'# Summe ermitteln\ntheSum = 0\nfor each rec in theSelected\n  theValue = theVTab.ReturnValueNumber( theField, rec )\n  if ( not ( theValue.IsNull ) ) then\n    theSum = theValue + theSum\n  end\nend\n\n'# Summe in Textfeldern formatieren\nif (theField.getType.AsString = \"FIELD_CHAR\") then\n  if (dez = \"0\") then\n    theSum.SetFormat(\"d\")\n  elseif (dez = \"1\") then\n    theSum.SetFormat(\"d.d\")\n  elseif (dez = \"2\") then\n    theSum.SetFormat(\"d.dd\")\n  elseif (dez = \"3\") then\n   
- theSum.SetFormat(\"d.ddd\")\n  elseif (dez = \"4\") then\n    theSum.SetFormat(\"d.dddd\")\n  elseif (dez = \"5\") then\n    theSum.SetFormat(\"d.ddddd\")\n  elseif (dez = \"6\") then\n    theSum.SetFormat(\"d.dddddd\")\n  elseif (dez = \"7\") then\n    theSum.SetFormat(\"d.ddddddd\")\n  elseif (dez = \"8\") then\n    theSum.SetFormat(\"d.dddddddd\")\n  elseif (dez = \"9\") then\n    theSum.SetFormat(\"d.ddddddddd\")\n  else\n    theSum.SetFormat(\"d.dddddddddd\")\n  end\nend\n\n'# Anzahl Zeilen ermitteln\ntheRecords = 0\nfor each rec in theVTab\n  theRe
-cords = theRecords + 1\nend\n\n'# Zielfeld definieren\ntheTarget = MsgBox.Input(\"Geben Sie die Nummer des Zielfeldes ein\", \"Zielfeld definieren\",1.AsString)\n\nif ((theTarget = nil) or (theTarget.IsNumber.Not)) then\n  MsgBox.Warning(\"Zielfeld wurde nicht definiert\",\"Abbruch\")\n  return nil\nelseif ((theTarget.AsNumber > theRecords) or (theTarget.AsNumber < 1)) then\n  MsgBox.Warning(\"Zielfeld existiert nicht\",\"Abbruch\")\n  return nil \nend\n\ntheTarget = theTarget.AsNumber - 1\n\n'# vorhandene Selektion aufheben\ntheSelect
-ed = theVTab.GetSelection\ntheSelected.ClearAll\ntheVTab.UpdateSelection\n\n'# Selektion durchfuehren\ntheSelected.Set(theTarget)\ntheVTab.SetSelection(theSelected)\ntheVTab.UpdateSelection\n\n'# Summe in Zielfeld schreiben\nfor each rec in theSelected\n  if (theField.getType.AsString = \"FIELD_CHAR\") then\n    theVTab.SetValue(theField,rec,theSum.AsString)\n  else\n    theVTab.SetValue(theField,rec,theSum)\n  end\nend\n\n'# Urspruengliche Selektion wiederherstellen\ntheSelected = theStack.Top\ntheVTab.SetSelection(theSelected)
-\ntheVTab.UpdateSelection\ntheStack.Empty\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend\n"
+im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Info(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Warning
+(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\n\nif ((theField.getType.AsString = \"FIELD_DATE\") or (theField.getType.AsString = \"FIELD_LOGICAL\")) then\n  MsgBox.Warning(\"Der Feldtyp muss \"\"String\"\" oder \"\"Number\"\" sein\",\"Abbruch\")\n  return nil\nend\n\n'# Definieren der Anzahl Nachkommastellen in Textfeldern\n\nif (theField.getType.AsString = \"FIELD_CHAR\") then\n  dez = MsgBox.Input(\"Geben Sie die Anzahl Nachkommastellen ein\", \"Anzahl Nachkommastellen\",3.AsString)\n  if (dez
+ = nil) then\n    return nil  \n  elseif (dez.IsNumber.Not) then\n    MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n    return nil\n  elseif (dez.AsNumber < 0) then\n    MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n    return nil  \n  end\nend\n\n'# Es muessen mindestens zwei Zeilen selektiert sein\n\nif ( theVTab.GetSelection.Count < 2) then\n  MsgBox.Warning(\"Zu summierende Zeilen (mindestens 2) muessen selektiert sein\",\"Abbruch\")\n  return nil\nend\n\n'# Selektion speichern\n\ntheSelected = theVTab.GetSelection\ntheStac
+k = Stack.Make\ntheStack.Push (theSelected.Clone)\n\n'# Summe ermitteln\n\ntheSum = 0\nfor each rec in theSelected\n  theValue = theVTab.ReturnValueNumber( theField, rec )\n  if ( not ( theValue.IsNull ) ) then\n    theSum = theValue + theSum\n  end\nend\n\n'# Summe in Textfeldern formatieren\n\nif (theField.getType.AsString = \"FIELD_CHAR\") then\n  if (dez = \"0\") then\n    theSum.SetFormat(\"d\")\n  elseif (dez = \"1\") then\n    theSum.SetFormat(\"d.d\")\n  elseif (dez = \"2\") then\n    theSum.SetFormat(\"d.dd\")\n  elseif (dez = \"3\") t
+hen\n    theSum.SetFormat(\"d.ddd\")\n  elseif (dez = \"4\") then\n    theSum.SetFormat(\"d.dddd\")\n  elseif (dez = \"5\") then\n    theSum.SetFormat(\"d.ddddd\")\n  elseif (dez = \"6\") then\n    theSum.SetFormat(\"d.dddddd\")\n  elseif (dez = \"7\") then\n    theSum.SetFormat(\"d.ddddddd\")\n  elseif (dez = \"8\") then\n    theSum.SetFormat(\"d.dddddddd\")\n  elseif (dez = \"9\") then\n    theSum.SetFormat(\"d.ddddddddd\")\n  else\n    theSum.SetFormat(\"d.dddddddddd\")\n  end\nend\n\n'# Anzahl Zeilen ermitteln\n\ntheRecords = 0\nfor each rec in theVTab
+\n  theRecords = theRecords + 1\nend\n\n'# Zielfeld definieren\n\ntheTarget = MsgBox.Input(\"Geben Sie die Nummer des Zielfeldes ein\", \"Zielfeld definieren\",1.AsString)\n\nif ((theTarget = nil) or (theTarget.IsNumber.Not)) then\n  MsgBox.Warning(\"Zielfeld wurde nicht definiert\",\"Abbruch\")\n  return nil\nelseif ((theTarget.AsNumber > theRecords) or (theTarget.AsNumber < 1)) then\n  MsgBox.Warning(\"Zielfeld existiert nicht\",\"Abbruch\")\n  return nil \nend\n\ntheTarget = theTarget.AsNumber - 1\n\n'# vorhandene Selektion aufheben\n
+\ntheSelected = theVTab.GetSelection\ntheSelected.ClearAll\ntheVTab.UpdateSelection\n\n'# Selektion durchfuehren\n\ntheSelected.Set(theTarget)\ntheVTab.SetSelection(theSelected)\ntheVTab.UpdateSelection\n\n'# Summe in Zielfeld schreiben\n\nfor each rec in theSelected\n  if (theField.getType.AsString = \"FIELD_CHAR\") then\n    theVTab.SetValue(theField,rec,theSum.AsString)\n  else\n    theVTab.SetValue(theField,rec,theSum)\n  end\nend\n\n'# Urspruengliche Selektion wiederherstellen\n\ntheSelected = theStack.Top\ntheVTab.SetSelection
+(theSelected)\ntheVTab.UpdateSelection\ntheStack.Empty\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend\n"
 )
 
-(Script.147
+(Script.142
 	Name:	"TableTools.CalculateTable"
-	SourceCode:	"'#####################################################################\n'#\n'# Filename:     TableTools_CalculateTable.ave\n'# Author:       Adrian Boehlen\n'# Date:         28.05.2017\n'# Version:      1.0\n'#\n'# Purpose:      ermoeglicht Berechnungen in einer Tabelle.\n'#               Dazu muss die Expression in der zweiten Zeile\n'#               einer Spalte des Typs \"String\" stehen\n'#               Werden benutzerdefinierte Variablen benoetigt,\n'#               sind diese in der ersten Zeile zu initialisieren
-.\n'#\n'#               Sind Zeilen selektiert, wird die Berechnung\n'#               nur in den selektierten Zeilen durchgefuehrt,\n'#               ansonsten in allen\n'#\n'#               Existiert ein Feld namens \"Type\" kann dort Avenue-\n'#               Code an beliebiger Stelle eingesetzt werden. Dazu\n'#               muss die betreffende Zeile mit \"Code\" gekennzeichnet\n'#               werden. Das Resultat dieser Berechnung wird in die\n'#               Zeile geschrieben, die mit \"Res\" gekennzeichnet ist.\n'
-#\n'#               Die erste und zweite Zeile werden durch\n'#               die Berechnung nicht beeinflusst\n'#\n'#               Wird das Tool mit gedrueckter Shift-Taste aufgerufen,\n'#               werden bestehende Eintraege im betreffenden Feld\n'#               geloescht. Dies betrifft nicht die Zeilen 1 und 2\n'#               und - falls Zeilensetting genutzt - Zeilen der\n'#               Definition \"Code\" im Feld \"Type\".\n'#\n'#####################################################################\n\n'# die
- Tabelle muss aktiv und im Edit-Modus sein\n\n_theTable = av.GetActiveDoc\n\nif (_theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\n_theVTab = _theTable.GetVTab\n_theFields = _theVTab.GetFields\n\nif (_theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (_theVTab.IsEditable.Not) then\n  _theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# es muss ein Feld ak
-tiv sein\n\nif (_theTable.GetActiveField = nil) then\n  MsgBox.Warning(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\n'# wenn Shift gedrueckt ist, sollen alle Dateneintraege geloescht werden\n\nif (System.IsShiftKeyDown) then\n  for each rec in _theVTab\n    '# Variablendeklaration und Spaltensetting ueberspringen\n    if (rec > 1) then\n      for each feld in _theFields\n        '# Zeilensetting ueberspringen\n        if (feld.AsString = \"Type\") then\n          if (_theVTab.ReturnValue(feld, rec).AsString = \"Co
-de\") then\n            continue\n          else\n            _theVTab.SetValue(_theTable.GetActiveField, rec, \"\")\n            _theVTab.UpdateSelection\n          end\n        end\n      end\n    end\n  end\n  return nil\nend\n\n'# diverse Variablen initialisieren\n\n_theField = _theTable.GetActiveField\n_theFieldName = _theField.GetName\n_a = 1    '# Standardmaessige Anzahl Durchgaenge\n_d = 3    '# Defaultwert fuer Anzahl Nachkommastellen\n_r = \" \"  '# Standardvariable, die den kalkulierten Wert des Spaltensettings aufnimmt
-\n_c = \" \"  '# Standardvariable, die den kalkulierten Wert des Zeilensettings aufnimmt\n_Type = 0 '# Standardwert fuer Feld \"Type\". Ist so auch gesetzt, wenn Feld nicht existiert\n\n\n'########################################################################################\n'# globale Variablen in der ersten Zeile lesen, in \"theVars\" speichern und initialisieren\n\nfor each rec in _theVTab\n  if (rec = 0) then\n    theVars = _theVTab.ReturnValue(_theField, rec)\n    if (theVars.AsString.Contains(\"_\")) then\n    \n      
-'# temporaeres Script mit Variablendeklaration aufbauen, ausfuehren, und wieder loeschen\n      \n      theSEd = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n      theSEd.SetSource(theVars.AsString)\n      theSEd.Compile\n      if (theSEd.IsCompiled.Not) then\n        MsgBox.Error(\"fehlerhafte Anweisung Variablendeklaration\",\"Abbruch\")\n        Av.GetProject.RemoveDoc(theSEd)\n        return nil\n      end\n      Av.Run(theSEd.AsString,\"\")     \n      Av.GetProject.RemoveDoc(theSEd)\n    end\n  end\nend\n\n'# Anz
-ahl Nachkommastellen uebersetzen\n\nif (_d = 0) then\n  _d = \"d\"\nelseif (_d = 1) then\n  _d = \"d.d\"\nelseif (_d = 2) then\n  _d = \"d.dd\"\nelseif (_d = 3) then\n  _d = \"d.ddd\"\nelseif (_d = 4) then\n  _d = \"d.dddd\"\nelseif (_d = 5) then\n  _d = \"d.ddddd\"\nelseif (_d = 6) then\n  _d = \"d.dddddd\"\nelseif (_d = 7) then\n  _d = \"d.ddddddd\"\nelseif (_d = 8) then\n  _d = \"d.dddddddd\"\nelseif (_d = 9) then\n  _d = \"d.ddddddddd\"\nelseif (_d = 10) then\n  _d = \"d.dddddddddd\"\nelseif (_d = 11) then\n  _d = \"d.ddddddddddd\"\nelseif (_d = 12) th
-en\n  _d = \"d.dddddddddddd\"\nelseif (_d = 13) then\n  _d = \"d.ddddddddddddd\"\nelseif (_d = 14) then\n  _d = \"d.dddddddddddddd\"\nelseif (_d = 15) then\n  _d = \"d.ddddddddddddddd\"\nelseif (_d = 16) then\n  _d = \"d.dddddddddddddddd\"\nelseif (_d = 17) then\n  _d = \"d.ddddddddddddddddd\"\nelseif (_d = 18) then\n  _d = \"d.dddddddddddddddddd\"\nelseif (_d = 19) then\n  _d = \"d.ddddddddddddddddddd\"\nelseif (_d = 20) then\n  _d = \"d.dddddddddddddddddddd\"\nelse\n  MsgBox.Error(\"Anzahl Nachkommastellen nicht korrekt\",\"Abbruch\")\n  return n
-il\nend\n\n'# Expression in der zweiten Zeile lesen und in \"_theExpr\" speichern\n'# bei einer numerischen Expression muss das Zahlenformat definiert werden\n\nfor each rec in _theVTab\n  if (rec = 1) then\n    if (_theVTab.ReturnValue(_theField, rec).AsString.Contains(\"AsString\")) then\n      'numberExpr = 0\n      _theExpr = _theVTab.ReturnValue(_theField, rec)\n    else\n      'numberExpr = 1\n      _theRec = rec    '# damit als globale Variable definiert\n      _theExpr = _theVTab.ReturnValue(_theField, _theRec)\n     
- _theExpr = _theExpr + 10.AsChar + \"if (_r.AsString.IsNumber) then\"\n      _theExpr = _theExpr + 10.AsChar + \"_r.SetFormat (\"\"\" + _d.AsString + \"\"\")\"\n      _theExpr = _theExpr + 10.AsChar + \"end\"\n      _theExpr = _theExpr + 10.AsChar + \"_theVTab.SetValue(_theField,_theRec,_r.AsString)\"\n    end\n  end\nend\n\n'# pruefen, ob Zeilen selektiert sind oder nicht\n\ntheSelected = _theVTab.GetSelection\n\nif (theSelected.Count = 0) then\n  wasSelected = 0\n  theLoop = _theVTab\nelse\n  wasSelected = 1\n  theLoop = theSelected\nen
-d\n\n'########################################################################################\n'# Berechnungsdurchgaenge starten und Zaehlervariable setzen\n\nfor each z in 1.._a\n  _z = z '# damit als globale Variable im temporaeren Script verfuegbar\n\n  for each rec in theLoop\n    if (rec > 1) then    \n      _theRec = rec     '# damit als globale Variable im temporaeren Script verfuegbar\n      _f = _theRec + 1  '# damit als Zeilenvariable von Expression aus aufrufbar, beginnend mit 1\n      theSelected.Set(rec)\n
-      _theVTab.SetSelection(theSelected)\n      _theVTab.UpdateSelection\n    \n      '# Inhalt der uebrigen Felder als Variable uebernehmen\n      '# falls das Feld leer ist, der Variable als Wert \"0\" zuweisen\n      '# falls das Feld keine Zahl ist, den Wert in Anfuehrungszeichen setzen\n      '# falls das Feld eine Zahl ist, sicherstellen, dass es eine Number ist und das Zahlenformat setzen\n    \n      _theFldCont = \"\"\n      for each theActFld in _theFields\n        _theFldCont = _theFldCont + \"_\" + theActFld.Ge
-tName.AsString + \" = \"\n        if (_theVTab.ReturnValue(theActFld, rec ).AsString = \"\") then\n          _theFldCont = _theFldCont + \"0\" + 10.AsChar\n        elseif (_theVTab.ReturnValue(theActFld, rec ).AsString.IsNumber.Not) then\n          _theFldCont = _theFldCont + \"\"\"\" + _theVTab.ReturnValue(theActFld, rec ).AsString + \"\"\"\" + 10.AsChar\n        else\n          _theNumValue = _theVTab.ReturnValue(theActFld, rec )\n          _theNumValue = _theNumValue.AsString\n          _theNumValue = _theNumValue.AsNumber\n  
-        _theNumValue.SetFormat(\"\" + _d + \"\")\n          _theFldCont = _theFldCont + _theNumValue.AsString + 10.AsChar\n        end\n      end\n    \n      '# temporaere Scripts aufbauen, ausfuehren, und wieder loeschen\n      '# im Falle eines Fehlers Abbruch mit Ausgabe des fehlerhaften Scripts\n      \n      '# 1. Script: Feldvariablen erzeugen\n      script1 = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n      script1.SetSource(_theFldCont.AsString)\n      script1.Compile\n      if (script1.IsCompiled.Not)
- then\n        MsgBox.Error(\"fehlerhafte Anweisung Script 1\",\"Abbruch\")\n        MsgBox.Report(_theFldCont.AsString,\"Calculation Script\")\n        Av.GetProject.RemoveDoc(script1)\n        return nil\n      end\n      Av.Run(script1.AsString,\"\")\n      'MsgBox.Report(_theFldCont.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n      Av.GetProject.RemoveDoc(script1)     \n      \n      '# normale Datenzeilen\n      if (_Type = 0) then\n        '# 2. Script: Spaltensetting\n        script2 = SEd.MakeWithGU
-I(Av.GetProject.GetSelectedGUI.GetName)\n        script2.SetSource(_theExpr.AsString)\n        script2.Compile\n        if (script2.IsCompiled.Not) then\n          MsgBox.Error(\"fehlerhafte Anweisung Script 2\",\"Abbruch\")\n          MsgBox.Report(_theExpr.AsString,\"Calculation Script\")\n          Av.GetProject.RemoveDoc(script2)\n          return nil\n        end\n        Av.Run(script2.AsString,\"\")\n        'MsgBox.Report(_theExpr.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n        Av.GetProject.R
-emoveDoc(script2)\n      \n      '# Code fuer Zeilensetting\n      elseif (_Type = \"Code\") then\n        '# Zeilensetting lesen\n        'MsgBox.Info(_theVTab.ReturnValue(_theTable.GetActiveField, rec).AsString,\"\")\n        _theCode = _theVTab.ReturnValue(_theTable.GetActiveField, rec).AsString\n        _theCode = _theCode + 10.AsChar + \"if (_c.AsString.IsNumber) then\"\n        _theCode = _theCode + 10.AsChar + \"_c.SetFormat (\"\"\" + _d.AsString + \"\"\")\"\n        _theCode = _theCode + 10.AsChar + \"end\"\n        _theCode
- = _theCode + 10.AsChar + \"_theVTab.SetValue(_theField,_theRec,_c.AsString)\"\n      \n      '# Resultat fuer Zeilensetting\n      elseif (_Type = \"Res\") then\n        '# 3. Script: Zeilensetting\n        script3 = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n        script3.SetSource(_theCode.AsString)\n        script3.Compile\n        if (script3.IsCompiled.Not) then\n          MsgBox.Error(\"fehlerhafte Anweisung Script 3\",\"Abbruch\")\n          MsgBox.Report(_theExpr.AsString,\"Calculation Script\")\n        
-  Av.GetProject.RemoveDoc(script3)\n          return nil\n        end\n        Av.Run(script3.AsString,\"\")\n        'MsgBox.Report(_theCode.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n        Av.GetProject.RemoveDoc(script3)        \n      end\n    end\n  end\n  \n  '# Anzeige aktualisieren\n\n  _theVTab.UpdateSelection\n\n  '# Selektion aufheben, wenn zuvor nichts selektiert\n\n  if (wasSelected = 0) then\n    theSelected.ClearAll\n    _theVTab.UpdateSelection\n  end\nend\n\n'# Editsession beenden, wenn zu 
-Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  _theVTab.SetEditable(false)\nend\n\n'# alle globalen Variablen loeschen\nAv.ClearGlobals"
+	SourceCode:	"'#####################################################################\n'#\n'# Filename:     TableTools_CalculateTable.ave\n'# Author:       Adrian Boehlen\n'# Date:         10.06.2014\n'# Version:      0.17\n'#\n'# Purpose:      ermoeglicht Berechnungen in einer Tabelle.\n'#               Dazu muss die Expression in der zweiten Zeile\n'#               einer Spalte des Typs \"String\" stehen\n'#               Werden benutzerdefinierte Variablen benoetigt,\n'#               sind diese in der ersten Zeile zu initialisiere
+n.\n'#\n'#               Sind Zeilen selektiert, wird die Berechnung\n'#               nur in den selektierten Zeilen durchgefuehrt,\n'#               ansonsten in allen\n'#\n'#               Die erste und zweite Zeile werden durch\n'#               die Berechnung nicht beeinflusst\n'#\n'#               Wird das Tool mit gedrueckter Shift-Taste aufgerufen,\n'#               werden bestehende eintraege im betreffenden Feld\n'#               geloescht. Dies betrifft nicht die Zeilen 1 und 2.\n'#\n'########################
+#############################################\n\n'# die Tabelle muss aktiv und im Edit-Modus sein\n\n_theTable = av.GetActiveDoc\n\nif (_theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\n_theVTab = _theTable.GetVTab\n_theFields = _theVTab.GetFields\n\nif (_theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (_theVTab.IsEditable.Not) then\n  _theVTab.StartEditingWithRecovery\n  theEditstatus = 0
+\nelse\n  theEditstatus = 1\nend\n\n'# es muss ein Feld aktiv sein\n\nif (_theTable.GetActiveField = nil) then\n  MsgBox.Warning(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\n'# wenn Shift gedrueckt ist, sollen alle Eintraege ab Zeile 3 geloescht werden\n\nif (System.IsShiftKeyDown) then\n  for each rec in _theVTab\n    if (rec > 1) then\n      _theVTab.SetValue(_theTable.GetActiveField, rec, \"\")\n      _theVTab.UpdateSelection\n    end\n  end\n  return nil\nend\n\n'# Anzahl Berechnungsdurchgaenge definieren\n\nanz = Msg
+Box.Input(\"Geben Sie die Anzahl Durchgaenge ein\", \"Anzahl Durchgaenge\",1.AsString)\n\nif (anz = nil) then\n  return nil\nelseif ((anz.IsNumber.Not) or (anz.AsNumber <= 0)) then\n  MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif (anz.AsNumber > 100) then\n  abbruch = MsgBox.YesNo(\"Wirklich \"+anz+\" Durchgänge durchführen?\",\"Anzahl Durchgänge\",false)\n  if (not abbruch) then\n    return nil\n  end \nend\n\n'# diverse Variablen initialisieren\n\n_theField = _theTable.GetActiveField\n_theFieldName = _theFiel
+d.GetName\n_d = 3    '# Defaultwert fuer Anzahl Nachkommastellen\n_r = \" \"  '# Standardvariable, die den kalkulierten Wert aufnimmt\n\n\n'########################################################################################\n'# globale Variablen in der ersten Zeile lesen, in \"theVars\" speichern und initialisieren\n\nfor each rec in _theVTab\n  if (rec = 0) then\n    theVars = _theVTab.ReturnValue(_theField, rec)\n    if (theVars.AsString.Contains(\"_\")) then\n    \n      '# temporaeres Script mit Variablendefinition a
+ufbauen, ausfuehren, und wieder loeschen\n      \n      theSEd = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n      theSEd.SetSource(theVars.AsString)\n      theSEd.Compile\n      if (theSEd.IsCompiled.Not) then\n        MsgBox.Error(\"fehlerhafte Anweisung\",\"Abbruch\")\n        Av.GetProject.RemoveDoc(theSEd)\n        return nil\n      end\n      Av.Run(theSEd.AsString,\"\")     \n      Av.GetProject.RemoveDoc(theSEd)\n    end\n  end\nend\n\n'# Anzahl Nachkommastellen uebersetzen\n\nif (_d = 0) then\n  _d = \"d\"\nelseif 
+(_d = 1) then\n  _d = \"d.d\"\nelseif (_d = 2) then\n  _d = \"d.dd\"\nelseif (_d = 3) then\n  _d = \"d.ddd\"\nelseif (_d = 4) then\n  _d = \"d.dddd\"\nelseif (_d = 5) then\n  _d = \"d.ddddd\"\nelseif (_d = 6) then\n  _d = \"d.dddddd\"\nelseif (_d = 7) then\n  _d = \"d.ddddddd\"\nelseif (_d = 8) then\n  _d = \"d.dddddddd\"\nelseif (_d = 9) then\n  _d = \"d.ddddddddd\"\nelseif (_d = 10) then\n  _d = \"d.dddddddddd\"\nend\n\n'# Expression in der zweiten Zeile lesen und in \"_theExpr\" speichern\n'# bei einer numerischen Expression muss das Zahlenformat d
+efiniert werden\n\nfor each rec in _theVTab\n  if (rec = 1) then\n    if (_theVTab.ReturnValue(_theField, rec).AsString.Contains(\"AsString\")) then\n      'numberExpr = 0\n      _theExpr = _theVTab.ReturnValue(_theField, rec)\n    else\n      'numberExpr = 1\n      _theRec = rec    '# damit als globale Variable definiert\n      _theExpr = _theVTab.ReturnValue(_theField, _theRec)\n      _theExpr = _theExpr + 10.AsChar + \"if (_r.AsString.IsNumber) then\"\n      _theExpr = _theExpr + 10.AsChar + \"_r.SetFormat (\"\"\" + _d.AsSt
+ring + \"\"\")\"\n      _theExpr = _theExpr + 10.AsChar + \"end\"\n      _theExpr = _theExpr + 10.AsChar + \"_theVTab.SetValue(_theField,_theRec,_r.AsString)\"\n    end\n  end\nend\n\n'# pruefen, ob Zeilen selektiert sind oder nicht\n\ntheSelected = _theVTab.GetSelection\n\nif (theSelected.Count = 0) then\n  wasSelected = 0\n  theLoop = _theVTab\nelse\n  wasSelected = 1\n  theLoop = theSelected\nend\n\n'# Berechnungsdurchgaenge starten und Zaehlervariable setzen\n\nfor each z in 1..anz.AsNumber\n  _z = z '# damit als globale Variable im
+ temporaeren Script verfuegbar\n\n  for each rec in theLoop\n    if (rec > 1) then    \n      _theRec = rec     '# damit als globale Variable im temporaeren Script verfuegbar\n      _f = _theRec + 1  '# damit als Zeilenvariable von Expression aus aufrufbar, beginnend mit 1\n      theSelected.Set(rec)\n      _theVTab.SetSelection(theSelected)\n      _theVTab.UpdateSelection\n    \n      '# Inhalt der uebrigen Felder als Variable uebernehmen\n      '# falls das Feld leer ist, der Variable als Wert \"0\" zuweisen\n      '# 
+falls das Feld keine Zahl ist, den Wert in Anfuehrungszeichen setzen\n      '# falls das Feld eine Zahl ist, sicherstellen, dass es eine Number ist und das Zahlenformat setzen\n    \n      _theFldCont = \"\"\n      for each theActFld in _theFields\n        _theFldCont = _theFldCont + \"_\" + theActFld.GetName.AsString + \" = \"\n        if (_theVTab.ReturnValue(theActFld, rec ).AsString = \"\") then\n          _theFldCont = _theFldCont + \"0\" + 10.AsChar\n        elseif (_theVTab.ReturnValue(theActFld, rec ).AsString.IsNumb
+er.Not) then\n          _theFldCont = _theFldCont + \"\"\"\" + _theVTab.ReturnValue(theActFld, rec ).AsString + \"\"\"\" + 10.AsChar\n        else\n          _theNumValue = _theVTab.ReturnValue(theActFld, rec )\n          _theNumValue = _theNumValue.AsString\n          _theNumValue = _theNumValue.AsNumber\n          _theNumValue.SetFormat(\"\" + _d + \"\")\n          _theFldCont = _theFldCont + _theNumValue.AsString + 10.AsChar\n        end\n      end\n      _theSource = _theFldCont + _theExpr\n    \n      '# temporaeres Script au
+fbauen, ausfuehren, und wieder loeschen\n      '# im Falle eines Fehlers Abbruch mit Ausgabe des fehlerhaften Scripts\n    \n      theSEd = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n      theSEd.SetSource(_theSource.AsString)\n      theSEd.Compile\n      if (theSEd.IsCompiled.Not) then\n        MsgBox.Error(\"fehlerhafte Anweisung\",\"Abbruch\")\n        MsgBox.Report(_theSource.AsString,\"Calculation Script\")\n        Av.GetProject.RemoveDoc(theSEd)\n        return nil\n      end\n      Av.Run(theSEd.AsString,
+\"\")\n      'MsgBox.Report(_theSource.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n      Av.GetProject.RemoveDoc(theSEd)     \n    end\n  end\n  \n  '# Anzeige aktualisieren\n\n  _theVTab.UpdateSelection\n\n  '# Selektion aufheben, wenn zuvor nichts selektiert\n\n  if (wasSelected = 0) then\n    theSelected.ClearAll\n    _theVTab.UpdateSelection\n  end\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  _theVTab.SetEditable(false)\nend\n\n'# alle globalen Variablen lo
+eschen\nAv.ClearGlobals"
 )
 
-(Script.148
+(Script.143
 	Name:	"TableTools.ChangeFieldType"
 	SourceCode:	"'#################################################################\n'#\n'# Filename:     TableTools_ChangeFieldType.ave\n'# Author:       Adrian Boehlen\n'# Date:         24.01.2014\n'# Version:      0.6\n'#\n'# Purpose:      Aendert den Feldtypen des selektierten Feldes\n'#               indem der Feldinhalt gelesen und in ein\n'#               neues Feld mit gleichem Namen geschrieben wird\n'#\n'#               Das urspruengliche Feld kann auch erhalten werden\n'#               In diesem Fall ist fuer das neue Feld e
 in\n'#               neuer Name zu definieren\n'#\n'#               Stehen im neuen Feld weniger Nachkommastellen\n'#               zur Verfuegung, wird korrekt gerundet\n'#\n'#################################################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecov
@@ -2462,12 +2511,12 @@ lweise als 0 in ein Dezimalfeld schreiben,\n'# oder Feld leer lassen\n\nfor each
  theValue / (10 ^ theDecimalPlaces.AsNumber)\n      theVTab.SetValue(theNewField,rec,theValue)\n    end\n  elseif (theType = \"String\") then\n    theVTab.SetValue(theNewField,rec,theValue.AsString)\n  end\nend\n\n'# Anzeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
 )
 
-(Script.149
+(Script.144
 	Name:	"TableTools.close"
 	SourceCode:	"self.getdialog.close"
 )
 
-(Script.150
+(Script.145
 	Name:	"TableTools.ConcatenateFields"
 	SourceCode:	"' NAME: TableTools_ConcatenateFields.ave\n' HERKUNFT: Harald Kuttig, 2004\n' HILFE: Concatenate fields. Combines the contents of fields to a new string\n'*******************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =\n    \" \"+nl+\n    \n    \"SCRIPTNAME: mm_tableConcatenateFields \"+nl+nl+\n  \n    \"ORIGIN: Harald 2004\"+nl+nl+\n    \n    \"Concatenate fields: Combines the contents of select
 ed fields to a new string \"+\n    \"and writes it to a user defined field. \"+nl+nl+\n    \n    \"You have the option to insert a separator string between the fields. \"+nl+nl+\n    \n    \"Arrange your fields in an order you want their values to appear in the concatenation. \"+nl\n\n  msgbox.report(message,\"INFO: Concatenate Fields ...\")\n  \n  return nil\nend\n\n'-----------------------------------------------------------------\n\ntheTable = av.GetActiveDoc \n\nif (theTable.is(table).not) then\n  MsgBox.Warning(\"Start this Scri
@@ -2487,7 +2536,7 @@ cord is too long and has been cut...\"\n  else\n    theGramma = \"The result str
 heSave = TRUE) then\n      theVTab.StopEditingWithRecovery(TRUE)\n    elseif (theSave = FALSE) then\n      theVTab.StopEditingWithRecovery(FALSE)\n    end\n  else\n    theVTab.StopEditingWithRecovery(TRUE)\n  end\nend\n\nav.ShowMsg(\"llll llll llll llll llll   llll llll llll    COMPLETED : Concatenate Fields...\")\n"
 )
 
-(Script.151
+(Script.146
 	Name:	"TableTools.CopyFieldContent"
 	SourceCode:	"'#################################################################\n'#\n'# Filename:     TableTools_CopyFieldContent.ave\n'# Author:       Adrian Boehlen\n'# Date:         10.06.2014\n'# Version:      0.3\n'#\n'# Purpose:      Kopiert Inhalt eines Feldes in ein bestehendes\n'#               anderes Feld unter Beruecksichtigung des\n'#               jeweiligen Feldtyps.\n'#\n'#               Sind Zeilen selektiert, wird nur der Inhalt\n'#               der selektierten Zeilen kopiert, ansonsten\n'#               der Inha
 lt aller Zeilen\n'#\n'#################################################################\n\n'# die Tabelle muss aktiv und im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 
@@ -2503,7 +2552,7 @@ g = \"FIELD_DECIMAL\") and (theSourceField.getType.AsString = \"FIELD_CHAR\")) t
 eVTab.UpdateSelection\n\n'# Selektion aufheben, wenn zuvor nichts selektiert\n\nif (wasSelected = 0) then\n  theSelected.ClearAll\n  theVTab.UpdateSelection\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend\n"
 )
 
-(Script.152
+(Script.147
 	Name:	"TableTools.CopyRecords"
 	SourceCode:	"' NAME: TableTools_CopyRecords.ave\n' HERKUNFT: Harald 04 / 03 / 03\n' BRAUCHT: Active Table\n' EINBINDUNG MTOOLS: Table Menue (Label: Copy Record Values)\n' HILFE:  Copies the Values of the selected Records  (s. CTRL-Click Info)\n'***************************************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =\n    \" \"+nl+\n    \n    \"SCRIPTNAME: mm_tableAttributeCopy \"+nl+nl+\n  \n  
   \"ORIGIN: based upon 'Copy Features Between Themes' by Tim Johnson \"+nl+nl+\n    \n    \"Copies the values of the selected records. \"+nl+nl+\n    \n    \"Attribute values of the following fields will be missed out: \"+nl+nl+\n    \n    \"   [Shape], \"+nl+\n    \"   [ID], \"+nl+\n    \"   [RecNo], \"+nl+\n    \"   [Area], \"+nl+\n    \"   [Perimeter], \"+nl+\n    \"   [Hectares], \"+nl+\n    \"   [Length], \"+nl+nl+\n    \n    \"   [X_Coord], \"+nl+\n    \"   [Y_Coord], \"+nl+\n    \"   [Z_Coord], \"+nl+nl+\n    \n    \"   [X-Coord], \"+nl+\n    \"  
@@ -2512,7 +2561,7 @@ eVTab.UpdateSelection\n\n'# Selektion aufheben, wenn zuvor nichts selektiert\n\n
 opied\")\n   return NIL\nend\n\nj = 0\nfor each rec in theVTab.GetSelection\n  for each item in _theCFlds\n    fld = theVTab.FindField(item)\n    theValue = theVTab.ReturnValue(fld,rec)\n    _theCVals.add(theValue)\n    j = j + 1\n  end\nend\n\ntheVS = \"\"\nif (j <> 1) then\n  theVS = \"s\"\nend\n\nav.ShowMsg(\"llll llll llll llll llll   llll llll llll    \"+j.AsString++\"Value\"+theVS+\" copied\")\n\n\n\n\n\n"
 )
 
-(Script.153
+(Script.148
 	Name:	"TableTools.Date"
 	SourceCode:	"'##########################################################\n'#\n'# Filename:     TableTools_Date.ave\n'# Author:       Adrian Boehlen\n'# Date:         22.06.2014\n'# Version:      0.1\n'#\n'# Purpose:      Fuellt eine Spalte, bzw. deren selektierte\n'#               Zeilen mit Datumswerten, die zwischen\n'#               einem zu definierenden Start- und \n'#               einem Enddatum liegen.            \n'#\n'##########################################################\n\n'# die Tabelle muss aktiv und im Edit-Modus s
 ein\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld vom Typ \"Date\" aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Warn
@@ -2522,7 +2571,7 @@ return nil\nend\n\nstartDate = startDate.AsNumber\nstartDate = startDate.AsDate\
      exit\n    else\n      theVTab.SetValue(theField,rec,dayList.Get(zeile))\n    end\n  zeile = zeile + 1\n  end\nelse\n  for each rec in theSet\n    if (rec+1 > dayList.Count) then\n      exit\n    else\n      theVTab.SetValue(theField,rec,dayList.Get(rec))\n    end\n  end\nend\n\n'# Anzeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend\n"
 )
 
-(Script.154
+(Script.149
 	Name:	"TableTools.DD2DMS"
 	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_DD2DMS.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.01.2014\n'# Version:      0.1\n'# Based on:     Theme.ConvertDDtoDMS\n'# \n'# Purpose:      Converts DecimalDegrees values\n'#               to DegreesMinutesSeconds\n'#\n'########################################################\n\n' Get the list of tables in the project and let the user pick one\ntabList = {}\nfor each i in av.GetProject.GetDocs\n  if (i.Is(Table)) the
 n\n    tabList.Add(i)\n  end \nend\n\n' Have the user pick the table to convert\ntb = MsgBox.ChoiceAsString(tabList,\n  \"Choose the table which contains the values to convert:\",\n  \"Convert DD to DMS\")\nif (tb = Nil) then\n  return \"\"\nend\ntbv = tb.GetVTab\n\n' Have the user pick the field with the DMS values\nf = MsgBox.ChoiceAsString(tbv.GetFields,\n  \"Choose the field to convert from DD to DMS\",\n  \"Select field\")\nif (f = Nil) then\n  return \"\"\nend\n\nnewFieldName = MsgBox.Input(\"Enter a name for the new field (up to 8 cha
@@ -2532,7 +2581,7 @@ ewf = Field.Make(newFieldName,#FIELD_CHAR,12,0)\ntbv.AddFields({newf})\n\n' Conv
 ring\n  end\n  if (dss < 10) then\n    dss = \"0\" + dss.AsString\n  end\n  \n  dd = (d.asString + \":\" + dm.asString + \":\" + dss.asString)\n  tbv.SetValue(newf,r,dd)\nend\n\n' Stop editing the table\ntbv.SetEditable(false)\n\n"
 )
 
-(Script.155
+(Script.150
 	Name:	"TableTools.DeleteRecordOrField"
 	SourceCode:	"'#########################################################\n'#\n'# Filename:     TableTools_DeleteRecordOrField.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.05.2014\n'# Version:      0.6\n'#\n'# Purpose:      löscht nach Rueckfrage selektierte Zeilen\n'#               oder das selektierte Feld\n'#               Sind sowohl Zeilen wie auch ein Feld \n'#               selektiert, haben die Zeilen Vorrang\n'#               \n'#########################################################\n\ntheTable = av.GetActiveDo
 c\n\nif (theTable.Is(table).Not) then\n  MsgBox.Info(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\n'# die Tabelle muss im Edit-Modus sein\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# pruefen, ob mindestens eine Zeile selektiert ist\n\nif ( theVTab.GetSelection.Count <> 0 ) then\n  if (theVTab.CanEdit.Not) then\n    MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n    return ni
@@ -2540,7 +2589,7 @@ l\n  end\n    \n  '# selektierte Zeilen loeschen\n\n  if (MsgBox.YesNo(\"Selekti
 n nil\n  end\n  theField = theTable.getActiveField\n  if (MsgBox.YesNo(\"Selektiertes Feld '\" + theField.GetAlias.AsString + \"' wirklich loeschen?\",\"Delete Field\",true)) then\n    theTable.StopEditing\n    theTable.GetVTab.RemoveFields({theField})\n  end\n  \n  '# Editsession beenden, wenn zu Beginn nicht gestartet\n  \n  if (theEditstatus = 0) then\n    theVTab.SetEditable(false)\n  end\nend"
 )
 
-(Script.156
+(Script.151
 	Name:	"TableTools.DMS2DD"
 	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_DMS2DD.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.01.2014\n'# Version:      0.1\n'# Based on:     Theme.ConvertDMStoDD\n'# \n'# Purpose:      Converts DegreesMinutesSeconds\n'#               values to DecimalDegrees\n'#\n'########################################################\n\n' Get the list of tables in the project and let the user pick one\ntabList = {}\nfor each i in av.GetProject.GetDocs\n  if (i.Is(Table)) the
 n\n    tabList.Add(i)\n  end \nend\n\n' Have the user pick the table to convert\ntb = MsgBox.ChoiceAsString(tabList,\n  \"Choose the table which contains the values to convert:\",\n  \"Convert DMS values to DD\")\nif (tb = Nil) then\n  return \"\"\nend\ntbv = tb.GetVTab\n\n' Have the user pick the field with the DMS values\nf = MsgBox.ChoiceAsString(tbv.GetFields,\n  \"Choose the field to convert from DMS to DD\",\n  \"Select field\")\nif (f = Nil) then\n  return \"\"\nend\n\nnewFieldName = MsgBox.Input(\"Enter a name for the new field (up t
@@ -2549,12 +2598,7 @@ ield\ntbv.SetEditable(true)\nnewf = Field.Make(newFieldName,#FIELD_DECIMAL,12,6)
 rees = degrees\n  d  = it.Get(0)\n  ' minutes/60\n  m  = ((it.Get(1).asNumber) / 60)\n  ' seconds/3600\n  s  = ((it.Get(2).asNumber) / 3600)\n  ms = (m + s)\n  if (ms <> 0) then\n      ms.SetFormat(\"dd.dddd\")\n      ms = ms.asString.asTokens(\".\").Get(1)\n   end\n  dms = (d + \".\" + ms.asString).asNumber\n  dms.SetFormat(\"dd.dddd\")\n  tbv.SetValueNumber(newf,r,dms)\nend\n\n' Stop editing the table\ntbv.SetEditable(false)\n"
 )
 
-(Script.157
-	Name:	"TableTools.Edit"
-	SourceCode:	"theTable = av.GetActiveDoc\ntheTable.EditValues\n"
-)
-
-(Script.158
+(Script.152
 	Name:	"TableTools.EditAttributes"
 	SourceCode:	"'Author  : Georg A.Zelenin, Odessa(UKRAINE)\n'          Position:GIS programmer.  \n'          Municipality Dpt.on Land Resources and Parcels Control\n'           (tel/fax.(0482) 373 076 )\n'    \n'Script Class: Simple User Edit Interface - \"One Click Editors\". \n'Script Name:  TableTools_EditAttributes.ave\n'\n'Title:   Single (Click/Apply) editor for a long (can not be disposed \n'         on a sinlge screen,too much or long fields ) Open Attributes table.\n'         Single Click editor saves a time for your routin
 e DB edits.                    \n'\n'Topics:  Script transforms clicked row under correction in a column editable\n'         Forms of MultiInput interface boxes, where each field looks like editable\n'         text line.The mode of editing are switched On or Off automatically\n'         under striking Ok(Save)/Cancel(Discard Edits) MultiInput button.\n'         Each input Box contains up to 20 lines (total Screen)\n'         and automatically gives new portion of the data if number of \n'         the DB fields are 
@@ -2566,21 +2610,22 @@ l = (maxl max lnf)\n  end\n  '\n  ' ...true font chars could not be aligned, unf
 \n      for each sel in theVTab.getSelection\n        theVTab.SetValue(f,sel,val)\n      end         \n    end   \n  end\nend\n\ntheVtab.SetEditable(FALSE)\ntheVTab.GetSelection.ClearAll\ntheTable.GetVTab.UpdateSelection\n"
 )
 
-(Script.159
+(Script.153
 	Name:	"TableTools.ExportHTML"
-	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_ExportHTML.ave\n'# Author:       Adrian Boehlen\n'# Date:         16.02.2025\n'# Version:      0.4\n'# Based on:     Table2HTML\n'# \n'# Purpose:      - Konvertiert Tabellen ins HTML-Format\n'#               - verschiedene Stile sind waehlbar\n'#               - Zahlenkolonnen werden rechtsbuendig,\n'#                 Textkolonnen linksbuendig dargestellt\n'#\n'########################################################\n\n'# Direction
+	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_ExportHTML.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.05.2014\n'# Version:      0.3\n'# Based on:     Table2HTML\n'# \n'# Purpose:      - Konvertiert Tabellen ins HTML-Format\n'#               - verschiedene Stile sind waehlbar\n'#               - Zahlenkolonnen werden rechtsbuendig,\n'#                 Textkolonnen linksbuendig dargestellt\n'#\n'########################################################\n\n'# Direction
 s:\n'# -----------\n'# 1. Place this script in a script editor and compile it.\n'# 2. Make the Table document you want to export to HTML format Active.\n'# 3. Edit the table's properties so that the name of the table is the\n'#    title you want to use in the HTML table, Hide any fields you do\n'#    not want in the HTML table, and set aliases for any cryptically\n'#    named fields.\n'# 4. From the Window menu choose the name of the script editor that\n'#    contains this script, and click the Run button.\n'# 5. Cho
 ose the style of HTML table want.\n'# 6. Choose a filename for your HTML table.\n\n'# Style definieren\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheTab = theTable.GetVTab\n\nStyles = {\"Classic\",\"Classic with Highlighted Column\",\"Green & White Rows\",\"Green & White Rows with Highlighted Column\"}\nStyle = Msgbox.ChoiceAsString(Styles,\"Choose a style for your HTML Table:\", \"Save Table as HTML\")\nif (Style = nil) then\n 
- return nil\nend\n\n'# HTML File anlegen\n\ntfn = \"$TEMP\".AsFileName.MakeTmp(\"mytable\",\"html\")          \nrfn = FileDialog.Put(tfn, \"*.html\", \"Save Table as HTML\")\nif (rfn = nil) then\n  return nil\nend\n\nR_file = LineFile.Make(rfn,#FILE_PERM_WRITE)\n\nif  (theTab.GetNumSelRecords > 0) then\n  selOnly = Msgbox.YesNoCancel(\"Export just selected records?\",\"Save Table as HTML\",false)\n  if (SelOnly = nil) then\n    return nil\n  end\nelse\n  selOnly = false\nend\n\n'# Feldnamen ermitteln\n\nmx = 0\nFstr = \"  <tr> \"\nvf = {}\nfor each 
-f in theTab.GetFields\n  if (f.IsVisible) then\n    Fstr = Fstr + 10.AsChar + \"    <th>\"+f.GetAlias+\"</th>\"\n    mx = mx + 1\n    vf.Add(f.GetAlias)\n  end\nend\nFstr = Fstr + 10.AsChar + \"  </tr>\"\n\nif (Style.Contains(\"High\")) then\n  hf = Msgbox.ChoiceAsString(vf,\"Choose a Field to highlight:\",\"Save Table as HTML\")\n  if (hf = nil) then\n    return nil\n  end\nend\n\n'# HTML Header schreiben\n\nR_file.WriteElt(\"<?xml version=\"\"1.0\"\" encoding=\"\"UTF-8\"\" ?>\")\nR_file.WriteElt(\"<!DOCTYPE html PUBLIC \"\"-//W3C//DTD XHTML 1.0 Tra
-nsitional//EN\"\" \"\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\">\")\nR_file.WriteElt(\"<html xmlns=\"\"http://www.w3.org/1999/xhtml\"\" xml:lang=\"\"en\"\" lang=\"\"en\"\">\")\nR_file.WriteElt(\"<head profile=\"\"http://gmpg.org/xfn/11\"\">\")\nR_file.WriteElt(\"<meta http-equiv=\"\"content-type\"\" content=\"\"text/html; charset=utf-8\"\" />\")\nR_file.WriteElt(\"<title>\"+av.GetActiveDoc.GetName+\"</title>\")\nR_file.WriteElt(\"<style type=\"\"text/css\"\">\")\nR_file.WriteElt(\"  h1,h2,td,th,b,i,p,li { font-family:Helvetica,sans-serif; }\")
-\nR_file.WriteElt(\"  h1 { font-size:25px; margin-bottom:8px; }\")\nR_file.WriteElt(\"  h2 { font-size:21px; margin-bottom:7px; }\")\nR_file.WriteElt(\"  th { font-size:20px; }\")\nR_file.WriteElt(\"  p,td { font-size:16px; }\")\nR_file.WriteElt(\"</style>\")\nR_file.WriteElt(\"</head>\")\nR_file.WriteElt(\"<body bgcolor=\"\"#FFFFFF\"\">\")\nR_file.WriteElt(\"<h1>\"+av.GetActiveDoc.GetName+\"</h1>\")\nR_file.WriteElt(\"<table border=\"\"1\"\" width=\"\"100%\"\" cellspacing=\"\"2\"\" cellpadding=\"\"0\"\">\")\nR_file.WriteElt(Fstr)\n\nrt = 1\n\nif (SelOnly = tr
-ue) then\n  xt = theTab.GetSelection\nelse\n  xt = theTab\nend\n\n'# Daten ermitteln und HTML Body schreiben\n\nfor each r in xt\n  if (Style.Contains(\"Green\")) then\n    if (rt < 3) then\n      ColStr = \"#FFFFFF\"\n    elseif (rt <= 4) then\n      ColStr = \"#BBFFBB\"\n    end\n    if (rt = 4) then\n      rt = 0\n    end\n  else\n    ColStr = \"#FFFFFF\"\n  end\n  fstr = \"  <tr>\"\n  for each f in theTab.GetFields\n    if ( (Style.Contains(\"High\")) AND (hf = (f.GetAlias)) ) then\n      Ost = ColStr.Clone\n      ColStr = \"#FFFFBB\"\n    en
-d\n    if (f.IsVisible) then\n      v = theTab.ReturnValueString(f,r)\n      theType = f.getType\n      if ((theType.AsString = \"FIELD_DECIMAL\") or (theType.AsString = \"FIELD_DATE\")) then\n        fstr = fstr + 10.AsChar +\"    <td align=\"\"right\"\" bgcolor=\"\"\"+ColStr+\"\"\"> \"+v+\" </td>\"\n      else\n        fstr = fstr + 10.AsChar +\"    <td align=\"\"left\"\" bgcolor=\"\"\"+ColStr+\"\"\"> \"+v+\" </td>\"\n      end\n    end\n    if ( (Style.Contains(\"High\")) AND (hf = (f.GetAlias)) ) then\n      ColStr = Ost\n    end\n  end\n  fstr = fst
-r + 10.AsChar + \"  </tr>\"\n  R_file.WriteElt(fstr)\n  rt = rt + 1\nend\nR_file.WriteElt(\"</table>\")\nR_file.WriteElt(\"</html>\")\nR_file.Close\n"
+ return nil\nend\n\n'# HTML File anlegen\n\ntfn = \"$TEMP\".AsFileName.MakeTmp(\"mytable\",\"htm\")          \nrfn = FileDialog.Put(tfn, \"*.htm\", \"Save Table as HTML\")\nif (rfn = nil) then\n  return nil\nend\n\nR_file = LineFile.Make(rfn,#FILE_PERM_WRITE)\n\nif  (theTab.GetNumSelRecords > 0) then\n  selOnly = Msgbox.YesNoCancel(\"Export just selected records?\",\"Save Table as HTML\",false)\n  if (SelOnly = nil) then\n    return nil\n  end\nelse\n  selOnly = false\nend\n\n'# Feldnamen ermitteln\n\nmx = 0\nFstr = \"  <tr> \"\nvf = {}\nfor each f 
+in theTab.GetFields\n  if (f.IsVisible) then\n    Fstr = Fstr + 10.AsChar + \"    <th>\"+f.GetAlias+\"</th>\"\n    mx = mx + 1\n    vf.Add(f.GetAlias)\n  end\nend\nFstr = Fstr + 10.AsChar + \"  </tr>\"\n\nif (Style.Contains(\"High\")) then\n  hf = Msgbox.ChoiceAsString(vf,\"Choose a Field to highlight:\",\"Save Table as HTML\")\n  if (hf = nil) then\n    return nil\n  end\nend\n\n'# HTML Header schreiben\n\nR_file.WriteElt(\"<!DOCTYPE html PUBLIC \"\"-//W3C//DTD XHTML 1.0 Transitional//EN\"\"\")\nR_file.WriteElt(\"    \"\"http://www.w3.org/TR/xht
+ml1/DTD/xhtml1-transitional.dtd\"\">\")\nR_file.WriteElt(\"<html xmlns=\"\"http://www.w3.org/1999/xhtml\"\">\")\nR_file.WriteElt(\"<head>\")\nR_file.WriteElt(\"  <meta http-equiv=\"\"Content-Type\"\"\")\nR_file.WriteElt(\"    content=\"\"text/html; charset=iso-8859-1\"\" />\")\nR_file.WriteElt(\"  <title>\"+av.GetActiveDoc.GetName+\"</title>\")\nR_file.WriteElt(\"  <style type=\"\"text/css\"\">\")\nR_file.WriteElt(\"    h1,td,th,b,i { font-family:Helvetica,sans-serif; }\")\nR_file.WriteElt(\"    h1 { font-size:26px; margin-bottom:18px; }\")\nR_file.Wri
+teElt(\"    th { font-size:20px; }\")\nR_file.WriteElt(\"    p,td { font-size:18px; }\")\nR_file.WriteElt(\"  </style>\")\nR_file.WriteElt(\"</head>\")\nR_file.WriteElt(\"<body bgcolor=\"\"#FFFFFF\"\">\")\nR_file.WriteElt(\"<table border=\"\"0\"\" width=\"\"100%\"\" cellspacing=\"\"2\"\" cellpadding=\"\"0\"\">\")\nR_file.WriteElt(\"  <tbody>\")\nR_file.WriteElt(\"    <tr>\")\nR_file.WriteElt(\"      <td align=\"\"center\"\">\")\nR_file.WriteElt(\"      <h1>\"+av.GetActiveDoc.GetName+\"</h1>\")\nR_file.WriteElt(\"      <br />\")\nR_file.WriteElt(\"      </td>\")\nR_fil
+e.WriteElt(\"    </tr>\")\nR_file.WriteElt(\"  </tbody>\")\nR_file.WriteElt(\"</table>\")\n\nR_file.WriteElt(\"<table border=\"\"1\"\" width=\"\"100%\"\" cellspacing=\"\"2\"\" cellpadding=\"\"0\"\">\")\n'# urspruengliche Syntax fuer Titel\n'R_file.WriteElt(\"  <tr>\")\n'R_file.WriteElt(\"    <th colspan=\"+mx.AsString+\">\"+av.GetActiveDoc.GetName+\"</th>\")\n'R_file.WriteElt(\"  </tr>\")\nR_file.WriteElt(Fstr)\n\nrt = 1\n\nif (SelOnly = true) then\n  xt = theTab.GetSelection\nelse\n  xt = theTab\nend\n\n'# Daten ermitteln und HTML Body schreiben\n\nfor each r 
+in xt\n  if (Style.Contains(\"Green\")) then\n    if (rt < 3) then\n      ColStr = \"#FFFFFF\"\n    elseif (rt <= 4) then\n      ColStr = \"#BBFFBB\"\n    end\n    if (rt = 4) then\n      rt = 0\n    end\n  else\n    ColStr = \"#FFFFFF\"\n  end\n  fstr = \"  <tr>\"\n  for each f in theTab.GetFields\n    if ( (Style.Contains(\"High\")) AND (hf = (f.GetAlias)) ) then\n      Ost = ColStr.Clone\n      ColStr = \"#FFFFBB\"\n    end\n    if (f.IsVisible) then\n      v = theTab.ReturnValueString(f,r)\n      theType = f.getType\n      if ((theType.As
+String = \"FIELD_DECIMAL\") or (theType.AsString = \"FIELD_DATE\")) then\n        fstr = fstr + 10.AsChar +\"    <td align=\"\"right\"\" bgcolor=\"+ColStr+\"> \"+v+\" </td>\"\n      else\n        fstr = fstr + 10.AsChar +\"    <td align=\"\"left\"\" bgcolor=\"+ColStr+\"> \"+v+\" </td>\"\n      end\n    end\n    if ( (Style.Contains(\"High\")) AND (hf = (f.GetAlias)) ) then\n      ColStr = Ost\n    end\n  end\n  fstr = fstr + 10.AsChar + \"  </tr>\"\n  R_file.WriteElt(fstr)\n  rt = rt + 1\nend\nR_file.WriteElt(\"</table>\")\nR_file.WriteElt(\"</html>\")\n
+R_file.Close\n"
 )
 
-(Script.160
+(Script.154
 	Name:	"TableTools.FindDuplicateValues"
 	SourceCode:	"'Name: TableTools_FindDuplicateValues.ave\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\nNumber.SetDefFormat(\"d\")\n\n'***** ADVISE TO STOP EDITING ESP. IF RECORDS HAVE BEEN DELETED *****\ndoSave = \"\"\nif (theVTab.IsBeingEditedWithRecovery) then\n  doSave = MsgBox.YesNoCancel(\"The \"+theVTab.GetName+\" is currently being edited...Save Edits?\"++\n                              \"  To proceed in edi
 t mode with limited options, click 'Cancel'.\", \n                              \"Stop Editing\", True)\n  if (doSave = nil) then\n    'return nil\n  else\n    if (theVTab.StopEditingWithRecovery(doSave).Not) then\n      MsgBox.Info(\"Unable to Save Edits, please use the 'Save Edits As' option\", \"\")\n      return nil\n    end\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nend\ntheVTab.Refresh\n\nproceed = (theVTab.Is(FTab) and (doSave = nil)).Not\n\n'***** GET USER SELECTED FIELDS *****\nfldList = theVTa
@@ -2598,16 +2643,13 @@ turn nil end\n    if (selList.FindByValue(\"APPLY PREVIOUS SELECTION\") <> -1) t
 = 1) then\n    msg = \"No duplicate values were found.\"\n  else\n    msg = \"No duplicate value sets were found.\"\n  end\n  Msgbox.Info(msg, \"Searching for Duplicates\")\nend\n\nNumber.SetDefFormat(\"\")\n\ndupDic = nil\ndupBitmap = nil\nav.GetProject.SetModified(True)\n\nreturn nil\n"
 )
 
-(Script.161
-	Name:	"TableTools.GetFieldProperties"
-	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_GetFieldProperties.ave\n'# Author:       Adrian Boehlen\n'# Date:         14.05.2017\n'# Version:      0.6\n'#\n'# Purpose:      zeigt den Datentyp des selektierten\n'#               Feldes und seine Definitionen an\n'#\n'########################################################\n\n'# die Tabelle muss aktiv sein\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\"
-,\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Warning(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\ntheFieldName = theField.GetName\ntheFieldAlias = theField.GetAlias\n\ntheType = theField.getType\nif (theType.AsString = \"FIELD_DECIMAL\") then\n  theWidth = theField.GetWidth.AsString\n  thePrecision = theField.GetPrecision.AsString\n  if (theFieldName <> theFieldAlias) then\n    MsgBox.Inf
-o(\"Name: \"+theFieldName.AsString+NL+\"Alias: \"+theFieldAlias.AsString+NL+\"Type: Number\"+NL+\"Width: \"+theWidth+NL+\"Precision: \"+thePrecision,theFieldName.AsString+\" (\"+theFieldAlias.AsString+\")\")\n  else\n    MsgBox.Info(\"Name: \"+theFieldName.AsString+NL+\"Type: Number\"+NL+\"Width: \"+theWidth+NL+\"Precision: \"+thePrecision,theFieldName.AsString)\n  end\nelseif (theType.AsString = \"FIELD_CHAR\") then\n  theWidth = theField.GetWidth.AsString\n  if (theFieldName <> theFieldAlias) then\n    MsgBox.Info(\"Name: \"+theFieldName
-.AsString+NL+\"Alias: \"+theFieldAlias.AsString+NL+\"Type: String\"+NL+\"Width: \"+theWidth,theFieldName.AsString+\" (\"+theFieldAlias.AsString+\")\")\n  else\n    MsgBox.Info(\"Name: \"+theFieldName.AsString+NL+\"Type: String\"+NL+\"Width: \"+theWidth,theFieldName.AsString)\n  end\nelseif (theType.AsString = \"FIELD_LOGICAL\") then\n  if (theFieldName <> theFieldAlias) then\n    MsgBox.Info(\"Name: \"+theFieldName.AsString+NL+\"Alias: \"+theFieldAlias.AsString+NL+\"Type: Boolean\",theFieldName.AsString+\" (\"+theFieldAlias.AsString+\")\")\n
-  else\n    MsgBox.Info(\"Name: \"+theFieldName.AsString+NL+\"Type: Boolean\",theFieldName.AsString)\n  end\nelseif (theType.AsString = \"FIELD_DATE\") then\n  if (theFieldName <> theFieldAlias) then\n    MsgBox.Info(\"Name: \"+theFieldName.AsString+NL+\"Alias: \"+theFieldAlias.AsString+NL+\"Type: Date\",theFieldName.AsString+\" (\"+theFieldAlias.AsString+\")\")\n  else\n    MsgBox.Info(\"Name: \"+theFieldName.AsString+NL+\"Type: Date\",theFieldName.AsString)\n  end\nend"
+(Script.155
+	Name:	"TableTools.GetFieldType"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_GetFieldType.ave\n'# Author:       Adrian Boehlen\n'# Date:         11.01.2014\n'# Version:      0.3\n'#\n'# Purpose:      zeigt den Datentyp des selektierten\n'#               Feldes an\n'#\n'########################################################\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Warning(\"Es ist kein Feld aktiv\",\"Abbruch\")\n
+  return nil\nend\n\ntheField = theTable.GetActiveField\ntheFieldName = theField.GetName\n\ntheType = theField.getType\nif (theType.AsString = \"FIELD_DECIMAL\") then\n  MsgBox.Info(\"Type: Number\",theFieldName.AsString)\nelseif (theType.AsString = \"FIELD_CHAR\") then\n  MsgBox.Info(\"Type: String\",theFieldName.AsString)\nelseif (theType.AsString = \"FIELD_LOGICAL\") then\n  MsgBox.Info(\"Type: Boolean\",theFieldName.AsString)\nelseif (theType.AsString = \"FIELD_DATE\") then\n  MsgBox.Info(\"Type: Date\",theFieldName.AsString)\nend"
 )
 
-(Script.162
+(Script.156
 	Name:	"TableTools.Index"
 	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_Index.ave\n'# Author:       Adrian Boehlen\n'# Date:         10.06.2014\n'# Version:      0.12\n'#\n'# Purpose:      Berechnet einen Index, ausgehend von\n'#               einem zu definierenden Initialwert mit\n'#               einer zu definierenden Schrittweite\n'#\n'#               ist eine Selektion vorhanden, wird die \n'#               Berechnung nur auf der Selektion durch-\n'#               gefuehrt\n'#\n'##################
 ######################################\n\n'# die Tabelle muss aktiv und im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein 
@@ -2617,7 +2659,7 @@ elected = theVTab.GetSelection\n\n'# Berechnung durchfuehren\n\nif (theVTab.GetS
 heField,rec,theSum)\n    end\n    theSum = theInterval + theSum\n  end\nend\n\n'# Anzeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
 )
 
-(Script.163
+(Script.157
 	Name:	"TableTools.ModifyFieldType"
 	SourceCode:	"' NAME: TableTools_ModifyFieldType.ave\n' HERKUNFT: Mel VanderWal, Tom Cosmas - MODIFIED : Harald (Several Fields, modify Type and Precision)\n' EINBINDUNG MTOOLS: Tabellen-Menueeintrag (Label: Rename and modify Fields... )\n' HILFE: Benennt die ausgewaehlten Felder um und aendert - wenn gewollt - Type, Width und Precision  (s. Ctrl-Klick Info)\n'***************************************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n 
 \nif (System.IsControlKeyDown) then\n\n  message =\n    \" \"+nl+\n    \n    \"SCRIPTNAME: mm_tableRenameModifyField \"+nl+nl+\n  \n    \"ORIGIN: Mel VanderWal, Tom Cosmas, Harald (07.2003) \"+nl+nl+\n    \n    \"Renames the chosen fields and modifies - if desired - type, width and precision. \"+nl+nl+\n    \n    \"The new name should count less than 32 characters, More than 10 characters create an alias. \"+nl+nl+\n    \n    \"If you want to preserve the originial name of the modified fields, hold the Shift key down and click OK w
@@ -2651,7 +2693,7 @@ ox.YesNo(\"Delete old field  '\"+theFldString+\"'?\", \"'\"+theFldString+\"' -->
 Cancel to stay in edit mode and check the results...\",\" Stop Editing\",TRUE)\n    if (theSave = TRUE) then\n      theVTab.StopEditingWithRecovery(TRUE)\n    elseif (theSave = FALSE) then\n      theVTab.StopEditingWithRecovery(FALSE)\n    end\n  else\n    theVTab.StopEditingWithRecovery(TRUE)\n  end\nend\n\nav.ShowMsg(\"llll llll llll llll llll   llll llll llll    COMPLETED: Modify Fields...\")\n\n' EOF\n"
 )
 
-(Script.164
+(Script.158
 	Name:	"TableTools.MoveField"
 	SourceCode:	"\n' NAME: TableTools_MoveField.ave\n' HERKUNFT: Harald 03 / 03\n' REQUIRES: Active Table, Active Field\n' INTEGRATION MTOOLS: Table Button (Label: Move active Field...)\n' HILFE:  Moves the active field to a position behind the field chosen from a ListBox  (s. CTRL Click Info)\n'***************************************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =\n    \" \"+nl+\n    \n    \"S
 CRIPTNAME: mm_tableSubstituteString \"+nl+nl+\n  \n    \"ORIGIN: Harald, 03.2005 \"+nl+nl+\n    \n    \"Moves the active field to a position behind the field chosen from a ListBox. \"+nl+nl+\n    \n    \"If the SHIFT key is down or if no field is active or if the Shape field is active you can choose a \"+\n    \"group of fields from a list and move them together to a position behind the field chosen from a ListBox. \"+nl+nl+\n    \n    \"All movements are non-permanent. \"+nl\n      \n  msgbox.report(message,\"INFO: Move Fields..
@@ -2664,14 +2706,13 @@ sFS = NIL) then return NIL end\n\n'theNuNum = MsgBox.Input(\"Enter a new positio
 eNuPos)+1)\ntheVTab.Refresh \n\ntheReActField = theVTab.FindField(theActFldSt)\ntheTable.SetActiveField (theReActField)\ntheVTab.Refresh \n\n' -----------------------------------------------------------------------------------\n\n"
 )
 
-(Script.165
+(Script.159
 	Name:	"TableTools.NewTable"
-	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_NewTable.ave\n'# Author:       Adrian Boehlen\n'# Date:         16.11.2014\n'# Version:      0.2\n'# Based on:     Table.New\n'#\n'# Purpose:      erstellt eine neue Tabelle im dbf-Format             \n'#\n'########################################################\n\nname = av.GetProject.FindGUI(\"Table\")\ntheFile = FileDialog.Put(av.GetProject.MakeFileName(name.AsString,\"dbf\"), \n                         \"*.dbf\", \n                  
-       \"New Table\")\nif (theFile = NIL) then\n  return nil\nend\n\nv = VTab.MakeNew(theFile,dBASE)\nif (v.HasError) then\n    if (v.HasLockError) then\n      MsgBox.Error(\"Unable to acquire Write Lock for file \" + theFile.GetBaseName, \"\")\n    else\n      MsgBox.Error(\"Unable to create \" + theFile.GetBaseName, \"\")\n    end\n    return nil\nend\nnewTable = Table.MakeWithGUI(VTab.MakeNew(theFile,dBASE), av.GetProject.FindGUI(\"Table\").AsString)\nnewTable.SetName(newTable.GetVTab.GetName)\nnewTable.SetCreator(\"Adrian Boehlen\")
-\nnewTable.GetWin.Open\nnewTable.GetVTab.SetEditable(False)\nnewTable.GetVTab.StartEditingWithRecovery"
+	SourceCode:	"'# Name: TableTools_NewTable.ave\nname = av.GetProject.GetSelectedGUI.GetDocBaseName.lcase\ntheFile = FileDialog.Put(av.GetProject.MakeFileName(name,\"dbf\"), \n                         \"*.dbf\", \n                         \"New Table\")\nif (theFile = NIL) then\n  return nil\nend\n\nv = VTab.MakeNew(theFile,dBASE)\nif (v.HasError) then\n    if (v.HasLockError) then\n      MsgBox.Error(\"Unable to acquire Write Lock for file \" + theFile.GetBaseName, \"\")\n    else\n      MsgBox.Error(\"Unable to create \" + theFile.GetBaseName, \"
+\")\n    end\n    return nil\nend\nnewTable = Table.MakeWithGUI(VTab.MakeNew(theFile,dBASE), av.GetProject.GetSelectedGUI.GetName)\nnewTable.SetName(newTable.GetVTab.GetName)\nnewTable.GetWin.Open\nnewTable.GetVTab.SetEditable(False)\nnewTable.GetVTab.StartEditingWithRecovery"
 )
 
-(Script.166
+(Script.160
 	Name:	"TableTools.PasteRecords"
 	SourceCode:	"' NAME: TableTools_PasteRecords.ave\n' HERKUNFT: Harald 04 / 03 / 03\n' BRAUCHT: Active Table\n' EINBINDUNG MTOOLS: Table Menue (Label: Paste Record Values)\n' HILFE:  Pastes the copied Record Values to the selected Records  (s. CTRL-Click Info)\n'***************************************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =\n    \" \"+nl+\n    \n    \"SCRIPT NAME: mm_tableAttributePa
 ste \"+nl+nl+\n  \n    \"ORIGIN: based upon 'Copy Features between Themes' by Tim Johnson \"+nl+nl+\n    \n    \"Pastes the copied values to the selected records. \"+nl+nl+\n    \n    \"Attribute values of the following fields will be missed out: \"+nl+nl+\n    \n    \"   [Shape], \"+nl+\n    \"   [ID], \"+nl+\n    \"   [RecNo], \"+nl+\n    \"   [Area], \"+nl+\n    \"   [Perimeter], \"+nl+\n    \"   [Hectares], \"+nl+\n    \"   [Length], \"+nl+nl+\n    \n    \"   [X_Coord], \"+nl+\n    \"   [Y_Coord], \"+nl+\n    \"   [Z_Coord], \"+nl+nl+\n    \n    \"  
@@ -2686,26 +2727,17 @@ ld.GetAlias <> \"Y_Coord\") and \n      (theSFld.GetAlias <> \"Z_Coord\") and\n\
 record\"+theRS+\" processed  (\"+\n           j.AsString++\"Value\"+theVS+\" inserted)  -  Please check the results and save if they are okay...\")\n\n\n\n"
 )
 
-(Script.167
+(Script.161
 	Name:	"TableTools.PasteRecordsUpdate"
 	SourceCode:	"' Name: TableTools_PasteRecordsUpdate.ave\ntheVari = \"theCVals\"\n\ntheTestScript = Script.Make(\"return _\"+theVari)\nif (theTestScript.HasError) then\n  _theCVals = NIL\nend\n\nSELF.SetEnabled((_theCVals <> NIL) and (_theCVals.count > 0))\n"
 )
 
-(Script.168
-	Name:	"TableTools.SaveLoadAliasFile"
-	SourceCode:	"'#############################################################\n'#\n'# Filename:     TableTools_SaveLoadAliasFile.ave\n'# Author:       Adrian Boehlen\n'# Date:         15.11.2014\n'# Version:      0.1\n'#\n'# Purpose:      exportieren und importieren von Field-Aliases \n'#                - Click: exportiert Field-Aliases in ein\n'#                  CSV-File mit der Endung .alias\n'#                - Shift-Click: importiert .alias-File\n'#                  und weist den passenden Feldern die\n'#                  defini
-erten Aliases zu            \n'#\n'#############################################################\n\n'# die Tabelle muss aktiv sein\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\ntheFields = theVTab.GetFields\n\nif (System.IsShiftKeyDown) then\n  '# Dialogbox definieren und File auswaehlen\n  theFileName = FileDialog.Show(\"*.alias\",\"Alias-File\",\"Select Alias File\")\n  if (theFileName = nil) then 
-\n    exit \n  end\n\n  '# File in LineFile einlesen\n  tableFile = LineFile.Make(theFileName, #FILE_PERM_READ)\n\n  '# Fileinhalt Zeile fuer Zeile durchgehen\n  '# Tabelle Feld fuer Feld durchgehen\n  '# wenn Feldname passt, Alias aus File zuweisen\n  while (true)\n    zeile = tableFile.ReadElt\n    if (zeile = nil) then\n      break\n    else\n      textListe = zeile.AsTokens(\",\")\n      'MsgBox.Info(textListe.Get(1),\"\")\n      for each theField in theFields\n        if (textListe.Get(0) = theField.GetName) then\n          
-theField.SetAlias(textListe.Get(1))\n        end\n      end\n    end\n  end\n\n  '# Anzeige aktualisieren\n\n  theVTab.UpdateSelection\n\n  '# File schliessen\n  tableFile.Close\nelse\n  '# Endung definieren\n  Suffix = \"alias\"\n\n  '# Dialogbox definieren und File anlegen\n  theFileName = av.GetProject.GetWorkDir.MakeTmp(\"table\",Suffix)\n  theFileName = FileDialog.Put(theFileName, \"*.\" + Suffix,\"Save Alias File\")\n  if (theFileName = nil) then\n    return nil\n  end\n  tableFile = LineFile.Make(theFileName, #FILE_PERM_WRITE)\n\n 
- '# Name und Alias jedes Feldes ins File schreiben\n  for each theField in theFields\n    theAlias = theField.GetAlias\n    theName = theField.GetName\n    tableFile.WriteElt(theName+\",\"+theAlias)\n  end\n\n  tableFile.Close\nend\n\n\n\n\n"
-)
-
-(Script.169
+(Script.162
 	Name:	"TableTools.Select"
 	SourceCode:	"theTable = av.GetActiveDoc\ntheTable.Select\nav.GetProject.SetModified(true)"
 )
 
-(Script.170
+(Script.163
 	Name:	"TableTools.SelectMany"
 	SourceCode:	"'########################################################\n'#\n'# Filename:     TableTools_SelectMany.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.05.2014\n'# Version:      0.6\n'#\n'# Purpose:      selektiert alle Records zwischen zwei\n'#               zu definierenden Zeilen\n'#               \n'#               bereits vorhandene Selektionen werden\n'#               zuvor aufgehoben\n'#\n'########################################################\n\n\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) th
 en\n  MsgBox.Info(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\n'# erste und letzte zu selektierende Zeile definieren\n\ntheFirst = MsgBox.Input(\"Geben Sie die erste zu selektierende Zeile ein\", \"erste Zeile definieren\",1.AsString)\n\nif (theFirst = nil) then\n  return nil\nelseif (theFirst.IsNumber.Not) then\n  MsgBox.Error(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif (theFirst.AsNumber < 1) then\n  MsgBox.Error(\"Zeile\" ++theFirst.AsString++ \"existiert nicht\",\"Ab
@@ -2713,7 +2745,7 @@ bruch\")\n  return nil\nend\n\ntheLast = MsgBox.Input(\"Geben Sie die letzte zu 
 istiert nicht\",\"Abbruch\")\n  return nil\nend\n\n\ntheFirst = theFirst.AsNumber - 1\ntheLast = theLast.AsNumber - 1\n\n'# allfaellig vorhandene Selektionen aufheben\n\ntheSelected = theVTab.GetSelection\ntheSelected.ClearAll\ntheVTab.UpdateSelection\n\n'# Selektion durchfuehren\n\nfor each rec in theFirst..theLast\n  theSelected.Set(rec)\n  theVTab.SetSelection(theSelected)\n  theVTab.UpdateSelection\nend\n"
 )
 
-(Script.171
+(Script.164
 	Name:	"TableTools.SetFieldDisplayWidth"
 	SourceCode:	"'  TableTools_SetFieldDisplayWidth.ave \n'  - Click = Increase by 20% -- \n'  - Shift & Click = Decrease by 20% -- \n'  - Control & Click = Automatic Set to Data Width\n'  \n'===========================================================\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\nif (theVTab.IsLinked = true) then\n  MsgBox.Warning( \"Sorry - don't work on linked tables - Indexing Problems\", \" 
 \" )\n  return nil\nend\nif (theVTab.IsBase = False) then\n  MsgBox.Warning( \"Sorry - don't work on joined tables - Indexing Problems\", \" \" )\n  return nil\nend\n\n\nif (System.IsControlKeyDown) then\n  FD = \"d.ddd\"\n  newgt = 1\n  newgt.SetFormat(FD)\n\n  theFieldlist = theVTab.GetFields\n  theRecs = theVTab\n  theCount = theRecs.GetNumRecords\n  av.ShowStopButton \n  pg = 0\n  for each F in theFieldlist\n    if (F.AsString = \"Shape\") then\n      continue\n    end\n    Ftype = F.IsTypeNumber\n    Falias = F.GetAlias  \n    Fwidth =
@@ -2723,7 +2755,7 @@ tring = \"Shape\") then\n      continue\n    end\n    W = F.GetPixelWidth\n    x
 g = \"Shape\") then\n    continue\n  end\n  W = F.GetPixelWidth\n  x = W + (W*N)\n  F.SetPixelWidth (x)\n  progress = (pg/theFieldlist.count) * 100\n  doMore = av.SetStatus( progress )\n  if (not doMore) then\n    return nil\n  end\n  pg = pg + 1\nend\n\ntheTest = theVTab.Refresh\nav.ClearStatus  \npg.SetFormat(\"\")\nreturn nil \n\n"
 )
 
-(Script.172
+(Script.165
 	Name:	"TableTools.SimpleSum"
 	SourceCode:	"'###############################################################\n'#\n'# Filename:     TableTools_SimpleSum.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.06.2014\n'# Version:      0.10\n'#\n'# Purpose:      Summiert die Werte eines Feldes und\n'#               schreibt das Ergebnis in die selektierte Zeile\n'#\n'#               Funktioniert in numerischen und Textfeldern\n'#\n'###############################################################\n\n'# die Tabelle muss aktiv und im Edit-Modus sein\n\ntheTable = av.Get
 ActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Warning(\"Es ist kein Feld aktiv\",\"Abbruch
@@ -2734,7 +2766,7 @@ hen\n    theSum.SetFormat(\"d.ddd\")\n  elseif (dez = \"4\") then\n    theSum.Se
 theField.getType.AsString = \"FIELD_CHAR\") then\n    theVTab.SetValue(theField,rec,theSum.AsString)\n  else\n    theVTab.SetValue(theField,rec,theSum)\n  end\nend\n\n'# Anzeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
 )
 
-(Script.173
+(Script.166
 	Name:	"TableTools.Sort"
 	SourceCode:	"'\n' TableTools_Sort.ave\n' (c) 1998-2000 Quantitative Decisions, Merion, PA USA\n' http://www.quantdec.com\n'\n' Physically sort records in a table or theme.\n'\n' SELF:    void\n'\n' RETURNS: Error code (integer).  See the \"constants\" section.\n'\n' CONTEXT: Run from a table or a view with one active ftheme.\n'\n' All selected records are sorted on the active field\n' and moved in sort order to the end of the physical table.\n' If no records are selected, the process is applied to all\n' records.  \n' If there is no activ
 e field, the user is prompted to select one.\n' In any event, the user is asked whether to sort in \n' ascending or descending order.\n'\n' Intended to establish drawing order in editable themes:\n' shapes are drawn in the order encountered while processing\n' the FTab.  Thus this operation visually \"promotes\" the\n' selected features to the top and they are drawn from first\n' (in sort order) to last among themselves.  For example,\n' if the selection consists of a single record, it is \n' promoted to the top of the
@@ -2756,36 +2788,29 @@ rocess any errors that occurred.\n'\nif (nCode <> nSUCCESS) then            ' 22
 nable to save the changes; aborting...\", sTitle)\n  return nERR_SAVE\nend\n'\n' Update the selection and definition bitmaps.\n'\nif (wasUnselected.Not) then\n  aVTab.GetSelection.SetRange(M-N, N)\n  aVTab.UpdateSelection\nend\naVTab.SetDefinition(aVTab.GetDefinition)\naVTab.UpdateDefBitmap\n'\n' Synchronize the disk and in-memory versions of the VTab.\n'\naVTab.Flush\n'\n' Clean up the project if necessary.\n'\nif (wasAdded) then\n  av.GetProject.RemoveDoc(aTable)\nelse\n  aTable.GetWin.Open\nend\nreturn nSUCCESS\n' end of script\n"
 )
 
-(Script.174
+(Script.167
 	Name:	"TableTools.start"
 	SourceCode:	"av.getproject.finddialog(\"TableTools\").open"
 )
 
-(Script.175
+(Script.168
 	Name:	"TableTools.ToggleEditing"
 	SourceCode:	"' Name: TableTools_ToggleEditing.ave\ntheTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Info(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheVTab = theTable.GetVTab\nif (theVTab.IsBeingEditedWithRecovery) then\n  doSave = MsgBox.YesNoCancel(\"Save Edits?\", \"Stop Editing\", True)\n  if (doSave = nil) then\n    return nil\n  end\n  if (theVtab.StopEditingWithRecovery(doSave).Not) then\n     MsgBox.Info(\"Unable to Save Edits, please use the Save Edits As option\", \"\")\n     return ni
 l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n  theVTab.StartEditingWithRecovery\nend"
 )
 
-(Script.176
-	Name:	"TableTools.Unselect"
-	SourceCode:	"theTable = av.GetActiveDoc\n\nif (theTable.Is(table).Not) then\n  MsgBox.Info(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\ntheTable.GetVTab.GetSelection.ClearAll\ntheTable.GetVTab.UpdateSelection\n"
-)
-
-(Script.177
-	Name:	"Ext.Unload"
+(Script.169
+	Name:	"Ext_unload"
 	SourceCode:	"Dialog.DetachFromExtension(self)\n"
 )
 
-(Script.178
-	Name:	"Ext.Inst"
-	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext_Inst.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      installiert die Extension \n'#\n'#########################################################################\n\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nSack=self\n\nSchaltflaeche=Sack.get(0)\ntableGUI = av.GetProject.FindGUI( \"Table\" )\nif (tableGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon ex
-istiert\n    if(tableGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      'Schaltfläche an der 2. Stelle einfügen\n      tableGUI.GetButtonBar.Add( Schaltflaeche, 2)\n    end\nend\n\nav.getproject.Adddialog( Sack.get(1)) '# 1. Dialog hinzufuegen\n\n\n\n"
+(Script.170
+	Name:	"Ext_Inst"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nSack=self\n\nSchaltflaeche=Sack.get(0)\ntableGUI = av.GetProject.FindGUI( \"Table\" )\nif (tableGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon existiert\n    if(tableGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      'Schaltfläche an der 2. Stelle einfügen\n      tableGUI.GetButtonBar.Add( Schaltflaeche, 2)\n    end\nend\n\nav.getproject.Adddialog( Sack.get(1))\n\n\n\n"
 )
 
-(Script.179
-	Name:	"Ext.Unin"
-	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext_Unin.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      entfernt die Komponenten beim Deaktivieren der Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nviewGUI = av.GetProject.FindGUI( \"Table\" )\n\n'# Schaltflaeche und D
-ialoge entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \"TableTools.start\"))\nav.GetProject.removedialog(\"TableTools\")\n"
+(Script.171
+	Name:	"Ext_unin"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\n\nviewGUI = av.GetProject.FindGUI( \"Table\" )\n\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \"TableTools.start\"))\nav.GetProject.removedialog(\"TableTools\")\n"
 )
 

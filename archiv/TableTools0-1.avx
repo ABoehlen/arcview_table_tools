@@ -1,0 +1,402 @@
+/3.2
+(Extension.1
+	Name:	"TableTools"
+	Dependencies:	"$AVBIN/avdlog.dll\n"
+	FirstRootClassName:	"Butn"
+	Roots:	2
+	Roots:	4
+	Roots:	24
+	Roots:	25
+	Roots:	26
+	Roots:	27
+	Version:	32
+	About:	"TableTools Toolbar (v0.1) "
+	UnloadScript:	28
+	InstallScript:	29
+	UninstallScript:	30
+	ExtVersion:	1
+)
+
+(Butn.2
+	Help:	"Start Table Tools toolbar//"
+	Icon:	3
+	Click:	"TableTools.start"
+)
+
+(AVIcon.3
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(AVDLog.4
+	Name:	"TableTools"
+	X:	339
+	Y:	122
+	W:	135
+	H:	45
+	ConstrainedControlNames:	5
+	ConstrainedControlNames:	6
+	ConstrainedControlNames:	7
+	Constraints:	8
+	Constraints:	9
+	Constraints:	10
+	Server:	11
+	ControlPanel:	12
+	Title:	"Table Tools"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	23
+)
+
+(AVStr.5
+	S:	"Close"
+)
+
+(AVStr.6
+	S:	"Sum"
+)
+
+(AVStr.7
+	S:	"StartEditing"
+)
+
+(Numb.8
+	N:	85.00000000000000
+)
+
+(Numb.9
+	N:	85.00000000000000
+)
+
+(Numb.10
+	N:	85.00000000000000
+)
+
+(Nil.11
+)
+
+(CPanel.12
+	Child:	13
+	ResBox:	22
+	Listening:	1
+)
+
+(CPanel.13
+	InternalName:	"aControlPanel2"
+	Child:	14
+	Child:	16
+	Child:	17
+	Constraints:	0x55
+	ResBox:	19
+	ResBox:	20
+	ResBox:	21
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.14
+	InternalName:	"Sum"
+	Help:	"Calculates sum and writes it into the selected cell//"
+	Icon:	15
+	Click:	"TableTools.Sum"
+)
+
+(AVIcon.15
+	Name:	"Summarize2"
+	Res:	"Icons.Summarize2"
+
+)
+
+(LButn.16
+	InternalName:	"Close"
+	Help:	"Close Table Tools toolbar//"
+	Label:	"Close"
+	Click:	"TableTools.close"
+)
+
+(Butn.17
+	InternalName:	"StartEditing"
+	Help:	"Starts or stops edit session//"
+	Icon:	18
+	Click:	"TableTools.ToggleEditing"
+)
+
+(AVIcon.18
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(RectD.19
+	Left:	41.00000000000000
+	Top:	30.00000000000000
+	Right:	65.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.20
+	Left:	73.00000000000000
+	Top:	30.00000000000000
+	Right:	116.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.21
+	Left:	9.00000000000000
+	Top:	30.00000000000000
+	Right:	33.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.22
+	Left:	8.00000000000000
+	Top:	40.00000000000000
+	Right:	132.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(Nil.23
+)
+
+(Script.24
+	Name:	"TableTools.close"
+	SourceCode:	"self.getdialog.close"
+)
+
+(Script.25
+	Name:	"TableTools.start"
+	SourceCode:	"av.getproject.finddialog(\"TableTools\").open"
+)
+
+(Script.26
+	Name:	"TableTools.Sum"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     table_sum.ave\n'# Author:       Adrian Boehlen\n'# Date:         11.11.2013\n'# Version:      0.1\n'#\n'# Purpose:      Summiert die Werte eines Feldes und\n'#               schreibt das Ergebnis in ein neues Feld\n'#\n'########################################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht b
+earbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  MsgBox.Info(\"Die Tabelle ist nicht im Edit-Modus\",\"Abbruch\")\n  return nil\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Info(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\n\nthePrecision = \"d.dddddddddd\"\ntheFieldPrecision = theField.GetPrecision\nScript.The.SetNumberFormat( thePrecision.Left( theFieldPrecision + 2 ) )\n\n'# Es muss eine Zeile selekti
+ert sein\n\nif ( theVTab.GetSelection.Count <> 1 ) then\n  MsgBox.Info(\"Die Zeile mit dem Zielfeld muss selektiert sein\",\"Abbruch\")\n  return nil\nend\n\n'# Wert im Zielfeld auf 0 stellen\n\ntheSelected = theVTab.GetSelection\nfor each rec in theSelected\n  theVTab.SetValue(theField,rec,0)\nend\n\n'# Summe ermitteln und in Zielfeld schreiben\n\ntheSet = theVTab\ntheSelected = theVTab.GetSelection\n\ntheSum = 0\nfor each rec in theSet\n  theValue = theVTab.ReturnValueNumber( theField, rec )\n  if ( not ( theValue.IsNull ) ) then\n
+    theSum = theValue + theSum\n  end\nend\n\nfor each rec in theSelected\n  theVTab.SetValue(theField,rec,theSum)\nend\n\n"
+)
+
+(Script.27
+	Name:	"TableTools.ToggleEditing"
+	SourceCode:	"theTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\nif (theVTab.IsBeingEditedWithRecovery) then\n  doSave = MsgBox.YesNoCancel(\"Save Edits?\", \"Stop Editing\", True)\n  if (doSave = nil) then\n    return nil\n  end\n  if (theVtab.StopEditingWithRecovery(doSave).Not) then\n     MsgBox.Info(\"Unable to Save Edits, please use the Save Edits As option\", \"\")\n     return nil\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n  theVTab.StartEditingWithRecovery\nend"
+)
+
+(Script.28
+	Name:	"Ext_unload"
+	SourceCode:	"Dialog.DetachFromExtension(self)\n"
+)
+
+(Script.29
+	Name:	"Ext_Inst"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nSack=self 'Der Sack vom makescript, wo alles Benötigte drin ist\n\n'Das erste, was wir hineingetan haben war die Schaltfläche, also get(0)\n\nSchaltflaeche=Sack.get(0)\ntableGUI = av.GetProject.FindGUI( \"Table\" )\nif (tableGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon existiert\n    if(tableGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      'Schaltfläche an der 2. Stelle einfügen\n      tableGUI.GetButtonBar.Add( Schaltflaeche, 2)\n    end\ne
+nd\n\n'Das 2. war der Dialog\n\nav.getproject.Adddialog( Sack.get(1))\n\n'...  weitere Objekte aus dem Make-Script\n'...  dabei immer die Reihenfolge bei get(?) beachten, entsprechend der Reihenfolge des Hinzutuens\n' sonst könnte vielleicht versucht werden, einem Menü eine Schaltläche hinzuzufügen\n' Die Scripte werden automatisch hinzugefügt\n\n'nun das Ext_unin-Script schreiben\n\n\n\n\n"
+)
+
+(Script.30
+	Name:	"Ext_unin"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\n\nviewGUI = av.GetProject.FindGUI( \"Table\" )\n\n'Hinzugefügte Teile wieder aus dem Projekt entfernen lassen\n'mit self ist die Extension (der Sack) gemeint\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \"TableTools.start\")) ' Schaltfläche\nav.GetProject.removedialog(\"TableTools\")  'Dialog\n"
+)
+

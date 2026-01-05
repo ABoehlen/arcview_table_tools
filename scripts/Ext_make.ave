@@ -2,7 +2,7 @@
 '#
 '# Filename:     Ext_Make.ave
 '# Author:       Adrian Boehlen
-'# Date:         27.11.2022
+'# Date:         16.02.2025
 '# Version:      1.0
 '#
 '# Purpose:      erstellt die Extension
@@ -12,13 +12,13 @@
 
 
 TableTools = Extension.Make("$AVHOME\projects\table_tools\TableTools.avx".AsFileName,
-"TableTools",av.FindScript("Ext_inst"),av.FindScript("Ext_unin"), {"$AVBIN\avdlog.dll".AsFileName})
+"TableTools",av.FindScript("Ext.Inst"),av.FindScript("Ext.Unin"), {"$AVBIN\avdlog.dll".AsFileName})
 
 TableTools.SetExtVersion(1)
 
 '# Beschreibung (Version jeweils anpassen)
-TableTools.SetAbout("TableTools Toolbar (v1.5) ")'Beschreibung
-TableTools.SetUnloadScript(av.FindScript("ext_unload"))
+TableTools.SetAbout("TableTools Toolbar (v1.6) ")'Beschreibung
+TableTools.SetUnloadScript(av.FindScript("Ext.Unload"))
 
 '# Schaltflaeche und Dialoge hinzufuegen
 Schaltflaeche=( av.FindGUI( "Table").GetButtonBar.findbyscript("TableTools.start"))  

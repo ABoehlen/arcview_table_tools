@@ -1,0 +1,127 @@
+'#################################################################
+'#
+'# Filename:     tabletools_calculate_table.ave
+'# Author:       Adrian Boehlen
+'# Date:         26.01.2014
+'# Version:      0.3
+'#
+'# Purpose:      ermoeglicht Berechnungen in einer Tabelle.
+'#               Dazu muss die Expression in der ersten Zeile
+'#               einer Spalte des Typs "String" stehen
+'#
+'#               Sind Zeilen selektiert, wird die Berechnung
+'#               nur in den selektierten Zeilen durchgefuehrt,
+'#               ansonsten in allen
+'#
+'#               Die in der ersten Zeile stehende Expression
+'#               wird durch die Berechnung nicht beeinflusst
+'#
+'#################################################################
+
+'# die Tabelle muss im Edit-Modus sein
+
+theTable = av.GetActiveDoc
+theVTab = theTable.GetVTab
+
+if (theVTab.CanEdit.Not) then
+  MsgBox.Info("Die Tabelle kann nicht bearbeitet werden","Abbruch")
+  return nil
+end
+
+if (theVTab.IsEditable.Not) then
+  theVTab.StartEditingWithRecovery
+  theEditstatus = 0
+else
+  theEditstatus = 1
+end
+
+'# Es muss ein Feld aktiv sein
+
+if (theTable.GetActiveField = nil) then
+  MsgBox.Info("Es ist kein Feld aktiv","Abbruch")
+  return nil
+end
+
+theField = theTable.GetActiveField
+theFieldName = theField.GetName
+
+'# Expression in der ersten Zeile lesen
+'# wenn eine numerische Expression muss der Wert mit 100000 multipliziert werden
+
+for each rec in theVTab
+  if (rec = 0) then
+    if (theVTab.ReturnValue(theField, rec).AsString.Contains("AsString")) then
+      numberExpr = 0
+      theExpression = theVTab.ReturnValue(theField, rec)
+    else
+      numberExpr = 1
+      theExpression = "("+theVTab.ReturnValue(theField, rec)+"* 100000).AsString"
+    end
+  end
+end
+
+'# Expression auf uebrige Zeilen anwenden
+
+theSelected = theVTab.GetSelection
+
+if (theVTab.GetSelection.Count = 0) then
+  wasSelected = 0
+  for each rec in theVTab
+    if (rec = 0) then
+      continue
+    else   
+      theSelected.Set(rec)
+      theVTab.SetSelection(theSelected)
+      theVTab.UpdateSelection
+      theVTab.Calculate(theExpression,theField)
+    end
+  end
+  
+  '# wenn eine numerische Expression muss der Wert durch 100000 geteilt werden
+  if (numberExpr = 1) then
+    for each rec in theSelected
+      theValue = theVTab.ReturnValue(theField, rec )
+      theValue = theValue.AsNumber / 100000
+      theVTab.SetValue(theField,rec,theValue.AsString)
+    end
+  end
+else
+  wasSelected = 1
+  for each rec in theVTab
+    if (rec = 0) then
+      continue
+    else   
+      theVTab.Calculate(theExpression,theField)
+    end
+  end
+  
+  '# wenn eine numerische Expression muss der Wert durch 100000 geteilt werden
+  if (numberExpr = 1) then
+    for each rec in theSelected
+      theValue = theVTab.ReturnValue(theField, rec )
+      theValue = theValue.AsNumber / 100000
+      theVTab.SetValue(theField,rec,theValue.AsString)
+    end
+  end       
+end
+
+'if (not (theVTab.Calculate(theExpression,theField))) then
+'  MsgBox.Warning("Syntax Error", "Expression")
+'end
+
+'# Anzeige aktualisieren
+
+theVTab.UpdateSelection
+
+'# Selektion aufheben, wenn zuvor nichts selektiert
+
+if (wasSelected = 0) then
+  theSelected.ClearAll
+  theVTab.UpdateSelection
+end
+
+'# Editsession beenden, wenn zu Beginn nicht gestartet
+
+if (theEditstatus = 0) then
+  theVTab.SetEditable(false)
+end

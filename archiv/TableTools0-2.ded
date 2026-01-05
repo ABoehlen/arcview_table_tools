@@ -1,0 +1,801 @@
+/3.2
+(ODB.1
+	Dependencies:	"$AVEXT/dialog.avx\n"
+	FirstRootClassName:	"DEd"
+	Roots:	2
+	Roots:	65
+	Roots:	69
+	Roots:	73
+	Roots:	77
+	Roots:	81
+	Version:	32
+)
+
+(DEd.2
+	Name:	"TableTools"
+	Creator:	"adrian"
+	CreationDate:	"Sam 06 Apr 2013 14:57:19 CEST"
+	Comments:	"Version 0.2"
+	GUIName:	"DialogEditor"
+	Win:	3
+	CSMgr:	4
+	DocExts:	6
+	DocExts:	7
+	Graphics:	8
+	Dpy:	31
+	Dialog:	34
+	DialogExtent:	64
+	Compiled:	1
+)
+
+(DocWin.3
+	Owner:	2
+	Open:	1
+	X:	307
+	Y:	238
+	W:	524
+	H:	241
+)
+
+(CSMgr.4
+	Client:	5
+)
+
+(CSClient.5
+	Client:	6
+	ReqName:	"ClientNfy"
+)
+
+(PanMgr.6
+	Doc:	2
+)
+
+(DocAct.7
+	Doc:	2
+)
+
+(GList.8
+	Child:	9
+	Child:	12
+	Child:	16
+	Child:	19
+	Child:	23
+	Child:	27
+	Dpy:	31
+	FormatNumb:	33
+)
+
+(GCtrl.9
+	Name:	"aControlPanel2"
+	Bounds:	10
+	ControlConstraints:	0x55
+	Control:	11
+	Editable:	1
+)
+
+(RectD.10
+	Left:	2.36458333333333
+	Top:	1.53125000000000
+	Right:	4.14583333333333
+	Bottom:	1.16666666666667
+)
+
+(CPanel.11
+	InternalName:	"aControlPanel2"
+	UseGraphicNfy:	1
+	Constraints:	0x55
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(GCtrl.12
+	Name:	"Sum"
+	Bounds:	13
+	ControlConstraints:	0x55
+	Control:	14
+	Editable:	1
+)
+
+(RectD.13
+	Left:	3.32291666666667
+	Top:	1.46875000000000
+	Right:	3.57291666666667
+	Bottom:	1.21875000000000
+)
+
+(Butn.14
+	InternalName:	"Sum"
+	UseGraphicNfy:	1
+	Help:	"Calculates sum and writes it into the selected cell//"
+	Icon:	15
+	Click:	"TableTools.Sum"
+)
+
+(AVIcon.15
+	Name:	"Summarize2"
+	Res:	"Icons.Summarize2"
+
+)
+
+(GCtrl.16
+	Name:	"Close"
+	Bounds:	17
+	ControlConstraints:	0x55
+	Control:	18
+	Editable:	1
+)
+
+(RectD.17
+	Left:	3.61458333333333
+	Top:	1.46875000000000
+	Right:	4.06250000000000
+	Bottom:	1.21875000000000
+)
+
+(LButn.18
+	InternalName:	"Close"
+	UseGraphicNfy:	1
+	Help:	"Close Table Tools toolbar//"
+	Label:	"Close"
+	Click:	"TableTools.close"
+)
+
+(GCtrl.19
+	Name:	"DeleteRecord"
+	Bounds:	20
+	ControlConstraints:	0x55
+	Control:	21
+	Editable:	1
+)
+
+(RectD.20
+	Left:	2.73958333333333
+	Top:	1.46875000000000
+	Right:	2.98958333333333
+	Bottom:	1.21875000000000
+)
+
+(Butn.21
+	InternalName:	"DeleteRecord"
+	UseGraphicNfy:	1
+	Help:	"Deletes the selected records from the table//"
+	Icon:	22
+	Click:	"TableTools.DeleteRecord"
+)
+
+(AVIcon.22
+	Name:	"AlignNone"
+	Res:	"Icons.AlignNone"
+
+)
+
+(GCtrl.23
+	Name:	"Sort"
+	Bounds:	24
+	ControlConstraints:	0x55
+	Control:	25
+	Editable:	1
+)
+
+(RectD.24
+	Left:	3.03125000000000
+	Top:	1.46875000000000
+	Right:	3.28125000000000
+	Bottom:	1.21875000000000
+)
+
+(Butn.25
+	InternalName:	"Sort"
+	UseGraphicNfy:	1
+	Help:	"Sorts the table ascending or descending permanently//"
+	Icon:	26
+	Click:	"TableTools.Sort"
+)
+
+(AVIcon.26
+	Name:	"SortAscending2"
+	Res:	"Icons.SortAscending2"
+
+)
+
+(GCtrl.27
+	Name:	"aButton2"
+	Bounds:	28
+	ControlConstraints:	0x55
+	Control:	29
+	Editable:	1
+)
+
+(RectD.28
+	Left:	2.44791666666667
+	Top:	1.46875000000000
+	Right:	2.69791666666667
+	Bottom:	1.21875000000000
+)
+
+(Butn.29
+	InternalName:	"aButton2"
+	UseGraphicNfy:	1
+	Help:	"Starts or stops edit session//"
+	Icon:	30
+	Click:	"TableTools.ToggleEditing"
+)
+
+(AVIcon.30
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(PageDpy.31
+	Top:	2.25000000000000
+	Right:	5.38541666666667
+	ReportUnits:	1
+	Units:	1
+	Scale:	32
+	ZoomRight:	5.38541666666667
+	ZoomTop:	2.25000000000000
+	GridSpacingX:	0.10000000000000
+	GridSpacingY:	0.10000000000000
+)
+
+(Numb.32
+	N:	96.00000000000000
+)
+
+(Numb.33
+)
+
+(AVDLog.34
+	Name:	"TableTools"
+	X:	221
+	Y:	86
+	W:	183
+	H:	45
+	ConstrainedControlNames:	35
+	ConstrainedControlNames:	36
+	ConstrainedControlNames:	37
+	ConstrainedControlNames:	38
+	ConstrainedControlNames:	39
+	Constraints:	40
+	Constraints:	41
+	Constraints:	42
+	Constraints:	43
+	Constraints:	44
+	Server:	45
+	ControlPanel:	46
+	Title:	"Table Tools"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	63
+)
+
+(AVStr.35
+	S:	"Close"
+)
+
+(AVStr.36
+	S:	"Sum"
+)
+
+(AVStr.37
+	S:	"DeleteRecord"
+)
+
+(AVStr.38
+	S:	"Sort"
+)
+
+(AVStr.39
+	S:	"aButton2"
+)
+
+(Numb.40
+	N:	85.00000000000000
+)
+
+(Numb.41
+	N:	85.00000000000000
+)
+
+(Numb.42
+	N:	85.00000000000000
+)
+
+(Numb.43
+	N:	85.00000000000000
+)
+
+(Numb.44
+	N:	85.00000000000000
+)
+
+(Nil.45
+)
+
+(CPanel.46
+	Child:	47
+	ResBox:	62
+	Listening:	1
+)
+
+(CPanel.47
+	InternalName:	"aControlPanel2"
+	Child:	48
+	Child:	50
+	Child:	51
+	Child:	53
+	Child:	55
+	Constraints:	0x55
+	ResBox:	57
+	ResBox:	58
+	ResBox:	59
+	ResBox:	60
+	ResBox:	61
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.48
+	InternalName:	"Sum"
+	Help:	"Calculates sum and writes it into the selected cell//"
+	Icon:	49
+	Click:	"TableTools.Sum"
+)
+
+(AVIcon.49
+	Name:	"Summarize2"
+	Res:	"Icons.Summarize2"
+
+)
+
+(LButn.50
+	InternalName:	"Close"
+	Help:	"Close Table Tools toolbar//"
+	Label:	"Close"
+	Click:	"TableTools.close"
+)
+
+(Butn.51
+	InternalName:	"DeleteRecord"
+	Help:	"Deletes the selected records from the table//"
+	Icon:	52
+	Click:	"TableTools.DeleteRecord"
+)
+
+(AVIcon.52
+	Name:	"AlignNone"
+	Res:	"Icons.AlignNone"
+
+)
+
+(Butn.53
+	InternalName:	"Sort"
+	Help:	"Sorts the table ascending or descending permanently//"
+	Icon:	54
+	Click:	"TableTools.Sort"
+)
+
+(AVIcon.54
+	Name:	"SortAscending2"
+	Res:	"Icons.SortAscending2"
+
+)
+
+(Butn.55
+	InternalName:	"aButton2"
+	Help:	"Starts or stops edit session//"
+	Icon:	56
+	Click:	"TableTools.ToggleEditing"
+)
+
+(AVIcon.56
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(RectD.57
+	Left:	92.00000000000000
+	Top:	30.00000000000000
+	Right:	116.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.58
+	Left:	120.00000000000000
+	Top:	30.00000000000000
+	Right:	163.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.59
+	Left:	36.00000000000000
+	Top:	30.00000000000000
+	Right:	60.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.60
+	Left:	64.00000000000000
+	Top:	30.00000000000000
+	Right:	88.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.61
+	Left:	8.00000000000000
+	Top:	30.00000000000000
+	Right:	32.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.62
+	Left:	9.00000000000000
+	Top:	40.00000000000000
+	Right:	180.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(Nil.63
+)
+
+(RectD.64
+	Left:	2.27083333333333
+	Top:	1.58333333333333
+	Right:	4.17708333333333
+	Bottom:	1.11458333333333
+)
+
+(SEd.65
+	Name:	"TableTools.close"
+	Creator:	"adrian"
+	CreationDate:	"Sam 06 Apr 2013 16:04:28 CEST"
+	GUIName:	"Script"
+	Win:	66
+	CSMgr:	67
+	DocExts:	68
+	Source:	"self.getdialog.close"
+)
+
+(DocWin.66
+	Owner:	65
+	X:	80
+	Y:	80
+	W:	363
+	H:	245
+)
+
+(CSMgr.67
+)
+
+(DocAct.68
+	Doc:	65
+)
+
+(SEd.69
+	Name:	"TableTools.DeleteRecord"
+	Creator:	"adrian"
+	CreationDate:	"Mit 25 Dez 2013 14:31:09 CET"
+	GUIName:	"Script"
+	Win:	70
+	CSMgr:	71
+	DocExts:	72
+	Source:	"theTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  MsgBox.Info(\"Die Tabelle ist nicht im Edit-Modus\",\"Abbruch\")\n  return nil\nend\n\ntheVtab.BeginTransaction\ntheVTab.RemoveRecords(theVTab.GetSelection.Clone)\ntheVTab.EndTransaction"
+)
+
+(DocWin.70
+	Owner:	69
+	X:	38
+	Y:	40
+	W:	537
+	H:	418
+)
+
+(CSMgr.71
+)
+
+(DocAct.72
+	Doc:	69
+)
+
+(SEd.73
+	Name:	"TableTools.Sort"
+	Creator:	"adrian"
+	CreationDate:	"Mit 25 Dez 2013 14:19:16 CET"
+	GUIName:	"Script"
+	Win:	74
+	CSMgr:	75
+	DocExts:	76
+	Source:	"'\n' Table.SortPhysical\n' (c) 1998-2000 Quantitative Decisions, Merion, PA USA\n' http://www.quantdec.com\n'\n' Physically sort records in a table or theme.\n'\n' SELF:    void\n'\n' RETURNS: Error code (integer).  See the \"constants\" section.\n'\n' CONTEXT: Run from a table or a view with one active ftheme.\n'\n' All selected records are sorted on the active field\n' and moved in sort order to the end of the physical table.\n' If no records are selected, the process is applied to all\n' records.  \n' If there is no active
+ field, the user is prompted to select one.\n' In any event, the user is asked whether to sort in \n' ascending or descending order.\n'\n' Intended to establish drawing order in editable themes:\n' shapes are drawn in the order encountered while processing\n' the FTab.  Thus this operation visually \"promotes\" the\n' selected features to the top and they are drawn from first\n' (in sort order) to last among themselves.  For example,\n' if the selection consists of a single record, it is \n' promoted to the top of the 
+drawing stack.\n'\n' W. Huber, Quantitative Decisions, Merion, PA  USA 6/11/98\n' whuber@Quantdec.com\n'\n' 6/18/98: Added f.IsEditable protection against nasty AV\n'          behavior.\n' 6/27/98: Modified from Table.PermutePhysical.\n'          Most of the error branches have not been tested.\n'          Tested with small themes, with and without selections,\n'          with and without definitions set.\n' 2/22/00: Improved error checking.  Created return codes.\n'          Added progress monitoring to long operation
+s.\n'          Some optimizations made.\n'\n' Comments:\n' This script is simple-minded about processing themes: it\n' processes only the first active theme, if any.  Likewise,\n' although it does some error checking, it merely return NILs\n' on encountering an error condition.\n'\n' Sorting is accomplished through the table.sort request.\n' Being built in, it's probably the fastest way available,\n' and it does not require creating an Avenue list of keys in\n' memory.\n'\n' Dealing with tables is a real bear.  First, to
+ sort them,\n' their windows have to be open.  This automatically adds\n' them to the project.  Second, as soon as a record is \n' added, the sort is broken and the table reverts to physical\n' order.  Third, if one asks a table for its active field\n' without the table being open, ArcView crashes.\n'\n' Our work-around is to do all the ConvertRowToRecord \n' requests at once and cache their results in a list.  Since\n' the primary purpose of this script is to reorder features\n' and, presumably, most themes won't ha
+ve that many features \n' (less than 10,000 typically), this doesn't create such a\n' huge performance hit.\n'\n' Another aberrant Avenue behavior encountered in testing\n' this script is that a selection bitmap can have defined-out\n' bits set.  Thus, for example, it is possible for the number\n' of selected records to exceed the number of visible records.\n' This script therefore takes the precaution of anding the\n' definition bitmap with the selection bitmap.\n'\n' ArcView seems to do a good job of packing the und
+erlying\n' tables after removing records.\n'-----------------------------------------------------------'\n'\n' Common message box title:\n'\nsTitle = \"Physical Sort\"\n'\n' Defined return codes (constants):\n'\nnSUCCESS      =  0\nnERR_NOTHEME  = -1 ' No active ftheme\nnERR_BADFTAB  = -2 ' Problem with the FTab\nnERR_CONTEXT  = -3 ' Not a view or table \nnERR_NOFIELDS = -4 ' No visible fields for sorting\nnERR_USER     = -5 ' User cancellation\nnERR_EDIT     = -6 ' Cannot edit the table\nnERR_ADD      = -7 ' Cannot add a new
+ record\nnERR_SAVE     = -8 ' Cannot save the transactions\n'\n' If the current document is a table, obtain its VTab.\n' Otherwise, use the first active theme's FTab, if there\n' is an active theme.\n'\naTable = av.GetActiveDoc\nif (av.GetActiveDoc.Is(Table)) then\n  aVTab = av.GetActiveDoc.GetVTab\n  wasAdded = FALSE\nelseif (av.GetActiveDoc.Is(View)) then\n  lstThemes = {}\n  for each theTheme in av.GetActiveDoc.GetActiveThemes\n    if (theTheme.Is(FTheme)) then\n      lstThemes.Add(theTheme)\n    end\n  end\n  if (lstThem
+es.Count = 0) then\n    MsgBox.Info(\"You need to activate an FTheme to process.\", sTitle)\n    return nERR_NOTHEME\n  end\n  aVTab = lstThemes.Get(0).GetFTab\n  aTable = Table.Make(aVTab)\n  if (aTable = NIL) then\n    MsgBox.Error(\"It appears this theme's feature table has an error.\", sTitle)\n    return nERR_BADFTAB\n  end\n  aTable.SetName(\"Made by\"++sTitle)\n  wasAdded = TRUE\nelse\n  MsgBox.Info(\"Run this script from a View or Table document.\", sTitle)\n  return nERR_CONTEXT\nend\n'\n' Usual housekeeping for processing
+ all records if none are selected.\n'\ntheBitmap = aVTab.GetSelection\ntheBitmap.And(aVTab.GetDefBitmap)     ' 22 Feb 2000\naVTab.UpdateSelection                 ' 22 Feb 2000\nwasUnselected = (theBitmap.Count = 0)\nif (wasUnselected) then\n  theBitmap.SetAll\nend\n'\n' Establish the sort order.  Ask user for sort field, if necessary,\n' and whether this is an ascending or descending sort.\n'\nif (aTable.GetWin.IsOpen.Not) then\n  aTable.GetWin.Open\nend\nfldSort = aTable.GetActiveField '--springs an Avenue bug if the tabl
+e is not open\nif (fldSort = NIL) then\n  lstStrFields = {}\n  for each theField in aVTab.GetFields\n    if (theField.IsTypeShape.Not and theField.IsVisible) then\n      lstStrFields.Add(theField.GetAlias)\n    end\n  end\n  if (lstStrFields.Count = 0) then\n    MsgBox.Error(\"No data fields are visible for sorting--\" + \n                 \"select Table|Properties to make them visible; aborting...\", sTitle)\n    if (wasAdded) then\n      av.GetProject.RemoveDoc(aTable)\n    end\n    return nERR_NOFIELDS\n  end\n  strFldSort 
+= MsgBox.ChoiceAsString(lstStrFields, \"Select a field for sorting\", sTitle)\n  if (strFldSort = NIL) then \n    return nERR_USER\n  end\n  fldSort = aVTab.FindField(strFldSort)\nend\nIsAscending = MsgBox.YesNo(\"Sort ascending (yes) or descending (no)?\", \n              sTitle ++ \"[\" + fldSort.GetAlias + \"]\", TRUE)\n'\n' Start editing the VTab.\n'\nif (aVTab.StartEditingWithRecovery.Not) then\n  MsgBox.Error(\"Unable to edit this table--make sure it's in dbf format, is not read-only,\" ++\n               \"and that its fold
+er is not read-only; aborting...\", sTitle)\n  if (wasAdded) then\n    av.GetProject.RemoveDoc(aTable)\n  end\n  return nERR_EDIT\nend\n'\n' Sort the table document.\n'\nav.ClearStatus\nav.ShowMsg(\"Sorting...\")\n\naTable.Sort(fldSort, IsAscending.Not)\naTable.PromoteSelection\nM = aVTab.GetNumRecords\n'aVTab.GetSelection.And(aVTab.GetDefBitmap)' The selection can include some undefined records!\nN = aVTab.GetSelection.Count\n'\n' Capture the sort order.\n'\nav.ClearStatus\nav.ShowMsg(\"Capturing the sort order...\")\nav.ShowStopBut
+ton\n\nlstOrder = {}\nfor each theRow in 0..(N-1)\n  if (av.SetStatus(100*(theRow+1)/N).not) then break end ' 22 Feb 2000\n  \n  lstOrder.Add(aTable.ConvertRowToRecord(theRow)) ' Compute this before adding a record screws it up!\nend\nif (lstOrder.Count < N) then ' 22 Feb 2000\n  return nERR_USER\nend\n'\n' Find the editable fields (22 Feb 2000: an optimization).\n'\nlstFields = {}\nfor each f in aVTab.GetFields\n  if (f.IsEditable) then\n    lstFields.Add(f)\n  end\nend\n'\n' Minimize the table window to avoid redraw delays.\n'
+ (22 Feb 2000)\n'\naTable.GetWin.Close ' Does not work when aTable was created from a theme in this script!\n'\n' Append copies of the selected records to the table, in the correct order.\n' \nav.ClearStatus\nav.ShowMsg(\"Now editing the table...\")\nav.ShowStopButton\nnCode = nSUCCESS\nfor each theRow in 0..(N-1)\n  if (av.SetStatus(100*(theRow+1)/N).not) then \n    nCode = nERR_USER\n    break\n  end ' 22 Feb 2000\n  \n  if (aVTab.CanAddRecord.Not) then\n    MsgBox.Error(\"Unable to add a new record--you may be out of disk s
+pace or RAM; aborting...\", \n                 sTitle)\n    nCode = nERR_ADD\n    break\n  end\n  \n  theRec = lstOrder.Get(theRow)\n  \n  aVTab.BeginTransaction\n    recDest = aVTab.AddRecord\n    for each f in lstFields\n      aVTab.SetValue(f, recDest, aVTab.ReturnValue(f, theRec))\n    end\n  aVTab.EndTransaction\n  \nend ' Appending selected records\n'\n' Process any errors that occurred.\n'\nif (nCode <> nSUCCESS) then            ' 22 Feb 2000\n  aVTab.StopEditingWithRecovery(false)\n  if (wasAdded) then\n    av.GetProject.
+RemoveDoc(aTable)\n  else\n    aTable.GetWin.Open\n  end\n  return nCode\nend\n'\n' Remove the original versions of the records.\n'\nav.ClearStatus\nav.ShowMsg(\"Cleaning up the table...\")\naVTab.BeginTransaction\n  aVTab.RemoveRecords(aVTab.GetSelection)\naVTab.EndTransaction\nif (aVTab.StopEditingWithRecovery(true).Not) then  ' 22 Feb 2000\n  msgBox.Error(\"Unable to save the changes; aborting...\", sTitle)\n  return nERR_SAVE\nend\n'\n' Update the selection and definition bitmaps.\n'\nif (wasUnselected.Not) then\n  aVTab.GetSele
+ction.SetRange(M-N, N)\n  aVTab.UpdateSelection\nend\naVTab.SetDefinition(aVTab.GetDefinition)\naVTab.UpdateDefBitmap\n'\n' Synchronize the disk and in-memory versions of the VTab.\n'\naVTab.Flush\n'\n' Clean up the project if necessary.\n'\nif (wasAdded) then\n  av.GetProject.RemoveDoc(aTable)\nelse\n  aTable.GetWin.Open\nend\nreturn nSUCCESS\n' end of script\n"
+)
+
+(DocWin.74
+	Owner:	73
+	X:	270
+	Y:	44
+	W:	736
+	H:	575
+)
+
+(CSMgr.75
+)
+
+(DocAct.76
+	Doc:	73
+)
+
+(SEd.77
+	Name:	"TableTools.Sum"
+	Creator:	"adrian"
+	CreationDate:	"Die 24 Dez 2013 15:46:59 CET"
+	GUIName:	"Script"
+	Win:	78
+	CSMgr:	79
+	DocExts:	80
+	Source:	"'########################################################\n'#\n'# Filename:     table_sum.ave\n'# Author:       Adrian Boehlen\n'# Date:         11.11.2013\n'# Version:      0.1\n'#\n'# Purpose:      Summiert die Werte eines Feldes und\n'#               schreibt das Ergebnis in ein neues Feld\n'#\n'########################################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht b
+earbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  MsgBox.Info(\"Die Tabelle ist nicht im Edit-Modus\",\"Abbruch\")\n  return nil\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Info(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\n\nthePrecision = \"d.dddddddddd\"\ntheFieldPrecision = theField.GetPrecision\nScript.The.SetNumberFormat( thePrecision.Left( theFieldPrecision + 2 ) )\n\n'# Es muss eine Zeile selekti
+ert sein\n\nif ( theVTab.GetSelection.Count <> 1 ) then\n  MsgBox.Info(\"Die Zeile mit dem Zielfeld muss selektiert sein\",\"Abbruch\")\n  return nil\nend\n\n'# Wert im Zielfeld auf 0 stellen\n\ntheSelected = theVTab.GetSelection\nfor each rec in theSelected\n  theVTab.SetValue(theField,rec,0)\nend\n\n'# Summe ermitteln und in Zielfeld schreiben\n\ntheSet = theVTab\ntheSelected = theVTab.GetSelection\n\ntheSum = 0\nfor each rec in theSet\n  theValue = theVTab.ReturnValueNumber( theField, rec )\n  if ( not ( theValue.IsNull ) ) then\n
+    theSum = theValue + theSum\n  end\nend\n\nfor each rec in theSelected\n  theVTab.SetValue(theField,rec,theSum)\nend\n\n"
+)
+
+(DocWin.78
+	Owner:	77
+	X:	186
+	Y:	77
+	W:	817
+	H:	555
+)
+
+(CSMgr.79
+)
+
+(DocAct.80
+	Doc:	77
+)
+
+(SEd.81
+	Name:	"TableTools.ToggleEditing"
+	Creator:	"adrian"
+	CreationDate:	"Die 24 Dez 2013 15:56:36 CET"
+	GUIName:	"Script"
+	Win:	82
+	CSMgr:	83
+	DocExts:	84
+	Source:	"theTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\nif (theVTab.IsBeingEditedWithRecovery) then\n  doSave = MsgBox.YesNoCancel(\"Save Edits?\", \"Stop Editing\", True)\n  if (doSave = nil) then\n    return nil\n  end\n  if (theVtab.StopEditingWithRecovery(doSave).Not) then\n     MsgBox.Info(\"Unable to Save Edits, please use the Save Edits As option\", \"\")\n     return nil\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n  theVTab.StartEditingWithRecovery\nend"
+)
+
+(DocWin.82
+	Owner:	81
+	X:	50
+	Y:	50
+	W:	714
+	H:	299
+)
+
+(CSMgr.83
+)
+
+(DocAct.84
+	Doc:	81
+)
+

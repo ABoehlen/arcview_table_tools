@@ -2,8 +2,8 @@
 '#
 '# Filename:     TableTools_ExportHTML.ave
 '# Author:       Adrian Boehlen
-'# Date:         29.05.2014
-'# Version:      0.3
+'# Date:         16.02.2025
+'# Version:      0.4
 '# Based on:     Table2HTML
 '# 
 '# Purpose:      - Konvertiert Tabellen ins HTML-Format
@@ -45,8 +45,8 @@ end
 
 '# HTML File anlegen
 
-tfn = "$TEMP".AsFileName.MakeTmp("mytable","htm")          
-rfn = FileDialog.Put(tfn, "*.htm", "Save Table as HTML")
+tfn = "$TEMP".AsFileName.MakeTmp("mytable","html")          
+rfn = FileDialog.Put(tfn, "*.html", "Save Table as HTML")
 if (rfn = nil) then
   return nil
 end
@@ -85,37 +85,23 @@ end
 
 '# HTML Header schreiben
 
-R_file.WriteElt("<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN""")
-R_file.WriteElt("    ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"">")
-R_file.WriteElt("<html xmlns=""http://www.w3.org/1999/xhtml"">")
-R_file.WriteElt("<head>")
-R_file.WriteElt("  <meta http-equiv=""Content-Type""")
-R_file.WriteElt("    content=""text/html; charset=iso-8859-1"" />")
-R_file.WriteElt("  <title>"+av.GetActiveDoc.GetName+"</title>")
-R_file.WriteElt("  <style type=""text/css"">")
-R_file.WriteElt("    h1,td,th,b,i { font-family:Helvetica,sans-serif; }")
-R_file.WriteElt("    h1 { font-size:26px; margin-bottom:18px; }")
-R_file.WriteElt("    th { font-size:20px; }")
-R_file.WriteElt("    p,td { font-size:18px; }")
-R_file.WriteElt("  </style>")
+R_file.WriteElt("<?xml version=""1.0"" encoding=""UTF-8"" ?>")
+R_file.WriteElt("<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN"" ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"">")
+R_file.WriteElt("<html xmlns=""http://www.w3.org/1999/xhtml"" xml:lang=""en"" lang=""en"">")
+R_file.WriteElt("<head profile=""http://gmpg.org/xfn/11"">")
+R_file.WriteElt("<meta http-equiv=""content-type"" content=""text/html; charset=utf-8"" />")
+R_file.WriteElt("<title>"+av.GetActiveDoc.GetName+"</title>")
+R_file.WriteElt("<style type=""text/css"">")
+R_file.WriteElt("  h1,h2,td,th,b,i,p,li { font-family:Helvetica,sans-serif; }")
+R_file.WriteElt("  h1 { font-size:25px; margin-bottom:8px; }")
+R_file.WriteElt("  h2 { font-size:21px; margin-bottom:7px; }")
+R_file.WriteElt("  th { font-size:20px; }")
+R_file.WriteElt("  p,td { font-size:16px; }")
+R_file.WriteElt("</style>")
 R_file.WriteElt("</head>")
 R_file.WriteElt("<body bgcolor=""#FFFFFF"">")
-R_file.WriteElt("<table border=""0"" width=""100%"" cellspacing=""2"" cellpadding=""0"">")
-R_file.WriteElt("  <tbody>")
-R_file.WriteElt("    <tr>")
-R_file.WriteElt("      <td align=""center"">")
-R_file.WriteElt("      <h1>"+av.GetActiveDoc.GetName+"</h1>")
-R_file.WriteElt("      <br />")
-R_file.WriteElt("      </td>")
-R_file.WriteElt("    </tr>")
-R_file.WriteElt("  </tbody>")
-R_file.WriteElt("</table>")
-
+R_file.WriteElt("<h1>"+av.GetActiveDoc.GetName+"</h1>")
 R_file.WriteElt("<table border=""1"" width=""100%"" cellspacing=""2"" cellpadding=""0"">")
-'# urspruengliche Syntax fuer Titel
-'R_file.WriteElt("  <tr>")
-'R_file.WriteElt("    <th colspan="+mx.AsString+">"+av.GetActiveDoc.GetName+"</th>")
-'R_file.WriteElt("  </tr>")
 R_file.WriteElt(Fstr)
 
 rt = 1
@@ -151,9 +137,9 @@ for each r in xt
       v = theTab.ReturnValueString(f,r)
       theType = f.getType
       if ((theType.AsString = "FIELD_DECIMAL") or (theType.AsString = "FIELD_DATE")) then
-        fstr = fstr + 10.AsChar +"    <td align=""right"" bgcolor="+ColStr+"> "+v+" </td>"
+        fstr = fstr + 10.AsChar +"    <td align=""right"" bgcolor="""+ColStr+"""> "+v+" </td>"
       else
-        fstr = fstr + 10.AsChar +"    <td align=""left"" bgcolor="+ColStr+"> "+v+" </td>"
+        fstr = fstr + 10.AsChar +"    <td align=""left"" bgcolor="""+ColStr+"""> "+v+" </td>"
       end
     end
     if ( (Style.Contains("High")) AND (hf = (f.GetAlias)) ) then

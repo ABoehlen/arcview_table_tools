@@ -1,0 +1,1877 @@
+/3.2
+(Extension.1
+	Name:	"TableTools"
+	Dependencies:	"$AVBIN/avdlog.dll\n"
+	FirstRootClassName:	"Butn"
+	Roots:	2
+	Roots:	4
+	Roots:	99
+	Roots:	100
+	Roots:	101
+	Roots:	102
+	Roots:	103
+	Roots:	104
+	Roots:	105
+	Roots:	106
+	Roots:	107
+	Roots:	108
+	Roots:	109
+	Roots:	110
+	Roots:	111
+	Roots:	112
+	Roots:	113
+	Roots:	114
+	Roots:	115
+	Roots:	116
+	Roots:	117
+	Roots:	118
+	Version:	32
+	About:	"TableTools Toolbar (v0.13) "
+	UnloadScript:	119
+	InstallScript:	120
+	UninstallScript:	121
+	ExtVersion:	1
+)
+
+(Butn.2
+	Help:	"Start Table Tools toolbar//"
+	Icon:	3
+	Click:	"TableTools.start"
+)
+
+(AVIcon.3
+	Name:	"tabletools_start.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d000 00000000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d000d000 ffff00ff 
+	Data:	ff00ffff ff00d0d0 d0d0d0d0 d000d000 
+	Data:	000000d0 0000d0d0 0000d0d0 d0d0d0d0 
+	Data:	d000d000 ffff00ff 000080ff ff00d0d0 
+	Data:	d0d0d0d0 d000d000 000000d0 00008080 
+	Data:	80d0d0d0 d0d0d0d0 d000d000 ffffd0ff 
+	Data:	8080ffff ff0000d0 d0d0d0d0 d000d000 
+	Data:	000000d0 d080ffff ff008000 d0d0d0d0 
+	Data:	d000d000 ffff00ff ff80ffff 00008080 
+	Data:	00d0d0d0 d000d000 00000000 d0d00000 
+	Data:	eded0080 8000d0d0 d000d000 ffff00ff 
+	Data:	ffd00077 00eded00 808000d0 d000d000 
+	Data:	00000000 00d0d000 7700eded 00808000 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 60cb00ed 
+	Data:	ed008080 0000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0607700 eded0000 3600d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d00077 00ed0036 3600d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d000 77003636 
+	Data:	3600d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	00363636 0000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0003600 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(AVDLog.4
+	Name:	"TableTools"
+	X:	74
+	Y:	120
+	W:	542
+	H:	40
+	ConstrainedControlNames:	5
+	ConstrainedControlNames:	6
+	ConstrainedControlNames:	7
+	ConstrainedControlNames:	8
+	ConstrainedControlNames:	9
+	ConstrainedControlNames:	10
+	ConstrainedControlNames:	11
+	ConstrainedControlNames:	12
+	ConstrainedControlNames:	13
+	ConstrainedControlNames:	14
+	ConstrainedControlNames:	15
+	ConstrainedControlNames:	16
+	ConstrainedControlNames:	17
+	ConstrainedControlNames:	18
+	ConstrainedControlNames:	19
+	ConstrainedControlNames:	20
+	ConstrainedControlNames:	21
+	ConstrainedControlNames:	22
+	Constraints:	23
+	Constraints:	24
+	Constraints:	25
+	Constraints:	26
+	Constraints:	27
+	Constraints:	28
+	Constraints:	29
+	Constraints:	30
+	Constraints:	31
+	Constraints:	32
+	Constraints:	33
+	Constraints:	34
+	Constraints:	35
+	Constraints:	36
+	Constraints:	37
+	Constraints:	38
+	Constraints:	39
+	Constraints:	40
+	Server:	41
+	ControlPanel:	42
+	Title:	"Table Tools"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	98
+)
+
+(AVStr.5
+	S:	"Close"
+)
+
+(AVStr.6
+	S:	"SimpleSum"
+)
+
+(AVStr.7
+	S:	"DeleteRecordOrField"
+)
+
+(AVStr.8
+	S:	"Sort"
+)
+
+(AVStr.9
+	S:	"StartEditing"
+)
+
+(AVStr.10
+	S:	"Index"
+)
+
+(AVStr.11
+	S:	"SelectMany"
+)
+
+(AVStr.12
+	S:	"AddRecords"
+)
+
+(AVStr.13
+	S:	"AdvancedSum"
+)
+
+(AVStr.14
+	S:	"DD2DMS"
+)
+
+(AVStr.15
+	S:	"DMS2DD"
+)
+
+(AVStr.16
+	S:	"ExportHTML"
+)
+
+(AVStr.17
+	S:	"ChangeFieldType"
+)
+
+(AVStr.18
+	S:	"AddField"
+)
+
+(AVStr.19
+	S:	"CalculateTable"
+)
+
+(AVStr.20
+	S:	"Table_New"
+)
+
+(AVStr.21
+	S:	"aTool3"
+)
+
+(AVStr.22
+	S:	"Select"
+)
+
+(Numb.23
+	N:	85.00000000000000
+)
+
+(Numb.24
+	N:	85.00000000000000
+)
+
+(Numb.25
+	N:	85.00000000000000
+)
+
+(Numb.26
+	N:	85.00000000000000
+)
+
+(Numb.27
+	N:	85.00000000000000
+)
+
+(Numb.28
+	N:	85.00000000000000
+)
+
+(Numb.29
+	N:	85.00000000000000
+)
+
+(Numb.30
+	N:	85.00000000000000
+)
+
+(Numb.31
+	N:	85.00000000000000
+)
+
+(Numb.32
+	N:	85.00000000000000
+)
+
+(Numb.33
+	N:	85.00000000000000
+)
+
+(Numb.34
+	N:	85.00000000000000
+)
+
+(Numb.35
+	N:	85.00000000000000
+)
+
+(Numb.36
+	N:	85.00000000000000
+)
+
+(Numb.37
+	N:	85.00000000000000
+)
+
+(Numb.38
+	N:	85.00000000000000
+)
+
+(Numb.39
+	N:	85.00000000000000
+)
+
+(Numb.40
+	N:	85.00000000000000
+)
+
+(Nil.41
+)
+
+(CPanel.42
+	Child:	43
+	ResBox:	97
+	Listening:	1
+)
+
+(CPanel.43
+	InternalName:	"aControlPanel2"
+	Child:	44
+	Child:	46
+	Child:	47
+	Child:	49
+	Child:	51
+	Child:	53
+	Child:	55
+	Child:	57
+	Child:	59
+	Child:	61
+	Child:	63
+	Child:	65
+	Child:	67
+	Child:	69
+	Child:	71
+	Child:	73
+	Child:	75
+	Child:	77
+	Constraints:	0x55
+	ResBox:	79
+	ResBox:	80
+	ResBox:	81
+	ResBox:	82
+	ResBox:	83
+	ResBox:	84
+	ResBox:	85
+	ResBox:	86
+	ResBox:	87
+	ResBox:	88
+	ResBox:	89
+	ResBox:	90
+	ResBox:	91
+	ResBox:	92
+	ResBox:	93
+	ResBox:	94
+	ResBox:	95
+	ResBox:	96
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.44
+	InternalName:	"SimpleSum"
+	Help:	"Calculates the sum and writes it into the selected cell//"
+	Icon:	45
+	Click:	"TableTools.SimpleSum"
+)
+
+(AVIcon.45
+	Name:	"Summarize2"
+	Res:	"Icons.Summarize2"
+
+)
+
+(LButn.46
+	InternalName:	"Close"
+	Help:	"Close Table Tools toolbar//"
+	Label:	"Close"
+	Click:	"TableTools.close"
+)
+
+(Butn.47
+	InternalName:	"DeleteRecordOrField"
+	Help:	"Deletes the selected records or the selected field from the table//"
+	Icon:	48
+	Click:	"TableTools.DeleteRecordOrField"
+)
+
+(AVIcon.48
+	Name:	"AlignNone"
+	Res:	"Icons.AlignNone"
+
+)
+
+(Butn.49
+	InternalName:	"Sort"
+	Help:	"Sorts the table ascending or descending permanently//"
+	Icon:	50
+	Click:	"TableTools.Sort"
+)
+
+(AVIcon.50
+	Name:	"SortAscending2"
+	Res:	"Icons.SortAscending2"
+
+)
+
+(Butn.51
+	InternalName:	"StartEditing"
+	Help:	"Starts or stops edit session//"
+	Icon:	52
+	Click:	"TableTools.ToggleEditing"
+)
+
+(AVIcon.52
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.53
+	InternalName:	"Index"
+	Help:	"Calculates index//"
+	Icon:	54
+	Click:	"TableTools.Index"
+)
+
+(AVIcon.54
+	Name:	"id.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d000d0 d0d00000 
+	Data:	00092660 bed0d0d0 d000d0d0 d0d000d0 
+	Data:	d0d000d0 d0c7a85a 15b5d0d0 d000d0d0 
+	Data:	d0d000d0 d0d000d0 d0d0d0d0 654bd0d0 
+	Data:	d000d0d0 d0d000d0 d0d000d0 d0d0d0d0 
+	Data:	b714d0d0 d000d0d0 d0d000d0 d0d000d0 
+	Data:	d0d0d0d0 cb04d0d0 d000d0d0 d0d000d0 
+	Data:	d0d000d0 d0d0d0d0 b713d0d0 d000d0d0 
+	Data:	d0d000d0 d0d000d0 d0d0d0d0 654bd0d0 
+	Data:	d000d0d0 d0d000d0 d0d000d0 d0c7a859 
+	Data:	15b5d0d0 d000d0d0 d0d000d0 d0d00000 
+	Data:	000b2761 bed0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(Butn.55
+	InternalName:	"SelectMany"
+	Help:	"Selects rows between two defined records//"
+	Icon:	56
+	Click:	"TableTools.SelectMany"
+)
+
+(AVIcon.56
+	Name:	"SelectSubCategory"
+	Res:	"Icons.SelectSubCategory"
+
+)
+
+(Butn.57
+	InternalName:	"AddRecords"
+	Help:	"Adds one or more records to the table//"
+	Icon:	58
+	Click:	"TableTools.AddRecords"
+)
+
+(AVIcon.58
+	Name:	"add_records.bmp"
+	Data:	4e442049 6d616765 00010011 00120000 
+	Data:	03a8c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d400c8d0 d4c8d0d4 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	000000c8 d0d4c8d0 d400c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 000000c8 d0d4c8d0 d400c8d0 
+	Data:	d4c8d0d4 000000c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 000000c8 d0d4c8d0 
+	Data:	d400c8d0 d4c8d0d4 00000000 00000000 
+	Data:	00000000 c8d0d400 00000000 00000000 
+	Data:	c8d0d400 00000000 00000000 000000c8 
+	Data:	d0d4c8d0 d400c8d0 d4c8d0d4 000000c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 00000000 
+	Data:	00000000 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d400c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d400 
+	Data:	00000000 00000000 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 000000c8 d0d4c8d0 d400c8d0 
+	Data:	d4c8d0d4 00000000 00000000 00000000 
+	Data:	c8d0d400 00000000 00000000 c8d0d400 
+	Data:	00000000 00000000 000000c8 d0d4c8d0 
+	Data:	d400c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d400 00000000 00000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d400c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4000000 00000000 00000000 
+	Data:	00000000 00000000 0000c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d400c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 00000000 
+	Data:	00000000 00000000 000000c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d400c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d400 00000000 00000000 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d400c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d400c8d0 d4c8d0d4 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	000000c8 d0d4c8d0 d400c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 000000c8 d0d4c8d0 d400c8d0 
+	Data:	d4c8d0d4 000000c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 000000c8 d0d4c8d0 
+	Data:	d400c8d0 d4c8d0d4 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 000000c8 
+	Data:	d0d4c8d0 d400c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4000000 00000001 
+	Data:	00180007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.59
+	InternalName:	"AdvancedSum"
+	Help:	"Calculates the sum from selected cells and writes it into the defined cell//"
+	Icon:	60
+	Click:	"TableTools.AdvancedSum"
+)
+
+(AVIcon.60
+	Name:	"advanced_sum.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	0474c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d400 0000c8d0 d4c8d0d4 c8d0d400 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d400 
+	Data:	0000c8d0 d4c8d0d4 c8d0d400 0000c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4000000 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4000000 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d400 0000c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 000000c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d400 
+	Data:	0000c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4000000 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d40000 00c8d0d4 c8d0d400 
+	Data:	00000000 00000000 00000000 0000c8d0 
+	Data:	d4c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d400 
+	Data:	0000c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4000000 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d400 0000c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 000000c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d400 
+	Data:	0000c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4000000 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	c8d0d400 0000c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4000000 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d400 0000c8d0 d4c8d0d4 c8d0d400 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d400 
+	Data:	0000c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d400 00000000 00000001 00180007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(Butn.61
+	InternalName:	"DD2DMS"
+	Help:	"Converts Decimal Degrees to DegreesMinutesSeconds//"
+	Icon:	62
+	Click:	"TableTools.DD2DMS"
+)
+
+(AVIcon.62
+	Name:	"dd2dms.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d000 000b40ba d000d0d0 
+	Data:	d000d0d0 00000d71 d000d000 d0c2583c 
+	Data:	d000cc1a cd00d0d0 d0cfa507 d000d000 
+	Data:	d0d0c408 d0009f00 9f00d0d0 cc995724 
+	Data:	d000d000 d0d0c308 d0006508 6500d0d0 
+	Data:	362763b9 d000d000 d0c2583c d0002a69 
+	Data:	2b00d0d0 08a3cfd0 d000d000 000c41ba 
+	Data:	d0000cc7 0c00d0d0 7b140000 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d000 
+	Data:	000b40ba d000000b 40bad0d0 d0d0d0d0 
+	Data:	d000d000 d0c2583c d000d0c2 583cd0d0 
+	Data:	d0d0d0d0 d000d000 d0d0c408 d000d0d0 
+	Data:	c408d0d0 d0d0d0d0 d000d000 d0d0c308 
+	Data:	d000d0d0 c308d0d0 d0d0d0d0 d000d000 
+	Data:	d0c2583c d000d0c2 583cd0d0 d0d0d0d0 
+	Data:	d000d000 000c41ba d000000c 41bad0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(Butn.63
+	InternalName:	"DMS2DD"
+	Help:	"Converts DegreesMinutesSeconds to Decimal Degrees//"
+	Icon:	64
+	Click:	"TableTools.DMS2DD"
+)
+
+(AVIcon.64
+	Name:	"dms2dd.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d000 000b40ba d000000b 
+	Data:	40bad0d0 d0d0d0d0 d000d000 d0c2583c 
+	Data:	d000d0c2 583cd0d0 d0d0d0d0 d000d000 
+	Data:	d0d0c408 d000d0d0 c408d0d0 d0d0d0d0 
+	Data:	d000d000 d0d0c308 d000d0d0 c308d0d0 
+	Data:	d0d0d0d0 d000d000 d0c2583c d000d0c2 
+	Data:	583cd0d0 d0d0d0d0 d000d000 000c41ba 
+	Data:	d000000c 41bad0d0 d0d0d0d0 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d000 
+	Data:	000b40ba d000d0d0 d000d0d0 00000d71 
+	Data:	d000d000 d0c2583c d000cc1a cd00d0d0 
+	Data:	d0cfa507 d000d000 d0d0c408 d0009f00 
+	Data:	9f00d0d0 cc995724 d000d000 d0d0c308 
+	Data:	d0006508 6500d0d0 362763b9 d000d000 
+	Data:	d0c2583c d0002a69 2b00d0d0 08a3cfd0 
+	Data:	d000d000 000c41ba d0000cc7 0c00d0d0 
+	Data:	7b140000 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(Butn.65
+	InternalName:	"ExportHTML"
+	Help:	"Exports the table to HTML//"
+	Icon:	66
+	Click:	"TableTools.ExportHTML"
+)
+
+(AVIcon.66
+	Name:	"html.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d000 
+	Data:	d0d000d0 d000d0d0 00d0d0d0 00d00000 
+	Data:	0000d000 d0d000d0 d000d0d0 00c814c8 
+	Data:	00d000d0 d000d000 000000d0 d000d0d0 
+	Data:	00890089 00d000d0 d000d000 d0d000d0 
+	Data:	d000d0d0 00403541 00d000d0 d000d000 
+	Data:	d0d00000 00000000 000cb90c 00d000d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(Butn.67
+	InternalName:	"ChangeFieldType"
+	Help:	"Changes the field type or makes a copy of the field//"
+	Icon:	68
+	Click:	"TableTools.ChangeFieldType"
+)
+
+(AVIcon.68
+	Name:	"change_field_type.bmp"
+	Data:	4e442049 6d616765 00010014 00140000 
+	Data:	0190d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 00000000 
+	Data:	00d0d0d0 d0d0d000 00000000 d0d0d0d0 
+	Data:	00d0d0d0 00d0d0d0 d0d0d000 ffff0000 
+	Data:	d0d0d0d0 00d0d0d0 00d0d0d0 d0d0d000 
+	Data:	ff00ff00 d0d0d0d0 00d0d0d0 00d0d0d0 
+	Data:	d0d0d000 00ffff00 d0d0d0d0 00d0d0d0 
+	Data:	00d0d0d0 d0d0d000 ffff0000 d0d0d0d0 
+	Data:	00d0d0d0 00d0d0d0 00d0d000 ff00ff00 
+	Data:	d0d0d0d0 00d0d0d0 00d0d0d0 0000d000 
+	Data:	00ffff00 d0d0d0d0 00d0d0d0 00000000 
+	Data:	00000000 ffff0000 d0d0d0d0 00d0d0d0 
+	Data:	00000000 00000000 ff00ff00 d0d0d0d0 
+	Data:	00d0d0d0 00d0d0d0 0000d000 00ffff00 
+	Data:	d0d0d0d0 00d0d0d0 00d0d0d0 00d0d000 
+	Data:	ffff0000 d0d0d0d0 00d0d0d0 00d0d0d0 
+	Data:	d0d0d000 ff00ff00 d0d0d0d0 00d0d0d0 
+	Data:	00d0d0d0 d0d0d000 00ffff00 d0d0d0d0 
+	Data:	00d0d0d0 00d0d0d0 d0d0d000 ffff0000 
+	Data:	d0d0d0d0 00d0d0d0 00d0d0d0 d0d0d000 
+	Data:	ff00ff00 d0d0d0d0 00000000 00d0d0d0 
+	Data:	d0d0d000 00000000 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d00000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Butn.69
+	InternalName:	"AddField"
+	Help:	"Adds a new field to the table//"
+	Icon:	70
+	Click:	"TableTools.AddField"
+)
+
+(AVIcon.70
+	Name:	"add_field.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	04c0c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d400c8d0 d4000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00000000 00000000 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d4c8 d0d4c8d0 d4000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d4c8 d0d40000 00000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 00000000 00000000 
+	Data:	00000000 00000000 00000000 000000c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 000000c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 00000000 00000000 
+	Data:	00000000 00000000 00000000 000000c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d4c8 d0d40000 00000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d4c8 d0d4c8d0 d4000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00000000 00000000 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 c8d0d4c8 d0d40000 
+	Data:	00c8d0d4 c8d0d400 0000c8d0 d4c8d0d4 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00c8d0d4 c8d0d400 0000c8d0 
+	Data:	d400c8d0 d4000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00000000 00000000 0000c8d0 
+	Data:	d400c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4000000 00000001 00180007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Butn.71
+	InternalName:	"CalculateTable"
+	Help:	"Calculates the expression from the first row//"
+	Icon:	72
+	Click:	"TableTools.CalculateTable"
+)
+
+(AVIcon.72
+	Name:	"calculate_table.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d000 00000000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d000d000 ffff00ff 
+	Data:	ff00ffff ff00d0d0 d0d0d0d0 d000d000 
+	Data:	00000000 00000000 0000d0d0 d0d0d0d0 
+	Data:	d000d000 ffff00ff ffd0ffff ffd0d0d0 
+	Data:	d0d0d0d0 d000d000 00000000 d0aa0000 
+	Data:	00000000 000000d0 d000d000 ffff00ff 
+	Data:	ffaa8888 88888888 888800d0 d000d000 
+	Data:	00000000 d0aa8888 88888888 888800d0 
+	Data:	d000d000 ffff00ff ffaa88ff 88ff88ff 
+	Data:	ff8800d0 d000d000 00000000 d0aa8888 
+	Data:	88888888 888800d0 d000d000 ffff00ff 
+	Data:	ffaa88ff 88ff88ff ff8800d0 d000d000 
+	Data:	00000000 d0aa8888 88888888 888800d0 
+	Data:	d000d0d0 d0d0d0d0 d0aa88ff 88ff88ff 
+	Data:	ff8800d0 d000d0d0 d0d0d0d0 d0aa8888 
+	Data:	88888888 888800d0 d000d0d0 d0d0d0d0 
+	Data:	d0aa88ff ffffffff ff8800d0 d000d0d0 
+	Data:	d0d0d0d0 d0aa88ff ffffffff ff8800d0 
+	Data:	d000d0d0 d0d0d0d0 d0aa8888 88888888 
+	Data:	888800d0 d000d0d0 d0d0d0d0 d0aaaaaa 
+	Data:	aaaaaaaa aaaa00d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(Butn.73
+	InternalName:	"Table_New"
+	Help:	"Creates a new, empty table//"
+	Icon:	74
+	Click:	"TableTools.NewTable"
+)
+
+(AVIcon.74
+	Name:	"table_new.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d000 00000000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d000d000 ffff00ff 
+	Data:	ff00ffff ff00d0d0 d0d0d0d0 d000d000 
+	Data:	00000000 00000000 0000d0d0 d0d0d0d0 
+	Data:	d000d000 ffff00ff ff00ffff ff00d0d0 
+	Data:	d0d0d0d0 d000d000 00000000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d000d000 ffff00ff 
+	Data:	ff00ffff ff00d0d0 d0d0d0d0 d000d000 
+	Data:	00000000 00000000 0000d0d0 d0d0d0d0 
+	Data:	d000d000 ffff00ff ff00f5ee e9a8d0d0 
+	Data:	4bd0d0d0 d000d000 00000000 0000a7c7 
+	Data:	46d0d0d0 4bd0d0d0 d000d000 ffff00ff 
+	Data:	ff00fff5 df4bd0d0 4b4bd04b d000d000 
+	Data:	00000000 000000d0 cfd04bd0 4bd04bd0 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d04bd0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d04b4bd0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d04bd0 4bd04bd0 d000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d04bd0d0 4bd0d04b 
+	Data:	d000d0d0 d0d0d0d0 d0d0d0d0 4bd0d0d0 
+	Data:	4bd0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 4bd0d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(Tool.75
+	InternalName:	"aTool3"
+	Help:	"Edits cell//"
+	Icon:	76
+	Cursor:	"Cursors.Default"
+	Apply:	"TableTools.EditAttributes"
+)
+
+(AVIcon.76
+	Name:	"Edit"
+	Res:	"Icons.Edit"
+
+)
+
+(Tool.77
+	InternalName:	"Select"
+	Help:	"Selects records in the table//"
+	Icon:	78
+	Cursor:	"Cursors.Default"
+	Apply:	"TableTools.Select"
+)
+
+(AVIcon.78
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(RectD.79
+	Left:	286.00000000000000
+	Top:	30.00000000000000
+	Right:	311.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.80
+	Left:	480.00000000000000
+	Top:	30.00000000000000
+	Right:	527.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.81
+	Left:	116.00000000000000
+	Top:	30.00000000000000
+	Right:	141.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.82
+	Left:	230.00000000000000
+	Top:	30.00000000000000
+	Right:	255.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.83
+	Left:	5.00000000000000
+	Top:	30.00000000000000
+	Right:	30.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.84
+	Left:	369.00000000000000
+	Top:	30.00000000000000
+	Right:	394.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.85
+	Left:	144.00000000000000
+	Top:	30.00000000000000
+	Right:	169.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.86
+	Left:	60.00000000000000
+	Top:	30.00000000000000
+	Right:	86.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.87
+	Left:	313.00000000000000
+	Top:	30.00000000000000
+	Right:	339.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.88
+	Left:	397.00000000000000
+	Top:	30.00000000000000
+	Right:	422.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.89
+	Left:	424.00000000000000
+	Top:	30.00000000000000
+	Right:	450.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.90
+	Left:	452.00000000000000
+	Top:	30.00000000000000
+	Right:	477.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.91
+	Left:	258.00000000000000
+	Top:	30.00000000000000
+	Right:	283.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.92
+	Left:	88.00000000000000
+	Top:	30.00000000000000
+	Right:	113.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.93
+	Left:	341.00000000000000
+	Top:	30.00000000000000
+	Right:	366.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.94
+	Left:	33.00000000000000
+	Top:	30.00000000000000
+	Right:	58.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.95
+	Left:	202.00000000000000
+	Top:	30.00000000000000
+	Right:	228.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.96
+	Left:	173.00000000000000
+	Top:	30.00000000000000
+	Right:	199.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.97
+	Left:	5.00000000000000
+	Top:	37.00000000000000
+	Right:	539.00000000000000
+	Bottom:	2.00000000000000
+)
+
+(Nil.98
+)
+
+(Script.99
+	Name:	"TableTools.AddField"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     tabletools_add_field.ave\n'# Author:       Adrian Boehlen\n'# Date:         24.01.2014\n'# Version:      0.1\n'# Based on:     Table.AddField\n'#\n'# Purpose:      fuegt ein neues Feld der Tabelle hinzu             \n'#\n'########################################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht
+ bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\ntheTable = av.GetActiveDoc\ntheFld = theTable.MakeField\n\nif (theFld <> NIL) then\n  theTable.GetVTab.AddFields({theFld})\n  theTable.SetActiveField(theFld)\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
+)
+
+(Script.100
+	Name:	"TableTools.AddRecords"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     tabletools_add_records.ave\n'# Author:       Adrian Boehlen\n'# Date:         30.01.2014\n'# Version:      0.6\n'#\n'# Purpose:      fuegt die gewuenschte Anzahl Records\n'#               der Tabelle hinzu\n'#\n'########################################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht bearbeite
+t werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# zu ergaenzende Zeilen definieren und pruefen\n\ntheRecords = MsgBox.Input(\"Geben Sie die Anzahl zu ergaenzender Zeilen ein\", \"Hinzuzufuegende Zeilen definieren\",1.AsString)\n\nif (theRecords = nil) then\n  return nil\nelseif (theRecords.IsNumber.Not) then\n  MsgBox.Error(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif (theRecords.AsNumber < 1) then\n  Ms
+gBox.Error(\"Anzahl Zeilen ist zu gering\",\"Abbruch\")\n  return nil\nend\n\n'# neue Zeilen ergaenzen\n\nfor each rec in 1..theRecords.AsNumber\n  theTable.GetVTab.BeginTransaction\n  theTable.GetVTab.AddRecord\n  theTable.GetVtab.EndTransaction\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
+)
+
+(Script.101
+	Name:	"TableTools.AdvancedSum"
+	SourceCode:	"'############################################################\n'#\n'# Filename:     tabletools_advanced_sum.ave\n'# Author:       Adrian Boehlen\n'# Date:         17.01.2014\n'# Version:      0.5\n'#\n'# Purpose:      Summiert die Werte selektierter Zeilen\n'#               eines Feldes und schreibt das Ergebnis in\n'#               die zu definierende Zeile\n'#\n'#               Funktioniert in numerischen und Textfeldern\n'#\n'############################################################\n\n'# die Tabelle muss im Edit-Mo
+dus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Info(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\nthePrecision = \"d.dddddddddd\"\ntheField
+Precision = theField.GetPrecision\nScript.The.SetNumberFormat( thePrecision.Left( theFieldPrecision + 2 ) )\n\n'# Es muessen mindestens zwei Zeilen selektiert sein\n\nif ( theVTab.GetSelection.Count < 2) then\n  MsgBox.Info(\"Zu summierende Zeilen (mindestens 2) muessen selektiert sein\",\"Abbruch\")\n  return nil\nend\n\n'# Summe ermitteln\n\ntheSelected = theVTab.GetSelection\ntheSum = 0\nfor each rec in theSelected\n  theValue = theVTab.ReturnValueNumber( theField, rec )\n  if ( not ( theValue.IsNull ) ) then\n    theSum = t
+heValue + theSum\n  end\nend\n\n'# Anzahl Zeilen ermitteln\n\ntheRecords = 0\nfor each rec in theVTab\n  theRecords = theRecords + 1\nend\n\n'# Zielfeld definieren\n\ntheTarget = MsgBox.Input(\"Geben Sie die Nummer des Zielfeldes ein\", \"Zielfeld definieren\",1.AsString)\n\nif ((theTarget = nil) or (theTarget.IsNumber.Not)) then\n  MsgBox.Info(\"Zielfeld wurde nicht definiert\",\"Abbruch\")\n  return nil\nelseif ((theTarget.AsNumber > theRecords) or (theTarget.AsNumber < 1)) then\n  MsgBox.Info(\"Zielfeld existiert nicht\",\"Abbruch\")\n
+  return nil \nend\n\ntheTarget = theTarget.AsNumber - 1\n\n'# vorhandene Selektion aufheben\n\ntheSelected = theVTab.GetSelection\ntheSelected.ClearAll\ntheVTab.UpdateSelection\n\n'# Selektion durchfuehren\n\ntheSelected.Set(theTarget)\ntheVTab.SetSelection(theSelected)\ntheVTab.UpdateSelection\n\n'# Summe in Zielfeld schreiben\n\nfor each rec in theSelected\n  if (theField.getType.AsString = \"FIELD_CHAR\") then\n    theVTab.SetValue(theField,rec,theSum.AsString)\n  else\n    theVTab.SetValue(theField,rec,theSum)\n  end\nend\n\n'# An
+zeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend\n"
+)
+
+(Script.102
+	Name:	"TableTools.CalculateTable"
+	SourceCode:	"'#################################################################\n'#\n'# Filename:     tabletools_calculate_table.ave\n'# Author:       Adrian Boehlen\n'# Date:         26.01.2014\n'# Version:      0.3\n'#\n'# Purpose:      ermoeglicht Berechnungen in einer Tabelle.\n'#               Dazu muss die Expression in der ersten Zeile\n'#               einer Spalte des Typs \"String\" stehen\n'#\n'#               Sind Zeilen selektiert, wird die Berechnung\n'#               nur in den selektierten Zeilen durchgefuehrt,\n'#    
+           ansonsten in allen\n'#\n'#               Die in der ersten Zeile stehende Expression\n'#               wird durch die Berechnung nicht beeinflusst\n'#\n'#################################################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEd
+itstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Info(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\ntheFieldName = theField.GetName\n\n'# Expression in der ersten Zeile lesen\n\nfor each rec in theVTab\n  if (rec = 0) then\n    theExpression = \"(\"+theVTab.ReturnValue(theField, rec)+\"* 100000).AsString\"\n  end\nend\n\n'# Expression auf uebrige Zeilen anwenden\n\ntheSelected = theVTab.GetSelection\n\nif (th
+eVTab.GetSelection.Count = 0) then\n  wasSelected = 0\n  for each rec in theVTab\n    if (rec = 0) then\n      continue\n    else   \n      theSelected.Set(rec)\n      theVTab.SetSelection(theSelected)\n      theVTab.UpdateSelection\n      theVTab.Calculate(theExpression,theField)\n    end\n  end\n  for each rec in theSelected\n    theValue = theVTab.ReturnValue(theField, rec )\n    theValue = theValue.AsNumber / 100000\n    theVTab.SetValue(theField,rec,theValue.AsString)\n  end\nelse\n  wasSelected = 1\n  for each rec in th
+eVTab\n    if (rec = 0) then\n      continue\n    else   \n      theVTab.Calculate(theExpression,theField)\n    end\n  end\n  for each rec in theSelected\n    theValue = theVTab.ReturnValue(theField, rec )\n    theValue = theValue.AsNumber / 100000\n    theVTab.SetValue(theField,rec,theValue.AsString)\n  end        \nend\n\n'if (not (theVTab.Calculate(theExpression,theField))) then\n'  MsgBox.Warning(\"Syntax Error\", \"Expression\")\n'end\n\n'# Anzeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Selektion aufheben, wenn zuvor ni
+chts selektiert\n\nif (wasSelected = 0) then\n  theSelected.ClearAll\n  theVTab.UpdateSelection\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
+)
+
+(Script.103
+	Name:	"TableTools.ChangeFieldType"
+	SourceCode:	"'#################################################################\n'#\n'# Filename:     tabletools_change_field_type.ave\n'# Author:       Adrian Boehlen\n'# Date:         24.01.2014\n'# Version:      0.6\n'#\n'# Purpose:      Aendert den Feldtypen des selektierten Feldes\n'#               indem der Feldinhalt gelesen und in ein\n'#               neues Feld mit gleichem Namen geschrieben wird\n'#\n'#               Das urspruengliche Feld kann auch erhalten werden\n'#               In diesem Fall ist fuer das neue Feld
+ ein\n'#               neuer Name zu definieren\n'#\n'#               Stehen im neuen Feld weniger Nachkommastellen\n'#               zur Verfuegung, wird korrekt gerundet\n'#\n'#################################################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRec
+overy\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Info(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\ntheFieldName = theField.GetName\n\n'# allfaellig vorhandene Selektionen aufheben\n\ntheSelected = theVTab.GetSelection\ntheSelected.ClearAll\ntheVTab.UpdateSelection\n\n'# Zielfeldtyp bestimmen\n\ntheTypeList = {}\ntheTypeList.Add(\"Decimal\")\ntheTypeList.Add(\"String\")\n\ntheType = MsgBox.ListAs
+String(theTypeList,\"Definieren Sie den Feldtyp\",\"Feldtyp bestimmen\")\nif (theType = nil) then\n  return nil\nend\n\ntheWidth = MsgBox.Input(\"Geben Sie die Feldlaenge ein\", \"Feldlaenge definieren\",16.AsString)\n\nif ((theWidth = nil) or (theWidth.IsNumber.Not)) then\n  MsgBox.Error(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif (theWidth.AsNumber < 1) then\n  MsgBox.Error(\"Feldlaenge ist zu gering\",\"Abbruch\")\n  return nil\nend\n\nif (theType = \"Decimal\") then\n  theDecimalPlaces = MsgBox.Input(\"Geben Sie die Anzahl 
+Nachkommastellen ein\", \"Nachkommastellen definieren\",3.AsString)\n  if ((theDecimalPlaces = nil) or (theDecimalPlaces.IsNumber.Not)) then\n    MsgBox.Error(\"Ungueltige Eingabe\",\"Abbruch\")\n    return nil\n  end\nend\n\n'# Inhalt der Spalte in Liste einlesen\n\ntheContent = {}\nfor each rec in theVTab\n  theContent.Add(theVTab.ReturnValue(theField, rec ))\nend\n\n'# Urspruengliches Feld loeschen oder Name der Kopie definieren\n\nif (MsgBox.YesNo(\"Urspruengliches Feld loeschen ?\",\"Feld loeschen\",true)) then\n  theTable.StopEd
+iting\n  theVTab.RemoveFields({theField})\n  theVTab.StartEditingWithRecovery\n  theNewFieldName = 0\nelse\n  theNewFieldName = MsgBox.Input(\"Geben Sie den Namen des neuen Feldes ein\", \"Feldname definieren\",\"\")\n  if (theNewFieldName = nil) then\n    return nil\n  end\nend\n\n'# neues Feld mit definiertem Feldtyp anlegen\n\nif (theType = \"Decimal\") then\n  if (theNewFieldName = 0) then\n    theNewField = Field.Make (theFieldName,#FIELD_DECIMAL,theWidth.AsNumber,theDecimalPlaces.AsNumber)\n  else\n    theNewField = Field.Mak
+e (theNewFieldName,#FIELD_DECIMAL,theWidth.AsNumber,theDecimalPlaces.AsNumber)\n  end\n  theVTab.AddFields({theNewField})\nelseif (theType = \"String\") then\n  if (theNewFieldName = 0) then\n    theNewField = Field.Make (theFieldName,#FIELD_CHAR,theWidth.AsNumber,0)\n  else\n    theNewField = Field.Make (theNewFieldName,#FIELD_CHAR,theWidth.AsNumber,0)\n  end\n  theVTab.AddFields({theNewField})\nend\n\n'# zwischengespeicherte Werte in neues Feld schreiben\n'# korrekte Rundung erzwingen\n'# Strings die keine Zahlen sind, w
+ahlweise als 0 in ein Dezimalfeld schreiben,\n'# oder Feld leer lassen\n\nfor each rec in theVTab\n  theValue = theContent.Get(rec)\n  theValue = theValue.AsString\n  if (theType = \"Decimal\") then\n    if (theValue.IsNumber.Not) then\n      if (MsgBox.YesNo(\"Werte, die keine Zahlen sind, als 0 uebernehmen ?\",\"keine Zahlen\",true)) then\n        theValue = 0\n        theVTab.SetValue(theNewField,rec,theValue)\n      end\n    else\n      theValue = (theValue.AsNumber * (10 ^ theDecimalPlaces.AsNumber)).Round\n      theValue
+ = theValue / (10 ^ theDecimalPlaces.AsNumber)\n      theVTab.SetValue(theNewField,rec,theValue)\n    end\n  elseif (theType = \"String\") then\n    theVTab.SetValue(theNewField,rec,theValue.AsString)\n  end\nend\n\n'# Anzeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
+)
+
+(Script.104
+	Name:	"TableTools.close"
+	SourceCode:	"self.getdialog.close"
+)
+
+(Script.105
+	Name:	"TableTools.DD2DMS"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     dd2dms.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.01.2014\n'# Version:      0.1\n'# Based on:     Theme.ConvertDDtoDMS\n'# \n'# Purpose:      Converts DecimalDegrees values\n'#               to DegreesMinutesSeconds\n'#\n'########################################################\n\n' Get the list of tables in the project and let the user pick one\ntabList = {}\nfor each i in av.GetProject.GetDocs\n  if (i.Is(Table)) then\n    tabLi
+st.Add(i)\n  end \nend\n\n' Have the user pick the table to convert\ntb = MsgBox.ChoiceAsString(tabList,\n  \"Choose the table which contains the values to convert:\",\n  \"Convert DD to DMS\")\nif (tb = Nil) then\n  return \"\"\nend\ntbv = tb.GetVTab\n\n' Have the user pick the field with the DMS values\nf = MsgBox.ChoiceAsString(tbv.GetFields,\n  \"Choose the field to convert from DD to DMS\",\n  \"Select field\")\nif (f = Nil) then\n  return \"\"\nend\n\nnewFieldName = MsgBox.Input(\"Enter a name for the new field (up to 8 characters:\",\n
+  \"Convert DD to DMS\",\"DMS-X\")\nif (newFieldName = Nil) then\n  return \"\"\nend\n\n' Make sure you can write to the table, and that the field doesn't already exist\nif (tbv.CanEdit.Not) then\n  MsgBox.Info(\"Cannot edit the table.\",\"Convert DD to DMS\")\n  return \"\"\nend\nif (tbv.FindField(newFieldName).Is(Field)) then\n  MsgBox.Info(\"A field with name\"++newFieldName.asString++\n    \"already exists.\",\"Convert DD to DMS\")\n  return \"\"\nend\n\n' If we can get this far, we can add the new field\ntbv.SetEditable(true)\nnewf = Field
+.Make(newFieldName,#FIELD_CHAR,12,0)\ntbv.AddFields({newf})\n\n' Convert DMS to DD\nfor each r in tbv\n  v = tbv.ReturnValueString(f, r)\n  ' get the degrees\n  d = v.asString.asTokens(\".\").Get(0)\n  if (v.asString.asTokens(\".\").Count <> 2) then\n    MsgBox.Info(\"Values in field\"++f.asString++\n      \"appear to be in the incorrect format. Need DD (e.g.,12.3456).\",\n      \"Convert DD values to DMS\")\n    tbv.RemoveFields({newf})  \n    tbv.SetEditable(false)\n    return \"\"\n  end\n\n  dnum = d.asNumber.Abs\n  v = v.asNumber.A
+bs\n  ' convert decimal degrees to decimal seconds\n  ds = v * 3600\n  if (ds = 0) then\n    dm = \"00\"\n    dss = \"00\"\n  else\n    ' get the minutes\n    dm = (ds - (dnum * 3600)) / 60\n    dm = dm.Truncate\n        \n    ' get the seconds\n    dss = ds - (dnum * 3600) - (dm * 60)\n    dss = dss.Truncate\n    if (dm = 0) then\n      dm = \"00\"   \n    end\n    if (dss = 0) then\n      dss = \"00\"  \n    end\n  end\n  \n  if (d.AsNumber < 10) then\n    d = \"0\" + d.AsString\n  end\n  if (dm < 10) then\n    dm = \"0\" + dm.AsString\n  end\n
+  if (dss < 10) then\n    dss = \"0\" + dss.AsString\n  end\n  \n  dd = (d.asString + \":\" + dm.asString + \":\" + dss.asString)\n  tbv.SetValue(newf,r,dd)\nend\n\n' Stop editing the table\ntbv.SetEditable(false)\n\n"
+)
+
+(Script.106
+	Name:	"TableTools.DeleteRecordOrField"
+	SourceCode:	"'#########################################################\n'#\n'# Filename:     tabletools_delete_rec_or_field.ave\n'# Author:       Adrian Boehlen\n'# Date:         30.01.2014\n'# Version:      0.5\n'#\n'# Purpose:      löscht nach Rueckfrage selektierte Zeilen\n'#               oder das selektierte Feld\n'#               Sind sowohl Zeilen wie auch ein Feld \n'#               selektiert, haben die Zeilen Vorrang\n'#               \n'#########################################################\n\ntheTable = av.GetActiveDo
+c\ntheVTab = theTable.GetVTab\n\n'# die Tabelle muss im Edit-Modus sein\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# pruefen, ob mindestens eine Zeile selektiert ist\n\nif ( theVTab.GetSelection.Count <> 0 ) then\n  if (theVTab.CanEdit.Not) then\n    MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n    return nil\n  end\n    \n  '# selektierte Zeilen loeschen\n\n  if (MsgBox.YesNo(\"Selektierte Zeile(n) wirklich loeschen ?\",\"De
+lete Record\",true)) then\n    theVtab.BeginTransaction\n    theVTab.RemoveRecords(theVTab.GetSelection.Clone)\n    theVTab.EndTransaction\n  end\n  \n  '# Editsession beenden, wenn zu Beginn nicht gestartet\n  \n  if (theEditstatus = 0) then\n    theVTab.SetEditable(false)\n  end\n  \nelse\n  if (theTable.GetActiveField = nil) then\n    MsgBox.Info(\"Selektieren Sie eine Zeile oder ein Feld\",\"Abbruch\")\n    return nil\n  end\n  theField = theTable.getActiveField\n  if (MsgBox.YesNo(\"Selektiertes Feld '\" + theField.GetAlias.As
+String + \"' wirklich loeschen?\",\"Delete Field\",true)) then\n    theTable.StopEditing\n    theTable.GetVTab.RemoveFields({theField})\n  end\n  \n  '# Editsession beenden, wenn zu Beginn nicht gestartet\n  \n  if (theEditstatus = 0) then\n    theVTab.SetEditable(false)\n  end\nend"
+)
+
+(Script.107
+	Name:	"TableTools.DMS2DD"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     dms2dd.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.01.2014\n'# Version:      0.1\n'# Based on:     Theme.ConvertDMStoDD\n'# \n'# Purpose:      Converts DegreesMinutesSeconds\n'#               values to DecimalDegrees\n'#\n'########################################################\n\n' Get the list of tables in the project and let the user pick one\ntabList = {}\nfor each i in av.GetProject.GetDocs\n  if (i.Is(Table)) then\n    tabLi
+st.Add(i)\n  end \nend\n\n' Have the user pick the table to convert\ntb = MsgBox.ChoiceAsString(tabList,\n  \"Choose the table which contains the values to convert:\",\n  \"Convert DMS values to DD\")\nif (tb = Nil) then\n  return \"\"\nend\ntbv = tb.GetVTab\n\n' Have the user pick the field with the DMS values\nf = MsgBox.ChoiceAsString(tbv.GetFields,\n  \"Choose the field to convert from DMS to DD\",\n  \"Select field\")\nif (f = Nil) then\n  return \"\"\nend\n\nnewFieldName = MsgBox.Input(\"Enter a name for the new field (up to 8 charact
+ers):\",\n  \"Convert DMS values to DD\",\"DD-X\")\nif (newFieldName = Nil) then\n  return \"\"\nend\n\n' Make sure you can write to the table, and that the field doesn't already exist\nif (tbv.CanEdit.Not) then\n  MsgBox.Info(\"Cannot edit the table.\",\"Convert DMS values to DD\")\n  return \"\"\nend\nif (tbv.FindField(newFieldName).Is(Field)) then\n  MsgBox.Info(\"A field with name\"++newFieldName.asString++\n    \"already exists.\",\"Convert DMS values to DD\")\n  return \"\"\nend\n\n' If we can get this far, we can add the new field\ntbv.Se
+tEditable(true)\nnewf = Field.Make(newFieldName,#FIELD_DECIMAL,12,6)\ntbv.AddFields({newf})\n\n' Convert DMS to DD\nfor each r in tbv\n  v = tbv.ReturnValueString(f, r)\n  ' split the string into 3 parts: D M S\n  it = v.AsTokens(\":\")\n  if (it.Count <> 3) then\n    MsgBox.Info(\"Values in field\"++f.asString++\n      \"appear to be in the incorrect format. Need DDD MM SS.\",\n      \"Convert DMS to DD\")\n    tbv.RemoveFields({newf})  \n    tbv.SetEditable(false)\n    return \"\"\n  end\n  \n  ' Do the conversion\n  ' degrees = degr
+ees\n  d  = it.Get(0)\n  ' minutes/60\n  m  = ((it.Get(1).asNumber) / 60)\n  ' seconds/3600\n  s  = ((it.Get(2).asNumber) / 3600)\n  ms = (m + s)\n  if (ms <> 0) then\n      ms.SetFormat(\"dd.dddd\")\n      ms = ms.asString.asTokens(\".\").Get(1)\n   end\n  dms = (d + \".\" + ms.asString).asNumber\n  dms.SetFormat(\"dd.dddd\")\n  tbv.SetValueNumber(newf,r,dms)\nend\n\n' Stop editing the table\ntbv.SetEditable(false)\n"
+)
+
+(Script.108
+	Name:	"TableTools.EditAttributes"
+	SourceCode:	"'Author  : Georg A.Zelenin, Odessa(UKRAINE)\n'          Position:GIS programmer.  \n'          Municipality Dpt.on Land Resources and Parcels Control\n'           (tel/fax.(0482) 373 076 )\n'    \n'Script Class: Simple User Edit Interface - \"One Click Editors\". \n'Script Name:  Table_CorrRecord\n'\n'Title:   Single (Click/Apply) editor for a long (can not be disposed \n'         on a sinlge screen,too much or long fields ) Open Attributes table.\n'         Single Click editor saves a time for your routine DB edits.  
+                  \n'\n'Topics:  Script transforms clicked row under correction in a column editable\n'         Forms of MultiInput interface boxes, where each field looks like editavle\n'         text line.The mode of editing are switched On or Off automatically\n'         under striking Ok(Save)/Cancel(Discard Edits) MultiInput button.\n'         Each input Box contains up to 20 lines (total Screen)\n'         and automatically gives new portion of the data if number of \n'         the DB fields are more then 20 
+(Cadastre DB e.c.t.),  \n'  \n'          For a Numeric/String Fiels only.\n'       \n'Usage: \n'          a preparation step \n'          a) Attach the compiled Script on Tool/Apply button in a Table environment.\n'          b) Click the row in Open Table you wish to edit by this Tool\n'          c) Makes your Edits in the Open MultiInput Box, press OK\n'\ntheTable = av.GetActiveDoc\ntheName  = theTable.GetName\ntheTable.Select\nav.GetProject.SetModified(true)\ntheVTab=theTable.getVtab\ntotFields   = theVTab.getFields\n\n  
+       nf = ( totFields.count-1 )\n         c  = 20\n\nres = nf mod c\nn   = (nf - res) / c\nb   = (n*c) + res\n         \nfor each i in 0..n \n  from =  i*c\n  to   = ((i+1)*c-1)\n  if (to>nf) then\n    to = from+res\n  end\n \n  nmFields    = {}\n  valFields   = {}\n  lstFields   = {}\n   \n  for each j in from..to\n    f=totFields.Get(j)\n    lstFields.Add(f)\n  end\n  \n    \n  ' /////////////////////      \n  maxl = 1      \n  for each f in lstFields \n    nmf = f.getName\n    lnf = nmf.count\n    maxl = (maxl max lnf)\n  end\n  '\n 
+ ' ...true font chars could not be aligned, unfortunately     \n  '      \n  for each f in lstFields\n    fnm  = f.getName\n    fout = fnm\n    dspace = ( maxl - fnm.count )\n    if ( dspace>0 ) then\n      buff=\"\"\n      for each i in 0..dspace\n        buff = buff + 160.AsChar\n      end\n      fout = fnm + buff\n    end\n    nmFields.Add(fout)  \n  end\n  \n  ' ////////////////////\n  numSel = theVTab.getNumSelRecords \n  if (numSel=0) then\n    exit\n  end\n  if (numSel>1) then\n    exit\n  end\n\n  for each sel in theVTab.getS
+election\n    for each f in lstFields\n      val = theVtab.ReturnValueString(f,sel)\n      if ( (val=nil)or(val=\"\") ) then \n        val=\" \"\n      end\n      valFields.Add(val)\n    end   \n  end\n\n  valUserSettings = MsgBox.MultiInput(\"\", \"Werte eingeben\", nmFields, valFields)\n\n  if ( valUserSettings.count = 0) then\n    return nil\n  end  \n    \n     \n  for each i in 0..(lstFields.count-1)\n\n    f = lstFields.get(i)\n    v = valUserSettings.get(i)\n  \n    if ( f.getName=\"shape\" ) then\n      continue\n    end\n    \n    fT
+ype = f.getType\n    aType = fType.AsString.AsTokens(\"_\").get(1)\n    \n    if ( (aType=\"LONG\")or(aType=\"DOUBLE\")or(aType=\"DECIMAL\")or(aType=\"FLOAT\") ) then    \n      if(v.IsNumber) then\n        val = v.AsNumber\n      end               \n    elseif(aType=\"DATE\") then\n      val = v.AsDate\n    elseif(aType=\"CHAR\") then\n      val = v\n    end\n    \n    theVtab.SetEditable(TRUE)\n    if(theVtab.IsEditable) then\n      for each sel in theVTab.getSelection\n        theVTab.SetValue(f,sel,val)\n      end         \n    end   
+\n  end\nend\n\ntheVtab.SetEditable(FALSE)\ntheVTab.GetSelection.ClearAll\ntheTable.GetVTab.UpdateSelection\n\n"
+)
+
+(Script.109
+	Name:	"TableTools.ExportHTML"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     table2html.ave\n'# Author:       Adrian Boehlen\n'# Date:         04.01.2014\n'# Version:      0.2\n'# Based on:     Table2HTML\n'# \n'# Purpose:      - Konvertiert Tabellen ins HTML-Format\n'#               - verschiedene Stile sind waehlbar\n'#               - Zahlenkolonnen werden rechtsbuendig,\n'#                 Textkolonnen linksbuendig dargestellt\n'#\n'########################################################\n\n'# Directions:\n'# -----
+------\n'# 1. Place this script in a script editor and compile it.\n'# 2. Make the Table document you want to export to HTML format Active.\n'# 3. Edit the table's properties so that the name of the table is the\n'#    title you want to use in the HTML table, Hide any fields you do\n'#    not want in the HTML table, and set aliases for any cryptically\n'#    named fields.\n'# 4. From the Window menu choose the name of the script editor that\n'#    contains this script, and click the Run button.\n'# 5. Choose the sty
+le of HTML table want.\n'# 6. Choose a filename for your HTML table.\n\n'# Style definieren\n\ntheTab = av.GetActiveDoc.GetVTab\nStyles = {\"Classic\",\"Classic with Highlighted Column\",\"Green & White Rows\",\"Green & White Rows with Highlighted Column\"}\nStyle = Msgbox.ChoiceAsString(Styles,\"Choose a style for your HTML Table:\", \"Save Table as HTML\")\nif (Style = nil) then\n  return nil\nend\n\n'# HTML File anlegen\n\ntfn = \"$TEMP\".AsFileName.MakeTmp(\"mytable\",\"htm\")          \nrfn = FileDialog.Put(tfn, \"*.htm\", \"Save Table a
+s HTML\")\nif (rfn = nil) then\n  return nil\nend\n\nR_file = LineFile.Make(rfn,#FILE_PERM_WRITE)\n\nif  (theTab.GetNumSelRecords > 0) then\n  selOnly = Msgbox.YesNoCancel(\"Export just selected records?\",\"Save Table as HTML\",false)\n  if (SelOnly = nil) then\n    return nil\n  end\nelse\n  selOnly = false\nend\n\n'# Feldnamen ermitteln\n\nmx = 0\nFstr = \"  <tr> \"\nvf = {}\nfor each f in theTab.GetFields\n  if (f.IsVisible) then\n    Fstr = Fstr + 10.AsChar + \"    <th>\"+f.GetAlias+\"</th>\"\n    mx = mx + 1\n    vf.Add(f.GetAlias)\n  en
+d\nend\nFstr = Fstr + 10.AsChar + \"  </tr>\"\n\nif (Style.Contains(\"High\")) then\n  hf = Msgbox.ChoiceAsString(vf,\"Choose a Field to highlight:\",\"Save Table as HTML\")\n  if (hf = nil) then\n    return nil\n  end\nend\n\n'# HTML Header schreiben\n\nR_file.WriteElt(\"<!DOCTYPE html PUBLIC \"\"-//W3C//DTD XHTML 1.0 Transitional//EN\"\"\")\nR_file.WriteElt(\"    \"\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\">\")\nR_file.WriteElt(\"<html xmlns=\"\"http://www.w3.org/1999/xhtml\"\">\")\nR_file.WriteElt(\"<head>\")\nR_file.WriteElt(\"  
+<meta http-equiv=\"\"Content-Type\"\"\")\nR_file.WriteElt(\"    content=\"\"text/html; charset=iso-8859-1\"\" />\")\nR_file.WriteElt(\"  <title>\"+av.GetActiveDoc.GetName+\"</title>\")\nR_file.WriteElt(\"  <style type=\"\"text/css\"\">\")\nR_file.WriteElt(\"    h1,td,th,b,i { font-family:Helvetica,sans-serif; }\")\nR_file.WriteElt(\"    h1 { font-size:26px; margin-bottom:18px; }\")\nR_file.WriteElt(\"    th { font-size:20px; }\")\nR_file.WriteElt(\"    p,td { font-size:18px; }\")\nR_file.WriteElt(\"  </style>\")\nR_file.WriteElt(\"</head>\")\nR_file
+.WriteElt(\"<body bgcolor=\"\"#FFFFFF\"\">\")\nR_file.WriteElt(\"<table border=\"\"0\"\" width=\"\"100%\"\" cellspacing=\"\"2\"\" cellpadding=\"\"0\"\">\")\nR_file.WriteElt(\"  <tbody>\")\nR_file.WriteElt(\"    <tr>\")\nR_file.WriteElt(\"      <td align=\"\"center\"\">\")\nR_file.WriteElt(\"      <h1>\"+av.GetActiveDoc.GetName+\"</h1>\")\nR_file.WriteElt(\"      <br />\")\nR_file.WriteElt(\"      </td>\")\nR_file.WriteElt(\"    </tr>\")\nR_file.WriteElt(\"  </tbody>\")\nR_file.WriteElt(\"</table>\")\n\nR_file.WriteElt(\"<table border=\"\"1\"\" width=\"\"100%\"\" cellspacing=
+\"\"2\"\" cellpadding=\"\"0\"\">\")\n'# urspruengliche Syntax fuer Titel\n'R_file.WriteElt(\"  <tr>\")\n'R_file.WriteElt(\"    <th colspan=\"+mx.AsString+\">\"+av.GetActiveDoc.GetName+\"</th>\")\n'R_file.WriteElt(\"  </tr>\")\nR_file.WriteElt(Fstr)\n\nrt = 1\n\nif (SelOnly = true) then\n  xt = theTab.GetSelection\nelse\n  xt = theTab\nend\n\n'# Daten ermitteln und HTML Body schreiben\n\nfor each r in xt\n  if (Style.Contains(\"Green\")) then\n    if (rt < 3) then\n      ColStr = \"#FFFFFF\"\n    elseif (rt <= 4) then\n      ColStr = \"#BBFFBB\"\n    end\n
+    if (rt = 4) then\n      rt = 0\n    end\n  else\n    ColStr = \"#FFFFFF\"\n  end\n  fstr = \"  <tr>\"\n  for each f in theTab.GetFields\n    if ( (Style.Contains(\"High\")) AND (hf = (f.GetAlias)) ) then\n      Ost = ColStr.Clone\n      ColStr = \"#FFFFBB\"\n    end\n    if (f.IsVisible) then\n      v = theTab.ReturnValueString(f,r)\n      theType = f.getType\n      if ((theType.AsString = \"FIELD_DECIMAL\") or (theType.AsString = \"FIELD_DATE\")) then\n        fstr = fstr + 10.AsChar +\"    <td align=\"\"right\"\" bgcolor=\"+ColStr+\"> 
+\"+v+\" </td>\"\n      else\n        fstr = fstr + 10.AsChar +\"    <td align=\"\"left\"\" bgcolor=\"+ColStr+\"> \"+v+\" </td>\"\n      end\n    end\n    if ( (Style.Contains(\"High\")) AND (hf = (f.GetAlias)) ) then\n      ColStr = Ost\n    end\n  end\n  fstr = fstr + 10.AsChar + \"  </tr>\"\n  R_file.WriteElt(fstr)\n  rt = rt + 1\nend\nR_file.WriteElt(\"</table>\")\nR_file.WriteElt(\"</html>\")\nR_file.Close\n"
+)
+
+(Script.110
+	Name:	"TableTools.GetFieldType"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     tabletools_get_field_type.ave\n'# Author:       Adrian Boehlen\n'# Date:         11.01.2014\n'# Version:      0.3\n'#\n'# Purpose:      zeigt den Datentyp des selektierten\n'#               Feldes an\n'#\n'########################################################\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Info(\"Es ist kein Feld aktiv\",\"Abbruch\")\n 
+ return nil\nend\n\ntheField = theTable.GetActiveField\ntheFieldName = theField.GetName\n\ntheType = theField.getType\nif (theType.AsString = \"FIELD_DECIMAL\") then\n  MsgBox.Info(\"Type: Number\",theFieldName.AsString)\nelseif (theType.AsString = \"FIELD_CHAR\") then\n  MsgBox.Info(\"Type: String\",theFieldName.AsString)\nelseif (theType.AsString = \"FIELD_LOGICAL\") then\n  MsgBox.Info(\"Type: Boolean\",theFieldName.AsString)\nelseif (theType.AsString = \"FIELD_DATE\") then\n  MsgBox.Info(\"Type: Date\",theFieldName.AsString)\nend"
+)
+
+(Script.111
+	Name:	"TableTools.Index"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     tabletools_index.ave\n'# Author:       Adrian Boehlen\n'# Date:         30.01.2014\n'# Version:      0.10\n'#\n'# Purpose:      Berechnet einen Index, ausgehend von\n'#               einem zu definierenden Initialwert mit\n'#               einer zu definierenden Schrittweite\n'#\n'#               ist eine Selektion vorhanden, wird die \n'#               Berechnung nur auf der Selektion durch-\n'#               gefuehrt\n'#\n'##################
+######################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Info(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\nthe
+Field = theTable.GetActiveField\nthePrecision = \"d.dddddddddd\"\ntheFieldPrecision = theField.GetPrecision\nScript.The.SetNumberFormat( thePrecision.Left( theFieldPrecision + 2 ) )\n\n'# Initialwert und Schrittweite definieren\n\ntheSum = MsgBox.Input(\"Geben Sie den Initialwert ein\", \"Initialwert definieren\",1.AsString)\n\nif (theSum = nil) then\n  return nil\nelseif (theSum.IsNumber.Not) then\n  MsgBox.Error(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nend\n\ntheInterval = MsgBox.Input(\"Geben Sie die Schrittweite ein\", \"
+Schrittweite definieren\",1.AsString)\n\nif (theInterval = nil) then\n  return nil\nelseif (theInterval.IsNumber.Not) then\n  MsgBox.Error(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif (theInterval.AsNumber = 0) then\n  MsgBox.Error(\"Schrittweite darf nicht 0 sein\",\"Abbruch\")\n  return nil\nend\n\ntheSum = theSum.AsNumber\ntheInterval = theInterval.AsNumber\ntheSet = theVTab\ntheSelected = theVTab.GetSelection\n\n'# Berechnung durchfuehren\n\nif (theVTab.GetSelection.Count <> 0) then\n  for each rec in theSelected\n    i
+f (theField.getType.AsString = \"FIELD_CHAR\") then\n      theVTab.SetValue(theField,rec,theSum.AsString)\n    else\n      theVTab.SetValue(theField,rec,theSum)\n    end\n    theSum = theInterval + theSum\n  end\nelse\n  for each rec in theSet\n    if (theField.getType.AsString = \"FIELD_CHAR\") then\n      theVTab.SetValue(theField,rec,theSum.AsString)\n    else\n      theVTab.SetValue(theField,rec,theSum)\n    end\n    theSum = theInterval + theSum\n  end\nend\n\n'# Anzeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Editsessio
+n beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
+)
+
+(Script.112
+	Name:	"TableTools.NewTable"
+	SourceCode:	"\nname = av.GetProject.GetSelectedGUI.GetDocBaseName.lcase\ntheFile = FileDialog.Put(av.GetProject.MakeFileName(name,\"dbf\"), \n                         \"*.dbf\", \n                         \"New Table\")\nif (theFile = NIL) then\n  return nil\nend\n\nv = VTab.MakeNew(theFile,dBASE)\nif (v.HasError) then\n    if (v.HasLockError) then\n      MsgBox.Error(\"Unable to acquire Write Lock for file \" + theFile.GetBaseName, \"\")\n    else\n      MsgBox.Error(\"Unable to create \" + theFile.GetBaseName, \"\")\n    end\n    return nil\nend\nne
+wTable = Table.MakeWithGUI(VTab.MakeNew(theFile,dBASE), av.GetProject.GetSelectedGUI.GetName)\nnewTable.SetName(newTable.GetVTab.GetName)\nnewTable.GetWin.Open\nnewTable.GetVTab.SetEditable(False)\nnewTable.GetVTab.StartEditingWithRecovery"
+)
+
+(Script.113
+	Name:	"TableTools.Select"
+	SourceCode:	"theTable = av.GetActiveDoc\ntheTable.Select\nav.GetProject.SetModified(true)"
+)
+
+(Script.114
+	Name:	"TableTools.SelectMany"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     tabletools_select_many.ave\n'# Author:       Adrian Boehlen\n'# Date:         30.01.2014\n'# Version:      0.5\n'#\n'# Purpose:      selektiert alle Records zwischen zwei\n'#               zu definierenden Zeilen\n'#               \n'#               bereits vorhandene Selektionen werden\n'#               zuvor aufgehoben\n'#\n'########################################################\n\n\ntheTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\n\n'#
+ erste und letzte zu selektierende Zeile definieren\n\ntheFirst = MsgBox.Input(\"Geben Sie die erste zu selektierende Zeile ein\", \"erste Zeile definieren\",1.AsString)\n\nif (theFirst = nil) then\n  return nil\nelseif (theFirst.IsNumber.Not) then\n  MsgBox.Error(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif (theFirst.AsNumber < 1) then\n  MsgBox.Error(\"Zeile\" ++theFirst.AsString++ \"existiert nicht\",\"Abbruch\")\n  return nil\nend\n\ntheLast = MsgBox.Input(\"Geben Sie die letzte zu selektierende Zeile ein\", \"letzte Zei
+le definieren\",2.AsString)\n\n'# Anzahl Zeilen ermitteln und Eingabe pruefen\n\ntheRecords = 0\nfor each rec in theVTab\n  theRecords = theRecords + 1\nend\n\nif (theLast = nil) then\n  return nil\nelseif (theLast.IsNumber.Not) then\n  MsgBox.Error(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nelseif ((theLast.AsNumber < 1) or (theLast.AsNumber > theRecords)) then\n  MsgBox.Error(\"Zeile\" ++theLast.AsString++ \"existiert nicht\",\"Abbruch\")\n  return nil\nend\n\n\ntheFirst = theFirst.AsNumber - 1\ntheLast = theLast.AsNumber - 1\n\n'
+# allfaellig vorhandene Selektionen aufheben\n\ntheSelected = theVTab.GetSelection\ntheSelected.ClearAll\ntheVTab.UpdateSelection\n\n'# Selektion durchfuehren\n\nfor each rec in theFirst..theLast\n  theSelected.Set(rec)\n  theVTab.SetSelection(theSelected)\n  theVTab.UpdateSelection\nend\n"
+)
+
+(Script.115
+	Name:	"TableTools.SimpleSum"
+	SourceCode:	"'###############################################################\n'#\n'# Filename:     tabletools_simple_sum.ave\n'# Author:       Adrian Boehlen\n'# Date:         17.01.2014\n'# Version:      0.6\n'#\n'# Purpose:      Summiert die Werte eines Feldes und\n'#               schreibt das Ergebnis in die selektierte Zeile\n'#\n'#               Funktioniert in numerischen und Textfeldern\n'#\n'###############################################################\n\n'# die Tabelle muss im Edit-Modus sein\n\ntheTable = av.GetActiveDoc\n
+theVTab = theTable.GetVTab\n\nif (theVTab.CanEdit.Not) then\n  MsgBox.Info(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (theVTab.IsEditable.Not) then\n  theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# Es muss ein Feld aktiv sein\n\nif (theTable.GetActiveField = nil) then\n  MsgBox.Info(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\ntheField = theTable.GetActiveField\nthePrecision = \"d.dddddddddd\"\ntheFieldPrecision = theField.GetPrecision\nScr
+ipt.The.SetNumberFormat( thePrecision.Left( theFieldPrecision + 2 ) )\n\n'# Es muss eine Zeile selektiert sein\n\nif (theVTab.GetSelection.Count <> 1) then\n  MsgBox.Info(\"Die Zeile mit dem Zielfeld muss selektiert sein\",\"Abbruch\")\n  return nil\nend\n\n'# Wert im Zielfeld auf 0 stellen\n\ntheSelected = theVTab.GetSelection\nfor each rec in theSelected\n  theVTab.SetValue(theField,rec,0)\nend\n\n'# Summe ermitteln\n\ntheSet = theVTab\ntheSelected = theVTab.GetSelection\ntheSum = 0\n\nfor each rec in theSet\n  theValue = theVTab.R
+eturnValueNumber(theField, rec)\n  if (not (theValue.IsNull)) then\n    theSum = theValue + theSum\n  end\nend\n\n'# Summe in Zielfeld schreiben\n\nfor each rec in theSelected\n  if (theField.getType.AsString = \"FIELD_CHAR\") then\n    theVTab.SetValue(theField,rec,theSum.AsString)\n  else\n    theVTab.SetValue(theField,rec,theSum)\n  end\nend\n\n'# Anzeige aktualisieren\n\ntheVTab.UpdateSelection\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  theVTab.SetEditable(false)\nend"
+)
+
+(Script.116
+	Name:	"TableTools.Sort"
+	SourceCode:	"'\n' Table.SortPhysical\n' (c) 1998-2000 Quantitative Decisions, Merion, PA USA\n' http://www.quantdec.com\n'\n' Physically sort records in a table or theme.\n'\n' SELF:    void\n'\n' RETURNS: Error code (integer).  See the \"constants\" section.\n'\n' CONTEXT: Run from a table or a view with one active ftheme.\n'\n' All selected records are sorted on the active field\n' and moved in sort order to the end of the physical table.\n' If no records are selected, the process is applied to all\n' records.  \n' If there is no active
+ field, the user is prompted to select one.\n' In any event, the user is asked whether to sort in \n' ascending or descending order.\n'\n' Intended to establish drawing order in editable themes:\n' shapes are drawn in the order encountered while processing\n' the FTab.  Thus this operation visually \"promotes\" the\n' selected features to the top and they are drawn from first\n' (in sort order) to last among themselves.  For example,\n' if the selection consists of a single record, it is \n' promoted to the top of the 
+drawing stack.\n'\n' W. Huber, Quantitative Decisions, Merion, PA  USA 6/11/98\n' whuber@Quantdec.com\n'\n' 6/18/98: Added f.IsEditable protection against nasty AV\n'          behavior.\n' 6/27/98: Modified from Table.PermutePhysical.\n'          Most of the error branches have not been tested.\n'          Tested with small themes, with and without selections,\n'          with and without definitions set.\n' 2/22/00: Improved error checking.  Created return codes.\n'          Added progress monitoring to long operation
+s.\n'          Some optimizations made.\n'\n' Comments:\n' This script is simple-minded about processing themes: it\n' processes only the first active theme, if any.  Likewise,\n' although it does some error checking, it merely return NILs\n' on encountering an error condition.\n'\n' Sorting is accomplished through the table.sort request.\n' Being built in, it's probably the fastest way available,\n' and it does not require creating an Avenue list of keys in\n' memory.\n'\n' Dealing with tables is a real bear.  First, to
+ sort them,\n' their windows have to be open.  This automatically adds\n' them to the project.  Second, as soon as a record is \n' added, the sort is broken and the table reverts to physical\n' order.  Third, if one asks a table for its active field\n' without the table being open, ArcView crashes.\n'\n' Our work-around is to do all the ConvertRowToRecord \n' requests at once and cache their results in a list.  Since\n' the primary purpose of this script is to reorder features\n' and, presumably, most themes won't ha
+ve that many features \n' (less than 10,000 typically), this doesn't create such a\n' huge performance hit.\n'\n' Another aberrant Avenue behavior encountered in testing\n' this script is that a selection bitmap can have defined-out\n' bits set.  Thus, for example, it is possible for the number\n' of selected records to exceed the number of visible records.\n' This script therefore takes the precaution of anding the\n' definition bitmap with the selection bitmap.\n'\n' ArcView seems to do a good job of packing the und
+erlying\n' tables after removing records.\n'-----------------------------------------------------------'\n'\n' Common message box title:\n'\nsTitle = \"Physical Sort\"\n'\n' Defined return codes (constants):\n'\nnSUCCESS      =  0\nnERR_NOTHEME  = -1 ' No active ftheme\nnERR_BADFTAB  = -2 ' Problem with the FTab\nnERR_CONTEXT  = -3 ' Not a view or table \nnERR_NOFIELDS = -4 ' No visible fields for sorting\nnERR_USER     = -5 ' User cancellation\nnERR_EDIT     = -6 ' Cannot edit the table\nnERR_ADD      = -7 ' Cannot add a new
+ record\nnERR_SAVE     = -8 ' Cannot save the transactions\n'\n' If the current document is a table, obtain its VTab.\n' Otherwise, use the first active theme's FTab, if there\n' is an active theme.\n'\naTable = av.GetActiveDoc\nif (av.GetActiveDoc.Is(Table)) then\n  aVTab = av.GetActiveDoc.GetVTab\n  wasAdded = FALSE\nelseif (av.GetActiveDoc.Is(View)) then\n  lstThemes = {}\n  for each theTheme in av.GetActiveDoc.GetActiveThemes\n    if (theTheme.Is(FTheme)) then\n      lstThemes.Add(theTheme)\n    end\n  end\n  if (lstThem
+es.Count = 0) then\n    MsgBox.Info(\"You need to activate an FTheme to process.\", sTitle)\n    return nERR_NOTHEME\n  end\n  aVTab = lstThemes.Get(0).GetFTab\n  aTable = Table.Make(aVTab)\n  if (aTable = NIL) then\n    MsgBox.Error(\"It appears this theme's feature table has an error.\", sTitle)\n    return nERR_BADFTAB\n  end\n  aTable.SetName(\"Made by\"++sTitle)\n  wasAdded = TRUE\nelse\n  MsgBox.Info(\"Run this script from a View or Table document.\", sTitle)\n  return nERR_CONTEXT\nend\n'\n' Usual housekeeping for processing
+ all records if none are selected.\n'\ntheBitmap = aVTab.GetSelection\ntheBitmap.And(aVTab.GetDefBitmap)     ' 22 Feb 2000\naVTab.UpdateSelection                 ' 22 Feb 2000\nwasUnselected = (theBitmap.Count = 0)\nif (wasUnselected) then\n  theBitmap.SetAll\nend\n'\n' Establish the sort order.  Ask user for sort field, if necessary,\n' and whether this is an ascending or descending sort.\n'\nif (aTable.GetWin.IsOpen.Not) then\n  aTable.GetWin.Open\nend\nfldSort = aTable.GetActiveField '--springs an Avenue bug if the tabl
+e is not open\nif (fldSort = NIL) then\n  lstStrFields = {}\n  for each theField in aVTab.GetFields\n    if (theField.IsTypeShape.Not and theField.IsVisible) then\n      lstStrFields.Add(theField.GetAlias)\n    end\n  end\n  if (lstStrFields.Count = 0) then\n    MsgBox.Error(\"No data fields are visible for sorting--\" + \n                 \"select Table|Properties to make them visible; aborting...\", sTitle)\n    if (wasAdded) then\n      av.GetProject.RemoveDoc(aTable)\n    end\n    return nERR_NOFIELDS\n  end\n  strFldSort 
+= MsgBox.ChoiceAsString(lstStrFields, \"Select a field for sorting\", sTitle)\n  if (strFldSort = NIL) then \n    return nERR_USER\n  end\n  fldSort = aVTab.FindField(strFldSort)\nend\nIsAscending = MsgBox.YesNoCancel(\"Sort ascending (yes) or descending (no)?\", \n              sTitle ++ \"[\" + fldSort.GetAlias + \"]\", TRUE)\n'\n' Exit if no sort is wished\n'\nif (IsAscending = nil) then\n  theSelected = aVTab.GetSelection\n  theSelected.ClearAll\n  aVTab.UpdateSelection\n  return nil\nend\n'\n' Start editing the VTab.\n'\nif (aVTa
+b.StartEditingWithRecovery.Not) then\n  MsgBox.Error(\"Unable to edit this table--make sure it's in dbf format, is not read-only,\" ++\n               \"and that its folder is not read-only; aborting...\", sTitle)\n  if (wasAdded) then\n    av.GetProject.RemoveDoc(aTable)\n  end\n  return nERR_EDIT\nend\n'\n' Sort the table document.\n'\nav.ClearStatus\nav.ShowMsg(\"Sorting...\")\n\naTable.Sort(fldSort, IsAscending.Not)\naTable.PromoteSelection\nM = aVTab.GetNumRecords\n'aVTab.GetSelection.And(aVTab.GetDefBitmap)' The selection c
+an include some undefined records!\nN = aVTab.GetSelection.Count\n'\n' Capture the sort order.\n'\nav.ClearStatus\nav.ShowMsg(\"Capturing the sort order...\")\nav.ShowStopButton\n\nlstOrder = {}\nfor each theRow in 0..(N-1)\n  if (av.SetStatus(100*(theRow+1)/N).not) then break end ' 22 Feb 2000\n  \n  lstOrder.Add(aTable.ConvertRowToRecord(theRow)) ' Compute this before adding a record screws it up!\nend\nif (lstOrder.Count < N) then ' 22 Feb 2000\n  return nERR_USER\nend\n'\n' Find the editable fields (22 Feb 2000: an optimiza
+tion).\n'\nlstFields = {}\nfor each f in aVTab.GetFields\n  if (f.IsEditable) then\n    lstFields.Add(f)\n  end\nend\n'\n' Minimize the table window to avoid redraw delays.\n' (22 Feb 2000)\n'\naTable.GetWin.Close ' Does not work when aTable was created from a theme in this script!\n'\n' Append copies of the selected records to the table, in the correct order.\n' \nav.ClearStatus\nav.ShowMsg(\"Now editing the table...\")\nav.ShowStopButton\nnCode = nSUCCESS\nfor each theRow in 0..(N-1)\n  if (av.SetStatus(100*(theRow+1)/N).not) t
+hen \n    nCode = nERR_USER\n    break\n  end ' 22 Feb 2000\n  \n  if (aVTab.CanAddRecord.Not) then\n    MsgBox.Error(\"Unable to add a new record--you may be out of disk space or RAM; aborting...\", \n                 sTitle)\n    nCode = nERR_ADD\n    break\n  end\n  \n  theRec = lstOrder.Get(theRow)\n  \n  aVTab.BeginTransaction\n    recDest = aVTab.AddRecord\n    for each f in lstFields\n      aVTab.SetValue(f, recDest, aVTab.ReturnValue(f, theRec))\n    end\n  aVTab.EndTransaction\n  \nend ' Appending selected records\n'\n' Pr
+ocess any errors that occurred.\n'\nif (nCode <> nSUCCESS) then            ' 22 Feb 2000\n  aVTab.StopEditingWithRecovery(false)\n  if (wasAdded) then\n    av.GetProject.RemoveDoc(aTable)\n  else\n    aTable.GetWin.Open\n  end\n  return nCode\nend\n'\n' Remove the original versions of the records.\n'\nav.ClearStatus\nav.ShowMsg(\"Cleaning up the table...\")\naVTab.BeginTransaction\n  aVTab.RemoveRecords(aVTab.GetSelection)\naVTab.EndTransaction\nif (aVTab.StopEditingWithRecovery(true).Not) then  ' 22 Feb 2000\n  msgBox.Error(\"Un
+able to save the changes; aborting...\", sTitle)\n  return nERR_SAVE\nend\n'\n' Update the selection and definition bitmaps.\n'\nif (wasUnselected.Not) then\n  aVTab.GetSelection.SetRange(M-N, N)\n  aVTab.UpdateSelection\nend\naVTab.SetDefinition(aVTab.GetDefinition)\naVTab.UpdateDefBitmap\n'\n' Synchronize the disk and in-memory versions of the VTab.\n'\naVTab.Flush\n'\n' Clean up the project if necessary.\n'\nif (wasAdded) then\n  av.GetProject.RemoveDoc(aTable)\nelse\n  aTable.GetWin.Open\nend\nreturn nSUCCESS\n' end of script\n"
+)
+
+(Script.117
+	Name:	"TableTools.start"
+	SourceCode:	"av.getproject.finddialog(\"TableTools\").open"
+)
+
+(Script.118
+	Name:	"TableTools.ToggleEditing"
+	SourceCode:	"theTable = av.GetActiveDoc\ntheVTab = theTable.GetVTab\nif (theVTab.IsBeingEditedWithRecovery) then\n  doSave = MsgBox.YesNoCancel(\"Save Edits?\", \"Stop Editing\", True)\n  if (doSave = nil) then\n    return nil\n  end\n  if (theVtab.StopEditingWithRecovery(doSave).Not) then\n     MsgBox.Info(\"Unable to Save Edits, please use the Save Edits As option\", \"\")\n     return nil\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n  theVTab.StartEditingWithRecovery\nend"
+)
+
+(Script.119
+	Name:	"Ext_unload"
+	SourceCode:	"Dialog.DetachFromExtension(self)\n"
+)
+
+(Script.120
+	Name:	"Ext_Inst"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nSack=self\n\nSchaltflaeche=Sack.get(0)\ntableGUI = av.GetProject.FindGUI( \"Table\" )\nif (tableGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon existiert\n    if(tableGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      'Schaltfläche an der 2. Stelle einfügen\n      tableGUI.GetButtonBar.Add( Schaltflaeche, 2)\n    end\nend\n\nav.getproject.Adddialog( Sack.get(1))\n\n\n\n"
+)
+
+(Script.121
+	Name:	"Ext_unin"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\n\nviewGUI = av.GetProject.FindGUI( \"Table\" )\n\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \"TableTools.start\"))\nav.GetProject.removedialog(\"TableTools\")\n"
+)
+
