@@ -1,6 +1,8 @@
 # arcview_table_tools
 
 ## Purpose
+![Table Tools toolbar](https://github.com/ABoehlen/arcview_table_tools/blob/main/table_tools_toolbar.png)
+
 On the one hand, Table Tools simplifies the work with dbf tables within ArcView 3 by enabling frequently required functions, which are normally only accessible via menus or require several steps, to be carried out with as few mouse clicks as possible. On the other hand it offers the possibility to perform complex calculations in these tables. In contrast to the standard Field Calculator, Table Tools allows the use of largely freely programmable avenue code for calculations. In addition, this code is directly in the table and does not have to be re-entered into the field calculator each time calculations are repeated. Finally, Table Tools also offers an export function to convert the tables into the easy-to-print HTML format.
 
 ## Background
