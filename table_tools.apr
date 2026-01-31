@@ -62,13 +62,14 @@
 	Prefs:	424
 	GUI:	432
 	GUI:	696
-	WorkDir:	1385
-	WinX:	10
-	WinY:	26
+	WorkDir:	1384
+	WinX:	3
+	WinY:	2
 	WinW:	1362
 	WinH:	763
 	SerialNumber:	"899941126318"
-	SelColor:	1386
+	SelColor:	1385
+	GUINames:	1386
 	GUINames:	1387
 	GUINames:	1388
 	GUINames:	1389
@@ -76,7 +77,6 @@
 	GUINames:	1391
 	GUINames:	1392
 	GUINames:	1393
-	GUINames:	1394
 	TocWidthScale:	1.00000000000000
 )
 
@@ -133,7 +133,7 @@ istiert\n    if(tableGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)t
 	CSMgr:	12
 	DocExts:	13
 	Source:	"'#########################################################################\n'#\n'# Filename:     Ext_Make.ave\n'# Author:       Adrian Boehlen\n'# Date:         16.02.2025\n'# Version:      1.0\n'#\n'# Purpose:      erstellt die Extension\n'#               Zum Erstellen der Extension NUR dieses Script ausfuehren\n'#\n'#########################################################################\n\n\nTableTools = Extension.Make(\"$AVHOME\\projects\\table_tools\\TableTools.avx\".AsFileName,\n\"TableTools\",av.FindScript(\"Ext.Inst\"),a
-v.FindScript(\"Ext.Unin\"), {\"$AVBIN\\avdlog.dll\".AsFileName})\n\nTableTools.SetExtVersion(1)\n\n'# Beschreibung (Version jeweils anpassen)\nTableTools.SetAbout(\"TableTools Toolbar (v1.6) \")'Beschreibung\nTableTools.SetUnloadScript(av.FindScript(\"Ext.Unload\"))\n\n'# Schaltflaeche und Dialoge hinzufuegen\nSchaltflaeche=( av.FindGUI( \"Table\").GetButtonBar.findbyscript(\"TableTools.start\"))  \nTableToolsDialog =av.FindDialog(\"TableTools\")\nTableTools.Add( Schaltflaeche)   'Schaltfläche hinzufügen\nTableTools.Add(TableToolsDia
+v.FindScript(\"Ext.Unin\"), {\"$AVBIN\\avdlog.dll\".AsFileName})\n\nTableTools.SetExtVersion(1)\n\n'# Beschreibung (Version jeweils anpassen)\nTableTools.SetAbout(\"TableTools Toolbar (v1.7) \")'Beschreibung\nTableTools.SetUnloadScript(av.FindScript(\"Ext.Unload\"))\n\n'# Schaltflaeche und Dialoge hinzufuegen\nSchaltflaeche=( av.FindGUI( \"Table\").GetButtonBar.findbyscript(\"TableTools.start\"))  \nTableToolsDialog =av.FindDialog(\"TableTools\")\nTableTools.Add( Schaltflaeche)   'Schaltfläche hinzufügen\nTableTools.Add(TableToolsDia
 log)\n\nfor each aDoc in av.GetProject.GetDocs\n  if (aDoc.Is(SEd)) then\n    if (aDoc.GetName.Contains(\"TableTools.\")) then\n      if (aDoc.IsCompiled.Not) then\n        aDoc.Compile\n      end\n      TableTools.Add(av.FindScript(aDoc.GetName))\n    end\n  end\nend\n\nTableTools.Commit\n\n"
 	SearchStr:	"View"
 )
@@ -2478,8 +2478,8 @@ ialoge entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript(
 
 (AVDLog.146
 	Name:	"TableTools"
-	X:	326
-	Y:	185
+	X:	453
+	Y:	103
 	W:	789
 	H:	40
 	ConstrainedControlNames:	147
@@ -4834,33 +4834,33 @@ ed = theVTab.GetSelection\ntheSelected.ClearAll\ntheVTab.UpdateSelection\n\n'# S
 .\n'#\n'#               Sind Zeilen selektiert, wird die Berechnung\n'#               nur in den selektierten Zeilen durchgefuehrt,\n'#               ansonsten in allen\n'#\n'#               Existiert ein Feld namens \"Type\" kann dort Avenue-\n'#               Code an beliebiger Stelle eingesetzt werden. Dazu\n'#               muss die betreffende Zeile mit \"Code\" gekennzeichnet\n'#               werden. Das Resultat dieser Berechnung wird in die\n'#               Zeile geschrieben, die mit \"Res\" gekennzeichnet ist.\n'
 #\n'#               Die erste und zweite Zeile werden durch\n'#               die Berechnung nicht beeinflusst\n'#\n'#               Wird das Tool mit gedrueckter Shift-Taste aufgerufen,\n'#               werden bestehende Eintraege im betreffenden Feld\n'#               geloescht. Dies betrifft nicht die Zeilen 1 und 2\n'#               und - falls Zeilensetting genutzt - Zeilen der\n'#               Definition \"Code\" im Feld \"Type\".\n'#\n'#####################################################################\n\n'# die
  Tabelle muss aktiv und im Edit-Modus sein\n\n_theTable = av.GetActiveDoc\n\nif (_theTable.Is(table).Not) then\n  MsgBox.Warning(\"Start this script from an active Table.\",\"\")\n  return nil\nend\n\n_theVTab = _theTable.GetVTab\n_theFields = _theVTab.GetFields\n\nif (_theVTab.CanEdit.Not) then\n  MsgBox.Warning(\"Die Tabelle kann nicht bearbeitet werden\",\"Abbruch\")\n  return nil\nend\n\nif (_theVTab.IsEditable.Not) then\n  _theVTab.StartEditingWithRecovery\n  theEditstatus = 0\nelse\n  theEditstatus = 1\nend\n\n'# es muss ein Feld ak
-tiv sein\n\nif (_theTable.GetActiveField = nil) then\n  MsgBox.Warning(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\n'# wenn Shift gedrueckt ist, sollen alle Dateneintraege geloescht werden\n\nif (System.IsShiftKeyDown) then\n  for each rec in _theVTab\n    '# Variablendeklaration und Spaltensetting ueberspringen\n    if (rec > 1) then\n      for each feld in _theFields\n        '# Zeilensetting ueberspringen\n        if (feld.AsString = \"Type\") then\n          if (_theVTab.ReturnValue(feld, rec).AsString = \"Co
-de\") then\n            continue\n          else\n            _theVTab.SetValue(_theTable.GetActiveField, rec, \"\")\n            _theVTab.UpdateSelection\n          end\n        end\n      end\n    end\n  end\n  return nil\nend\n\n'# diverse Variablen initialisieren\n\n_theField = _theTable.GetActiveField\n_theFieldName = _theField.GetName\n_a = 1    '# Standardmaessige Anzahl Durchgaenge\n_d = 3    '# Defaultwert fuer Anzahl Nachkommastellen\n_r = \" \"  '# Standardvariable, die den kalkulierten Wert des Spaltensettings aufnimmt
-\n_c = \" \"  '# Standardvariable, die den kalkulierten Wert des Zeilensettings aufnimmt\n_Type = 0 '# Standardwert fuer Feld \"Type\". Ist so auch gesetzt, wenn Feld nicht existiert\n\n\n'########################################################################################\n'# globale Variablen in der ersten Zeile lesen, in \"theVars\" speichern und initialisieren\n\nfor each rec in _theVTab\n  if (rec = 0) then\n    theVars = _theVTab.ReturnValue(_theField, rec)\n    if (theVars.AsString.Contains(\"_\")) then\n    \n      
-'# temporaeres Script mit Variablendeklaration aufbauen, ausfuehren, und wieder loeschen\n      \n      theSEd = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n      theSEd.SetSource(theVars.AsString)\n      theSEd.Compile\n      if (theSEd.IsCompiled.Not) then\n        MsgBox.Error(\"fehlerhafte Anweisung Variablendeklaration\",\"Abbruch\")\n        Av.GetProject.RemoveDoc(theSEd)\n        return nil\n      end\n      Av.Run(theSEd.AsString,\"\")     \n      Av.GetProject.RemoveDoc(theSEd)\n    end\n  end\nend\n\n'# Anz
-ahl Nachkommastellen uebersetzen\n\nif (_d = 0) then\n  _d = \"d\"\nelseif (_d = 1) then\n  _d = \"d.d\"\nelseif (_d = 2) then\n  _d = \"d.dd\"\nelseif (_d = 3) then\n  _d = \"d.ddd\"\nelseif (_d = 4) then\n  _d = \"d.dddd\"\nelseif (_d = 5) then\n  _d = \"d.ddddd\"\nelseif (_d = 6) then\n  _d = \"d.dddddd\"\nelseif (_d = 7) then\n  _d = \"d.ddddddd\"\nelseif (_d = 8) then\n  _d = \"d.dddddddd\"\nelseif (_d = 9) then\n  _d = \"d.ddddddddd\"\nelseif (_d = 10) then\n  _d = \"d.dddddddddd\"\nelseif (_d = 11) then\n  _d = \"d.ddddddddddd\"\nelseif (_d = 12) th
-en\n  _d = \"d.dddddddddddd\"\nelseif (_d = 13) then\n  _d = \"d.ddddddddddddd\"\nelseif (_d = 14) then\n  _d = \"d.dddddddddddddd\"\nelseif (_d = 15) then\n  _d = \"d.ddddddddddddddd\"\nelseif (_d = 16) then\n  _d = \"d.dddddddddddddddd\"\nelseif (_d = 17) then\n  _d = \"d.ddddddddddddddddd\"\nelseif (_d = 18) then\n  _d = \"d.dddddddddddddddddd\"\nelseif (_d = 19) then\n  _d = \"d.ddddddddddddddddddd\"\nelseif (_d = 20) then\n  _d = \"d.dddddddddddddddddddd\"\nelse\n  MsgBox.Error(\"Anzahl Nachkommastellen nicht korrekt\",\"Abbruch\")\n  return n
-il\nend\n\n'# Expression in der zweiten Zeile lesen und in \"_theExpr\" speichern\n'# bei einer numerischen Expression muss das Zahlenformat definiert werden\n\nfor each rec in _theVTab\n  if (rec = 1) then\n    if (_theVTab.ReturnValue(_theField, rec).AsString.Contains(\"AsString\")) then\n      'numberExpr = 0\n      _theExpr = _theVTab.ReturnValue(_theField, rec)\n    else\n      'numberExpr = 1\n      _theRec = rec    '# damit als globale Variable definiert\n      _theExpr = _theVTab.ReturnValue(_theField, _theRec)\n     
- _theExpr = _theExpr + 10.AsChar + \"if (_r.AsString.IsNumber) then\"\n      _theExpr = _theExpr + 10.AsChar + \"_r.SetFormat (\"\"\" + _d.AsString + \"\"\")\"\n      _theExpr = _theExpr + 10.AsChar + \"end\"\n      _theExpr = _theExpr + 10.AsChar + \"_theVTab.SetValue(_theField,_theRec,_r.AsString)\"\n    end\n  end\nend\n\n'# pruefen, ob Zeilen selektiert sind oder nicht\n\ntheSelected = _theVTab.GetSelection\n\nif (theSelected.Count = 0) then\n  wasSelected = 0\n  theLoop = _theVTab\nelse\n  wasSelected = 1\n  theLoop = theSelected\nen
-d\n\n'########################################################################################\n'# Berechnungsdurchgaenge starten und Zaehlervariable setzen\n\nfor each z in 1.._a\n  _z = z '# damit als globale Variable im temporaeren Script verfuegbar\n\n  for each rec in theLoop\n    if (rec > 1) then    \n      _theRec = rec     '# damit als globale Variable im temporaeren Script verfuegbar\n      _f = _theRec + 1  '# damit als Zeilenvariable von Expression aus aufrufbar, beginnend mit 1\n      theSelected.Set(rec)\n
-      _theVTab.SetSelection(theSelected)\n      _theVTab.UpdateSelection\n    \n      '# Inhalt der uebrigen Felder als Variable uebernehmen\n      '# falls das Feld leer ist, der Variable als Wert \"0\" zuweisen\n      '# falls das Feld keine Zahl ist, den Wert in Anfuehrungszeichen setzen\n      '# falls das Feld eine Zahl ist, sicherstellen, dass es eine Number ist und das Zahlenformat setzen\n    \n      _theFldCont = \"\"\n      for each theActFld in _theFields\n        _theFldCont = _theFldCont + \"_\" + theActFld.Ge
-tName.AsString + \" = \"\n        if (_theVTab.ReturnValue(theActFld, rec ).AsString = \"\") then\n          _theFldCont = _theFldCont + \"0\" + 10.AsChar\n        elseif (_theVTab.ReturnValue(theActFld, rec ).AsString.IsNumber.Not) then\n          _theFldCont = _theFldCont + \"\"\"\" + _theVTab.ReturnValue(theActFld, rec ).AsString + \"\"\"\" + 10.AsChar\n        else\n          _theNumValue = _theVTab.ReturnValue(theActFld, rec )\n          _theNumValue = _theNumValue.AsString\n          _theNumValue = _theNumValue.AsNumber\n  
-        _theNumValue.SetFormat(\"\" + _d + \"\")\n          _theFldCont = _theFldCont + _theNumValue.AsString + 10.AsChar\n        end\n      end\n    \n      '# temporaere Scripts aufbauen, ausfuehren, und wieder loeschen\n      '# im Falle eines Fehlers Abbruch mit Ausgabe des fehlerhaften Scripts\n      \n      '# 1. Script: Feldvariablen erzeugen\n      script1 = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n      script1.SetSource(_theFldCont.AsString)\n      script1.Compile\n      if (script1.IsCompiled.Not)
- then\n        MsgBox.Error(\"fehlerhafte Anweisung Script 1\",\"Abbruch\")\n        MsgBox.Report(_theFldCont.AsString,\"Calculation Script\")\n        Av.GetProject.RemoveDoc(script1)\n        return nil\n      end\n      Av.Run(script1.AsString,\"\")\n      'MsgBox.Report(_theFldCont.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n      Av.GetProject.RemoveDoc(script1)     \n      \n      '# normale Datenzeilen\n      if (_Type = 0) then\n        '# 2. Script: Spaltensetting\n        script2 = SEd.MakeWithGU
-I(Av.GetProject.GetSelectedGUI.GetName)\n        script2.SetSource(_theExpr.AsString)\n        script2.Compile\n        if (script2.IsCompiled.Not) then\n          MsgBox.Error(\"fehlerhafte Anweisung Script 2\",\"Abbruch\")\n          MsgBox.Report(_theExpr.AsString,\"Calculation Script\")\n          Av.GetProject.RemoveDoc(script2)\n          return nil\n        end\n        Av.Run(script2.AsString,\"\")\n        'MsgBox.Report(_theExpr.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n        Av.GetProject.R
-emoveDoc(script2)\n      \n      '# Code fuer Zeilensetting\n      elseif (_Type = \"Code\") then\n        '# Zeilensetting lesen\n        'MsgBox.Info(_theVTab.ReturnValue(_theTable.GetActiveField, rec).AsString,\"\")\n        _theCode = _theVTab.ReturnValue(_theTable.GetActiveField, rec).AsString\n        _theCode = _theCode + 10.AsChar + \"if (_c.AsString.IsNumber) then\"\n        _theCode = _theCode + 10.AsChar + \"_c.SetFormat (\"\"\" + _d.AsString + \"\"\")\"\n        _theCode = _theCode + 10.AsChar + \"end\"\n        _theCode
- = _theCode + 10.AsChar + \"_theVTab.SetValue(_theField,_theRec,_c.AsString)\"\n      \n      '# Resultat fuer Zeilensetting\n      elseif (_Type = \"Res\") then\n        '# 3. Script: Zeilensetting\n        script3 = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n        script3.SetSource(_theCode.AsString)\n        script3.Compile\n        if (script3.IsCompiled.Not) then\n          MsgBox.Error(\"fehlerhafte Anweisung Script 3\",\"Abbruch\")\n          MsgBox.Report(_theExpr.AsString,\"Calculation Script\")\n        
-  Av.GetProject.RemoveDoc(script3)\n          return nil\n        end\n        Av.Run(script3.AsString,\"\")\n        'MsgBox.Report(_theCode.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n        Av.GetProject.RemoveDoc(script3)        \n      end\n    end\n  end\n  \n  '# Anzeige aktualisieren\n\n  _theVTab.UpdateSelection\n\n  '# Selektion aufheben, wenn zuvor nichts selektiert\n\n  if (wasSelected = 0) then\n    theSelected.ClearAll\n    _theVTab.UpdateSelection\n  end\nend\n\n'# Editsession beenden, wenn zu 
-Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  _theVTab.SetEditable(false)\nend\n\n'# alle globalen Variablen loeschen\nAv.ClearGlobals"
+tiv sein\n\nif (_theTable.GetActiveField = nil) then\n  MsgBox.Warning(\"Es ist kein Feld aktiv\",\"Abbruch\")\n  return nil\nend\n\n'# Backup-Tabelle anlegen\ntheCWD = FileName.getCWD\n_theVTab.Export(theCWD.MakeTmp(\"bak\", \"dbf\"), dBase, False)\n\n'# wenn Shift gedrueckt ist, sollen alle Dateneintraege geloescht werden\n\nif (System.IsShiftKeyDown) then\n  for each rec in _theVTab\n    '# Variablendeklaration und Spaltensetting ueberspringen\n    if (rec > 1) then\n      for each feld in _theFields\n        '# Zeilensetting ueb
+erspringen\n        if (feld.AsString = \"Type\") then\n          if (_theVTab.ReturnValue(feld, rec).AsString = \"Code\") then\n            continue\n          else\n            _theVTab.SetValue(_theTable.GetActiveField, rec, \"\")\n            _theVTab.UpdateSelection\n          end\n        end\n      end\n    end\n  end\n  return nil\nend\n\n'# diverse Variablen initialisieren\n\n_theField = _theTable.GetActiveField\n_theFieldName = _theField.GetName\n_a = 1    '# Standardmaessige Anzahl Durchgaenge\n_d = 3    '# Defaultwert fu
+er Anzahl Nachkommastellen\n_r = \" \"  '# Standardvariable, die den kalkulierten Wert des Spaltensettings aufnimmt\n_c = \" \"  '# Standardvariable, die den kalkulierten Wert des Zeilensettings aufnimmt\n_Type = 0 '# Standardwert fuer Feld \"Type\". Ist so auch gesetzt, wenn Feld nicht existiert\n\n\n'########################################################################################\n'# globale Variablen in der ersten Zeile lesen, in \"theVars\" speichern und initialisieren\n\nfor each rec in _theVTab\n  if (rec = 0) 
+then\n    theVars = _theVTab.ReturnValue(_theField, rec)\n    if (theVars.AsString.Contains(\"_\")) then\n    \n      '# temporaeres Script mit Variablendeklaration aufbauen, ausfuehren, und wieder loeschen\n      \n      theSEd = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n      theSEd.SetSource(theVars.AsString)\n      theSEd.Compile\n      if (theSEd.IsCompiled.Not) then\n        MsgBox.Error(\"fehlerhafte Anweisung Variablendeklaration\",\"Abbruch\")\n        Av.GetProject.RemoveDoc(theSEd)\n        return nil
+\n      end\n      Av.Run(theSEd.AsString,\"\")     \n      Av.GetProject.RemoveDoc(theSEd)\n    end\n  end\nend\n\n'# Anzahl Nachkommastellen uebersetzen\n\nif (_d = 0) then\n  _d = \"d\"\nelseif (_d = 1) then\n  _d = \"d.d\"\nelseif (_d = 2) then\n  _d = \"d.dd\"\nelseif (_d = 3) then\n  _d = \"d.ddd\"\nelseif (_d = 4) then\n  _d = \"d.dddd\"\nelseif (_d = 5) then\n  _d = \"d.ddddd\"\nelseif (_d = 6) then\n  _d = \"d.dddddd\"\nelseif (_d = 7) then\n  _d = \"d.ddddddd\"\nelseif (_d = 8) then\n  _d = \"d.dddddddd\"\nelseif (_d = 9) then\n  _d = \"d.ddddddd
+dd\"\nelseif (_d = 10) then\n  _d = \"d.dddddddddd\"\nelseif (_d = 11) then\n  _d = \"d.ddddddddddd\"\nelseif (_d = 12) then\n  _d = \"d.dddddddddddd\"\nelseif (_d = 13) then\n  _d = \"d.ddddddddddddd\"\nelseif (_d = 14) then\n  _d = \"d.dddddddddddddd\"\nelseif (_d = 15) then\n  _d = \"d.ddddddddddddddd\"\nelseif (_d = 16) then\n  _d = \"d.dddddddddddddddd\"\nelseif (_d = 17) then\n  _d = \"d.ddddddddddddddddd\"\nelseif (_d = 18) then\n  _d = \"d.dddddddddddddddddd\"\nelseif (_d = 19) then\n  _d = \"d.ddddddddddddddddddd\"\nelseif (_d = 20) then\n 
+ _d = \"d.dddddddddddddddddddd\"\nelse\n  MsgBox.Error(\"Anzahl Nachkommastellen nicht korrekt\",\"Abbruch\")\n  return nil\nend\n\n'# Expression in der zweiten Zeile lesen und in \"_theExpr\" speichern\n'# bei einer numerischen Expression muss das Zahlenformat definiert werden\n\nfor each rec in _theVTab\n  if (rec = 1) then\n    if (_theVTab.ReturnValue(_theField, rec).AsString.Contains(\"AsString\")) then\n      'numberExpr = 0\n      _theExpr = _theVTab.ReturnValue(_theField, rec)\n    else\n      'numberExpr = 1\n      _theRec 
+= rec    '# damit als globale Variable definiert\n      _theExpr = _theVTab.ReturnValue(_theField, _theRec)\n      _theExpr = _theExpr + 10.AsChar + \"if (_r.AsString.IsNumber) then\"\n      _theExpr = _theExpr + 10.AsChar + \"_r.SetFormat (\"\"\" + _d.AsString + \"\"\")\"\n      _theExpr = _theExpr + 10.AsChar + \"end\"\n      _theExpr = _theExpr + 10.AsChar + \"_theVTab.SetValue(_theField,_theRec,_r.AsString)\"\n    end\n  end\nend\n\n'# pruefen, ob Zeilen selektiert sind oder nicht\n\ntheSelected = _theVTab.GetSelection\n\nif (theS
+elected.Count = 0) then\n  wasSelected = 0\n  theLoop = _theVTab\nelse\n  wasSelected = 1\n  theLoop = theSelected\nend\n\n'########################################################################################\n'# Berechnungsdurchgaenge starten und Zaehlervariable setzen\n\nfor each z in 1.._a\n  _z = z '# damit als globale Variable im temporaeren Script verfuegbar\n\n  for each rec in theLoop\n    if (rec > 1) then    \n      _theRec = rec     '# damit als globale Variable im temporaeren Script verfuegbar\n      _f = _t
+heRec + 1  '# damit als Zeilenvariable von Expression aus aufrufbar, beginnend mit 1\n      theSelected.Set(rec)\n      _theVTab.SetSelection(theSelected)\n      _theVTab.UpdateSelection\n    \n      '# Inhalt der uebrigen Felder als Variable uebernehmen\n      '# falls das Feld leer ist, der Variable als Wert \"0\" zuweisen\n      '# falls das Feld keine Zahl ist, den Wert in Anfuehrungszeichen setzen\n      '# falls das Feld eine Zahl ist, sicherstellen, dass es eine Number ist und das Zahlenformat setzen\n    \n    
+  _theFldCont = \"\"\n      for each theActFld in _theFields\n        _theFldCont = _theFldCont + \"_\" + theActFld.GetName.AsString + \" = \"\n        if (_theVTab.ReturnValue(theActFld, rec ).AsString = \"\") then\n          _theFldCont = _theFldCont + \"0\" + 10.AsChar\n        elseif (_theVTab.ReturnValue(theActFld, rec ).AsString.IsNumber.Not) then\n          _theFldCont = _theFldCont + \"\"\"\" + _theVTab.ReturnValue(theActFld, rec ).AsString + \"\"\"\" + 10.AsChar\n        else\n          _theNumValue = _theVTab.ReturnValue(t
+heActFld, rec )\n          _theNumValue = _theNumValue.AsString\n          _theNumValue = _theNumValue.AsNumber\n          _theNumValue.SetFormat(\"\" + _d + \"\")\n          _theFldCont = _theFldCont + _theNumValue.AsString + 10.AsChar\n        end\n      end\n    \n      '# temporaere Scripts aufbauen, ausfuehren, und wieder loeschen\n      '# im Falle eines Fehlers Abbruch mit Ausgabe des fehlerhaften Scripts\n      \n      '# 1. Script: Feldvariablen erzeugen\n      script1 = SEd.MakeWithGUI(Av.GetProject.GetSelectedGU
+I.GetName)\n      script1.SetSource(_theFldCont.AsString)\n      script1.Compile\n      if (script1.IsCompiled.Not) then\n        MsgBox.Error(\"fehlerhafte Anweisung Script 1\",\"Abbruch\")\n        MsgBox.Report(_theFldCont.AsString,\"Calculation Script\")\n        Av.GetProject.RemoveDoc(script1)\n        return nil\n      end\n      Av.Run(script1.AsString,\"\")\n      'MsgBox.Report(_theFldCont.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n      Av.GetProject.RemoveDoc(script1)     \n      \n      '# nor
+male Datenzeilen\n      if (_Type = 0) then\n        '# 2. Script: Spaltensetting\n        script2 = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n        script2.SetSource(_theExpr.AsString)\n        script2.Compile\n        if (script2.IsCompiled.Not) then\n          MsgBox.Error(\"fehlerhafte Anweisung Script 2\",\"Abbruch\")\n          MsgBox.Report(_theExpr.AsString,\"Calculation Script\")\n          Av.GetProject.RemoveDoc(script2)\n          return nil\n        end\n        Av.Run(script2.AsString,\"\")\n       
+ 'MsgBox.Report(_theExpr.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n        Av.GetProject.RemoveDoc(script2)\n      \n      '# Code fuer Zeilensetting\n      elseif (_Type = \"Code\") then\n        '# Zeilensetting lesen\n        'MsgBox.Info(_theVTab.ReturnValue(_theTable.GetActiveField, rec).AsString,\"\")\n        _theCode = _theVTab.ReturnValue(_theTable.GetActiveField, rec).AsString\n        _theCode = _theCode + 10.AsChar + \"if (_c.AsString.IsNumber) then\"\n        _theCode = _theCode + 10.As
+Char + \"_c.SetFormat (\"\"\" + _d.AsString + \"\"\")\"\n        _theCode = _theCode + 10.AsChar + \"end\"\n        _theCode = _theCode + 10.AsChar + \"_theVTab.SetValue(_theField,_theRec,_c.AsString)\"\n      \n      '# Resultat fuer Zeilensetting\n      elseif (_Type = \"Res\") then\n        '# 3. Script: Zeilensetting\n        script3 = SEd.MakeWithGUI(Av.GetProject.GetSelectedGUI.GetName)\n        script3.SetSource(_theCode.AsString)\n        script3.Compile\n        if (script3.IsCompiled.Not) then\n          MsgBox.Error(\"feh
+lerhafte Anweisung Script 3\",\"Abbruch\")\n          MsgBox.Report(_theExpr.AsString,\"Calculation Script\")\n          Av.GetProject.RemoveDoc(script3)\n          return nil\n        end\n        Av.Run(script3.AsString,\"\")\n        'MsgBox.Report(_theCode.AsString,\"Calculation Script\") '# nur aktivieren zur Komtrolle \n        Av.GetProject.RemoveDoc(script3)        \n      end\n    end\n  end\n  \n  '# Anzeige aktualisieren\n\n  _theVTab.UpdateSelection\n\n  '# Selektion aufheben, wenn zuvor nichts selektiert\n\n  if (wasSele
+cted = 0) then\n    theSelected.ClearAll\n    _theVTab.UpdateSelection\n  end\nend\n\n'# Editsession beenden, wenn zu Beginn nicht gestartet\n\nif (theEditstatus = 0) then\n  _theVTab.SetEditable(false)\nend\n\n'# alle globalen Variablen loeschen\nAv.ClearGlobals"
 	SearchStr:	"_theFields"
 )
 
 (DocWin.300
 	Owner:	299
-	X:	120
+	X:	241
 	Y:	8
 	W:	953
-	H:	618
+	H:	610
 )
 
 (CSMgr.301
@@ -5812,10 +5812,11 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	HelpTopic:	"New_button"
 	Update:	"Doc.NewUpdate"
 	Label:	"&New"
-	Click:	"Script.New"
+	Click:	"Table.New"
 )
 
 (LButn.420
+	Disabled:	1
 	HelpTopic:	"Open_button"
 	Update:	"Doc.OpenUpdate"
 	Label:	"&Open"
@@ -5823,10 +5824,10 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 )
 
 (LButn.421
-	HelpTopic:	"Run_button"
-	Update:	"Script.ActionUpdate"
-	Label:	"&Run"
-	Click:	"Script.Action"
+	HelpTopic:	"Add_button"
+	Update:	"Table.ActionUpdate"
+	Label:	"&Add"
+	Click:	"Table.Action"
 )
 
 (FN.422
@@ -8148,9 +8149,9 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	Modified:	1
 	Visible:	1
 	MenuBar:	697
-	ButnBar:	771
-	Popups:	816
-	ToolBar:	817
+	ButnBar:	770
+	Popups:	815
+	ToolBar:	816
 	NewScript:	"Table.New"
 	OpenScript:	"Doc.Open"
 	ActionScript:	"Table.Action"
@@ -8158,7 +8159,7 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	OpenUpdateScript:	"Doc.OpenUpdate"
 	ActionUpdateScript:	"Table.ActionUpdate"
 	Title:	"Tables"
-	Icon:	824
+	Icon:	823
 )
 
 (MenuBar.697
@@ -8167,7 +8168,7 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	Child:	728
 	Child:	746
 	Child:	755
-	Child:	766
+	Child:	765
 )
 
 (PMenu.698
@@ -8585,6 +8586,7 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 )
 
 (Choice.747
+	Disabled:	1
 	Help:	"Sorts rows in ascending order (A-Z), (0-9)"
 	HelpTopic:	"Sort_table"
 	Update:	"Table.SortUpdate"
@@ -8594,6 +8596,7 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 )
 
 (Choice.748
+	Disabled:	1
 	Help:	"Sorts rows in descending order (Z-A), (9-0)"
 	HelpTopic:	"Sort_table"
 	Update:	"Table.SortUpdate"
@@ -8606,6 +8609,7 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 )
 
 (Choice.750
+	Disabled:	1
 	Help:	"Creates or removes an index on the active field"
 	HelpTopic:	"Create_Remove_Index"
 	Update:	"Table.IndexUpdate"
@@ -8618,6 +8622,7 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 )
 
 (Choice.752
+	Disabled:	1
 	Help:	"Creates a summary table grouped by the active field"
 	HelpTopic:	"Summarize"
 	Update:	"Table.SortUpdate"
@@ -8656,7 +8661,6 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	Child:	761
 	Child:	763
 	Child:	764
-	Child:	765
 	Label:	"&Window"
 )
 
@@ -8701,7 +8705,7 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 )
 
 (AVStr.762
-	S:	"table_tools.apr table3.dbf TableTools.CalculateTable"
+	S:	"table_tools.apr emptytable.dbf"
 )
 
 (Choice.763
@@ -8712,29 +8716,22 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 )
 
 (Choice.764
-	Help:	"Activates table3.dbf"
-	Label:	"&2 table3.dbf"
+	Help:	"Activates emptytable.dbf"
+	Label:	"&2 emptytable.dbf"
 	Click:	"WindowActivate"
 	Shortcut:	"Keys.None"
 )
 
-(Choice.765
-	Help:	"Activates TableTools.CalculateTable"
-	Label:	"&3 TableTools.CalculateTable"
-	Click:	"WindowActivate"
-	Shortcut:	"Keys.None"
-)
-
-(PMenu.766
+(PMenu.765
 	InternalName:	"Help"
+	Child:	766
 	Child:	767
 	Child:	768
 	Child:	769
-	Child:	770
 	Label:	"&Help"
 )
 
-(Choice.767
+(Choice.766
 	Help:	"Displays the dialog for browsing and searching ArcView's help system"
 	HelpTopic:	"Help_on_Help_Topics"
 	Label:	"Help &Topics..."
@@ -8742,7 +8739,7 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	Shortcut:	"Keys.None"
 )
 
-(Choice.768
+(Choice.767
 	Help:	"Provides instructions for how to obtain help from ArcView"
 	HelpTopic:	"Help_on_How_to_Get_Help"
 	Label:	"&How to Get Help..."
@@ -8750,10 +8747,10 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	Shortcut:	"Keys.None"
 )
 
-(Space.769
+(Space.768
 )
 
-(Choice.770
+(Choice.769
 	Help:	"Provides information about ArcView"
 	HelpTopic:	"About"
 	Label:	"&About ArcView..."
@@ -8761,55 +8758,55 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	Shortcut:	"Keys.None"
 )
 
-(ButnBar.771
-	Child:	772
-	Child:	774
+(ButnBar.770
+	Child:	771
+	Child:	773
+	Child:	775
 	Child:	776
-	Child:	777
-	Child:	779
-	Child:	781
+	Child:	778
+	Child:	780
+	Child:	782
 	Child:	783
-	Child:	784
-	Child:	786
-	Child:	788
+	Child:	785
+	Child:	787
+	Child:	789
 	Child:	790
-	Child:	791
+	Child:	792
 	Child:	793
-	Child:	794
-	Child:	796
-	Child:	798
+	Child:	795
+	Child:	797
+	Child:	799
 	Child:	800
-	Child:	801
+	Child:	802
 	Child:	803
-	Child:	804
-	Child:	806
+	Child:	805
+	Child:	807
 	Child:	808
-	Child:	809
-	Child:	811
+	Child:	810
+	Child:	812
 	Child:	813
-	Child:	814
 )
 
-(Butn.772
+(Butn.771
 	Help:	"Save Project//Saves the current project"
 	HelpTopic:	"Save_Project"
-	Icon:	773
+	Icon:	772
 	Click:	"Project.Save"
 )
 
-(AVIcon.773
+(AVIcon.772
 	Name:	"Save"
 	Res:	"Icons.Save"
 
 )
 
-(Butn.774
+(Butn.773
 	Help:	"Start Table Tools toolbar//"
-	Icon:	775
+	Icon:	774
 	Click:	"TableTools.start"
 )
 
-(AVIcon.775
+(AVIcon.774
 	Name:	"tabletools_start.bmp"
 	Data:	4e442049 6d616765 00010013 00130000 
 	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -8904,353 +8901,356 @@ l\n  end\nelseif (theVTab.IsEditable) then\n  theVTab.SetEditable(False)\nelse\n
 	Data:	00000000 0000
 )
 
-(Space.776
+(Space.775
 )
 
-(Butn.777
+(Butn.776
 	Disabled:	1
 	Help:	"Cut//Cuts the selected cell to the clipboard"
 	HelpTopic:	"Cut"
 	Update:	"Table.CutUpdate"
-	Icon:	778
+	Icon:	777
 	Click:	"Table.Cut"
 )
 
-(AVIcon.778
+(AVIcon.777
 	Name:	"Cut"
 	Res:	"Icons.Cut"
 
 )
 
-(Butn.779
+(Butn.778
 	Disabled:	1
 	Help:	"Copy//Copies the selected cell to the clipboard"
 	HelpTopic:	"Copy"
 	Update:	"Table.CutUpdate"
-	Icon:	780
+	Icon:	779
 	Click:	"Table.Copy"
 )
 
-(AVIcon.780
+(AVIcon.779
 	Name:	"Copy"
 	Res:	"Icons.Copy"
 
 )
 
-(Butn.781
+(Butn.780
 	Disabled:	1
 	Help:	"Paste//Inserts the contents of the Clipboard into the active cell"
 	HelpTopic:	"Paste"
 	Update:	"Table.CutUpdate"
-	Icon:	782
+	Icon:	781
 	Click:	"Table.Paste"
 )
 
-(AVIcon.782
+(AVIcon.781
 	Name:	"Paste"
 	Res:	"Icons.Paste"
 
 )
 
-(Space.783
+(Space.782
 )
 
-(Butn.784
+(Butn.783
 	Help:	"Select All//Selects all records in the table"
 	HelpTopic:	"Select_All"
-	Icon:	785
+	Icon:	784
 	Click:	"Table.SelectAll"
 )
 
-(AVIcon.785
+(AVIcon.784
 	Name:	"SelectAll"
 	Res:	"Icons.SelectAll"
 
 )
 
-(Butn.786
+(Butn.785
 	Help:	"Select None//Unselects all records in the table"
 	HelpTopic:	"Select_None_in_a_table"
-	Icon:	787
+	Icon:	786
 	Click:	"Table.UnselectAll"
 )
 
-(AVIcon.787
+(AVIcon.786
 	Name:	"SelectNone"
 	Res:	"Icons.SelectNone"
 
 )
 
-(Butn.788
+(Butn.787
 	Help:	"Switch Selection//Toggles selected and unselected records in the table"
 	HelpTopic:	"Switch_Selection"
-	Icon:	789
+	Icon:	788
 	Click:	"Table.SwitchSelection"
 )
 
-(AVIcon.789
+(AVIcon.788
 	Name:	"SwitchSelect"
 	Res:	"Icons.SwitchSelect"
 
 )
 
-(Space.790
+(Space.789
 )
 
-(Butn.791
+(Butn.790
 	Help:	"Create Chart//Creates a chart from the table"
 	HelpTopic:	"Create_Chart"
 	Update:	"Table.ChartUpdate"
-	Icon:	792
+	Icon:	791
 	Click:	"Table.Chart"
 )
 
-(AVIcon.792
+(AVIcon.791
 	Name:	"MakeChart"
 	Res:	"Icons.MakeChart"
 
 )
 
-(Space.793
+(Space.792
 )
 
-(Butn.794
+(Butn.793
 	Help:	"Find//Finds the row in the table using the text you enter"
 	HelpTopic:	"Find"
-	Icon:	795
+	Icon:	794
 	Click:	"Table.Find"
 )
 
-(AVIcon.795
+(AVIcon.794
 	Name:	"Find"
 	Res:	"Icons.Find"
 
 )
 
-(Butn.796
+(Butn.795
 	Help:	"Query Builder//Displays the Query Builder to select records with a logical expression"
 	HelpTopic:	"Query_Builder"
-	Icon:	797
+	Icon:	796
 	Click:	"Table.Query"
 )
 
-(AVIcon.797
+(AVIcon.796
 	Name:	"QueryBuilder"
 	Res:	"Icons.QueryBuilder"
 
 )
 
-(Butn.798
+(Butn.797
 	Disabled:	1
 	Help:	"Promote//Promotes selected rows to the top of the table"
 	HelpTopic:	"Promote"
 	Update:	"Table.PromoteUpdate"
-	Icon:	799
+	Icon:	798
 	Click:	"Table.Promote"
 )
 
-(AVIcon.799
+(AVIcon.798
 	Name:	"Promote"
 	Res:	"Icons.Promote"
 
 )
 
-(Space.800
+(Space.799
 )
 
-(Butn.801
+(Butn.800
 	Disabled:	1
 	Help:	"Join//Appends the fields of another table to the active table based on a common field"
 	HelpTopic:	"Join"
 	Update:	"Table.JoinUpdate"
-	Icon:	802
+	Icon:	801
 	Click:	"Table.Join"
 )
 
-(AVIcon.802
+(AVIcon.801
 	Name:	"Join"
 	Res:	"Icons.Join"
 
 )
 
-(Space.803
+(Space.802
 )
 
-(Butn.804
+(Butn.803
+	Disabled:	1
 	Help:	"Summarize//Creates a summary table grouped by the active field"
 	HelpTopic:	"Summarize"
 	Update:	"Table.SortUpdate"
-	Icon:	805
+	Icon:	804
 	Click:	"Table.Summarize"
 )
 
-(AVIcon.805
+(AVIcon.804
 	Name:	"Summarize"
 	Res:	"Icons.Summarize"
 
 )
 
-(Butn.806
+(Butn.805
 	Disabled:	1
 	Help:	"Calculate//Calculates the value of a field"
 	HelpTopic:	"Calculate"
 	Update:	"Table.CalculateUpdate"
-	Icon:	807
+	Icon:	806
 	Click:	"Table.Calculate"
 )
 
-(AVIcon.807
+(AVIcon.806
 	Name:	"Calculator"
 	Res:	"Icons.Calculator"
 
 )
 
-(Space.808
+(Space.807
 )
 
-(Butn.809
+(Butn.808
+	Disabled:	1
 	Help:	"Sort Ascending//Sorts rows in ascending order (A-Z), (0-9)"
 	HelpTopic:	"Sort_table"
 	Update:	"Table.SortUpdate"
-	Icon:	810
+	Icon:	809
 	Click:	"Table.SortAscending"
 )
 
-(AVIcon.810
+(AVIcon.809
 	Name:	"SortAscending"
 	Res:	"Icons.SortAscending"
 
 )
 
-(Butn.811
+(Butn.810
+	Disabled:	1
 	Help:	"Sort Descending//Sorts rows in descending order (Z-A), (9-0)"
 	HelpTopic:	"Sort_table"
 	Update:	"Table.SortUpdate"
-	Icon:	812
+	Icon:	811
 	Click:	"Table.SortDescending"
 )
 
-(AVIcon.812
+(AVIcon.811
 	Name:	"SortDescending"
 	Res:	"Icons.SortDescending"
 
 )
 
-(Space.813
+(Space.812
 )
 
-(Butn.814
+(Butn.813
 	Help:	"Help//Gets help about the next button, tool, or menu choice you click"
 	HelpTopic:	"Help_button"
-	Icon:	815
+	Icon:	814
 	Click:	"Help.Tool"
 )
 
-(AVIcon.815
+(AVIcon.814
 	Name:	"HelpTool"
 	Res:	"Icons.HelpTool"
 
 )
 
-(PopupSet.816
+(PopupSet.815
 )
 
-(ToolBar.817
-	Child:	818
-	Child:	820
-	Child:	822
+(ToolBar.816
+	Child:	817
+	Child:	819
+	Child:	821
 )
 
-(Tool.818
+(Tool.817
 	Help:	"Select//Selects records in the table"
 	HelpTopic:	"Select_tool"
-	Icon:	819
+	Icon:	818
 	Cursor:	"Cursors.Default"
 	Apply:	"Table.Select"
 	Click:	"Table.StopEditing"
 )
 
-(AVIcon.819
+(AVIcon.818
 	Name:	"Select"
 	Res:	"Icons.Select"
 
 )
 
-(Tool.820
+(Tool.819
 	Disabled:	1
 	Help:	"Edit//Changes cell values"
 	HelpTopic:	"Edit_tool"
 	Update:	"Table.IsEditableUpdate"
-	Icon:	821
+	Icon:	820
 	Cursor:	"Cursors.Finger"
 	Apply:	"Table.Edit"
 )
 
-(AVIcon.821
+(AVIcon.820
 	Name:	"Edit"
 	Res:	"Icons.Edit"
 
 )
 
-(Tool.822
+(Tool.821
 	Help:	"Identify//Provides information about a record"
 	HelpTopic:	"Identify_tool"
-	Icon:	823
+	Icon:	822
 	Cursor:	"Cursors.ID"
 	Apply:	"Table.Identify"
 	Click:	"Table.StopEditing"
 )
 
-(AVIcon.823
+(AVIcon.822
 	Name:	"ID"
 	Res:	"Icons.ID"
 
 )
 
-(AVIcon.824
+(AVIcon.823
 	Name:	"Icon"
 	Res:	"Table.Icon"
 
 )
 
-(FN.1385
+(FN.1384
 	Path:	"z:/home/adrian"
 )
 
-(TClr.1386
+(TClr.1385
 	Red:	0xffff
 	Green:	0xffff
 )
 
-(AVStr.1387
+(AVStr.1386
 	S:	"View"
 )
 
-(AVStr.1388
+(AVStr.1387
 	S:	"Table"
 )
 
-(AVStr.1389
+(AVStr.1388
 	S:	"Chart"
 )
 
-(AVStr.1390
+(AVStr.1389
 	S:	"Layout"
 )
 
-(AVStr.1391
+(AVStr.1390
 	S:	"Script"
 )
 
-(AVStr.1392
+(AVStr.1391
 	S:	"Project"
 )
 
-(AVStr.1393
+(AVStr.1392
 	S:	"Appl"
 )
 
-(AVStr.1394
+(AVStr.1393
 	S:	"DialogEditor"
 )
 

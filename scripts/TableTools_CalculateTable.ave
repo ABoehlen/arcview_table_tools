@@ -63,6 +63,10 @@ if (_theTable.GetActiveField = nil) then
   return nil
 end
 
+'# Backup-Tabelle anlegen
+theCWD = FileName.getCWD
+_theVTab.Export(theCWD.MakeTmp("bak", "dbf"), dBase, False)
+
 '# wenn Shift gedrueckt ist, sollen alle Dateneintraege geloescht werden
 
 if (System.IsShiftKeyDown) then

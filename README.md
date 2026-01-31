@@ -275,30 +275,45 @@ Button zum Schliessen der Table Tools-Toolbar
 
 Dies ist die mit Abstand mächtigste und vielseitigste Funktion. Da mit frei programmierbarem Avenue-Code gearbeitet wird, eröffnen sich damit mannigfaltige Möglichkeiten. Die Inspiration dazu stammt von Franz Kottiras Commodore 64-Programm «datatool» von 2003. \[3\]
 
-Um diese Funktion zu verwenden, muss das betreffende Feld vom Typ «String» sein. Um genügend Platz auch für komplexe Ausdrücke zur Verfügung zu haben, empfiehlt es sich, die Anzahl Zeichen möglichst hoch zu setzen, z.B. auf 100. Maximal sind 254 Zeichen möglich.
+Um diese Funktion zu verwenden, müssen die betreffenden Felder vom Typ «String» sein. Um genügend Platz auch für komplexe Ausdrücke zur Verfügung zu haben, empfiehlt es sich, die Anzahl Zeichen möglichst hoch zu setzen, z.B. auf 100. Maximal sind 254 Zeichen möglich.
 
 Berechnungen sind für ein gesamtes Feld möglich oder nur für eine bestimmte Zeile.
 
-Die ersten zwei Zeilen der betreffenden Tabelle stehen nicht für die Aufnahme der Daten zur Verfügung, sondern dienen folgenden Zwecken:
+Bei diesem Tool ist keine Undo-Funktion verfügbar. Daher wird vor jeder Berechnung ein Backup der Tabelle angelegt. Die Backups werden ins aktuelle Arbeitsverzeichnis unter dem Namen «bak1.dbf», «bak2.dbf» etc. geschrieben und können bei Bedarf jederzeit wieder in den Namen der ursprünglichen Tabelle umbenennt werden. Natürlich sollte man nicht vergessen, nicht benötigte Backups von Zeit zu Zeit zu löschen.
 
-1. Zeile: Definition der gewünschten Anzahl Nachkommastellen (Default: 3), der Anzahl Berechnungsdurchläufe (Default: 1) und Initialisierung benutzerdefinierter Variablen. Damit diese vom System verarbeitet werden können, müssen sie «global» sein, d.h. mit dem Unterstrich (_) beginnen. Wenn die Defaultwerte übernommen und keine benutzerdefinierte Variablen benötigt werden, bleibt diese Zelle leer. Mehrere Variablenzuweisungen werden einfach durch Leerzeichen getrennt hintereinander geschrieben. 
-2. Zeile: Hier sind die Anweisungen, die für das gesamte Feld gelten, als Avenue-Code zu formulieren. Dieser Code wird, sofern nichts selektiert ist, für jede Zeile angewendet, andernfalls nur für die selektierten Zeilen. Im Gegensatz zu «normalem» Programmcode werden die Anweisungen hier einfach durch Leerzeichen getrennt hintereinander geschrieben.
+### Spaltensetting
 
-Da bei gewissen Berechnungen die Zellen leer sein sollen, gibt es die Möglichkeit, allfällig bestehende Daten im betreffenden Feld zu löschen. Dazu muss das Tool mit gedrückter Shift-Taste aufgerufen werden. Die beiden ersten Zeilen, sowie weitere Code- und Resultatszeilen (siehe unten) werden durch diese Funktion nicht beeinflusst.
+Da die Spalten (Felder) in Berechnungen über ihre Namen angesprochen werden können, empfiehlt es sich, dafür möglichst kurze Namen (z.B. mit zwei Zeichen) zu verwenden und als «sprechenden» Namen einen Alias einzufügen. 
+
+Die ersten beiden Zeilen der betreffenden Tabelle stehen nicht für die Aufnahme der Daten zur Verfügung, sondern dienen folgenden Zwecken:
+
+1. Zeile: Für jede gewünschte Spalte ist die Definition der gewünschten Anzahl Nachkommastellen (Default: 3) und der Anzahl Berechnungsdurchläufe (Default: 1) sowie die Initialisierung benutzerdefinierter Variablen vorzunehmen. Damit diese vom System verarbeitet werden können, müssen sie «global» sein, d.h. mit dem Unterstrich (_) beginnen. Wenn die Defaultwerte übernommen und keine benutzerdefinierte Variablen benötigt werden, bleibt diese Zelle leer. Mehrere Variablenzuweisungen werden einfach durch Leerzeichen getrennt hintereinander geschrieben. 
+2. Zeile: Hier sind die Anweisungen, die für die gesamte Spalte gelten, als Avenue-Code zu formulieren. Dieser Code wird, sofern nichts selektiert ist, für jede Zeile angewendet, andernfalls nur für die selektierten Zeilen. Im Gegensatz zu «normalem» Programmcode werden die Anweisungen hier einfach durch Leerzeichen getrennt hintereinander geschrieben.
+
+Da bei gewissen Berechnungen die Zellen leer sein sollen, gibt es die Möglichkeit, allfällig bestehende Daten in der betreffenden Spalte zu löschen. Dazu muss das Tool mit gedrückter Shift-Taste aufgerufen werden. Die beiden ersten Zeilen, sowie weitere Code- und Resultatszeilen (siehe unten) werden durch diese Funktion nicht beeinflusst.
 
 Nebst den vom Benutzer zu definierenden Variablen stehen einige Systemvariablen zur Verfügung, die nicht durch benutzerdefinierte Variablen überschrieben werden dürfen. Andernfalls riskiert man ein fehlerhaftes Verhalten oder sogar einen Absturz. Ebenso sollten die Systemvariablen `_z` und `_f` nur in Ausdrücken oder Bedingungen, d.h. lesend verwendet werden, da sie durch die laufende Berechnung automatisch mit Werten gespiesen werden.
 
 ### Systemvariablen und ihre Bedeutung
 * `_a`: Diese Variable speichert die Anzahl der Durchläufe. Normalerweise ist nur ein Durchlauf nötig, aber manche mathematische Operationen erfordern zwei oder eine noch höhere Anzahl von Durchläufen. Default ist 1.
+* `_c`: Diese Variable nimmt das Ergebnis der Berechnungen einzelner Zeilen auf (Zeilensetting, siehe unten). Was in die folgende Resultatszeile geschrieben werden soll, muss daher immer dieser Variable zugewiesen werden
 * `_d`: Dieser Variable speichert die gewünschte Anzahl Nachkommastellen. Bis zu 20 sind möglich. Default ist 3.
-* `_r`: Diese Variable nimmt das Ergebnis der Feldberechnungen (2. Zeile) auf. Was schlussendlich in die einzelnen Zeilen geschrieben werden soll, muss daher immer dieser Variable zugewiesen werden
-* `_c`: Diese Variable nimmt das Ergebnis der Berechnungen einzelner Zeilen auf. Was in die folgende Resultatszeile geschrieben werden soll, muss daher immer dieser Variable zugewiesen werden
-* `_z`: In dieser Variable ist die Zahl des aktuellen Durchlaufs gespeichert. Anhand des Wertes von `_z` kann das Verhalten jedes Durchlaufs gesteuert werden.
 * `_f`: Diese Variable speichert die Nummer der aktuellen Zeile, unabhängig davon, ob Zeilen selektiert sind oder nicht. Wird diese Variable in Bedingungen verwendet, kann z.B. genau gesteuert werden, in welche Zeile welches Ergebnis geschrieben werden soll. 
-* `_<Feldname>`: Jedes Feld kann als Variable mit seinen Namen für Berechnungen verwendet werden. Damit die Variable gültig ist, muss allerdings, wie bei allen anderen Variablen der Unterstrich (_) vorangestellt werden. Verwendet wird immer der effektive Feldname, nicht der allenfalls vorhandene Aliasname.
+* `_r`: Diese Variable nimmt das Ergebnis der Feldberechnungen (2. Zeile) auf. Was schlussendlich in die einzelnen Zeilen geschrieben werden soll, muss daher immer dieser Variable zugewiesen werden. Es ist sehr wichtig, dass dieser Variable ein Wert zugewiesen wird, insbesondere wenn in einzelnen Zeilen bereits Werte stehen. Ansonsten würden diese mit dem Leerstring überschrieben. Soll der bestehende Wert erhalten bleiben, weist man `_r` den Wert der aktellen Feldvariable zu (siehe nachstehend).
+* `_z`: In dieser Variable ist die Zahl des aktuellen Durchlaufs gespeichert. Anhand des Wertes von `_z` kann das Verhalten jedes Durchlaufs gesteuert werden.
+* `_<Feldname>`: Jede Spalte (Feld) kann als Variable mit seinen Namen für Berechnungen verwendet werden. Damit die Variable gültig ist, muss allerdings, wie bei allen anderen Variablen der Unterstrich (_) vorangestellt werden. Verwendet wird immer der effektive Feldname, nicht der allenfalls vorhandene Aliasname.
 
 **Achtung**
 Da Avenue nicht case-sensitive ist, dürfen keine Feldnamen verwendet werden, die gleich lauten wie Systemvariablen. So würde ein Feld namens «A» zu einem Konflikt mit der Variable `_a` führen, da das Feld «A» intern mit `_A` angesprochen wird, was mit `_a` identisch ist.
+
+Die Variablen sind zwar «global» (aus Avenue-Sicht), ihr Gültigkeitsbereich beschränkt sich jedoch auf die Zeile, in der sie stehen. Will man auf Inhalte anderer Felder zugreifen, so muss man dies immer über die Feldvariable machen, während auf im Spaltensetting definierte Variablen anderer Spalten nicht zugegriffen werden kann.
+
+### Zeilensetting
+
+Um Berechnungen nur in bestimmten Zeilen vorzunehmen, ist eine Spalte namens «Type» anzulegen (String, 4 Characters reichen), welche den Datentypen jeder Zeile beschreibt. Der Normaltyp sind numerische Daten, in diesem Fall bleibt das Feld leer. Code-Zeilen werden mit «Code» gekennzeichnet und erhalten Berechnungen, welche dem Spaltensetting ähneln. Der Unterschied ist, dass die Anweisungen nur ausgeführt werden, wenn das System beim Ausführen der Spalte diese Zeile erreicht. Für die Aufnahme des Ergebnisses der Berechnungen ist die Standardvariable `_c` zu verwenden. Damit das Ergebnis auch sichtbar wird, ist eine weitere Zeile vorzusehen, die mit der Bezeichnung «Res» (Result) bezeichnet wird.
+
+Spalten, in denen keine Berechnungen vorgenommen werden, die z.B. erläuternden Text beinhalten, werden von diesen Angaben nicht tangiert. Dort kann problemlos auch in eine mit «Code» oder «Res» markierten Zeile normaler Text (oder Zahlen) eingefügt werden.
+
 
 ## Beispiele
 
@@ -347,7 +362,7 @@ Statt mit allen Werten kann auch nur mit einer Auswahl davon gearbeitet werden, 
 
 ### Berechnungen in einzelnen Zeilen durchführen
 
-Soll das Resultat von Berechnungen nur in eine bestimmte Zeile geschrieben werden, kann – statt umständlich mit Selektionen oder Zeilennummern zu arbeiten – auch in beliebigen weiteren Zeilen Programmcode gesetzt werden. Dazu ist ein Feld namens «Type» anzulegen (String, 4 Characters reichen), wo jede betreffende Zeile mit dem Eintrag «Code» gekennzeichnet wird. Für das Ergebnis ist eine weitere Zeile vorzusehen, die mit der Bezeichnung «Res» markiert wird.
+Soll das Resultat von Berechnungen nur in eine bestimmte Zeile geschrieben werden, kann – statt umständlich mit Selektionen oder Zeilennummern zu arbeiten – das Zeilensetting verwendet werden, wie oben erläutert.
 
 **Aufgabe**
 Spaltensumme berechnen
@@ -374,9 +389,38 @@ Nach der Berechnung steht das Ergebnis in der mit «Res» gekennzeichneten Zeile
 
 Auch für diese Codezeile gilt dabei die in der ersten Zeile festgelegte Formatierung, hier `_d=5`.
 
+### Berechnungen in Spalten, wo bereits Werte stehen
+
+Nicht immer ist die Spalte, auf der Berechnungen vorgenommen werden sollen, komplett leer. Es ist auch möglich, bestehende Werte nur zu lesen, um beispielsweise die Summe zu errechnen.
+
+**Aufgabe**
+Erstellen eines Budgets mit monatlichen oder jährlichen Ausgaben
+
+Es gibt Ausgaben die sich einfacher monatlich festlegen lassen, andere jährlich. Deshalb ist für beides je eine Spalte («mo» und «ja») vorgesehen. Worum es sich handelt, ist in der Spalte «Bz» (Bezeichnung) festgehalten. Da nur gerundete Werte vorhanden sind, wird auf Nachkommastellen verzichtet (`_d=0`). Als temprärer Speicher enthält jede Spalte die Variable `_t`. Diese beeinflussen sich untereinander nicht.
+
+Beim Ausführen der betreffenden Spalte wird jeweils der aktuelle Wert der temporären Variable hinzugefügt, sowie der korrespondierende Wert der jeweils anderen Spalte (monatlich = jährlich / 12 bzw. jährlich = monatlich * 12). Es ist daher sehr wichtig, dass pro Zeile immer nur in der einen Spalte ein Wert > 0 steht. Damit der aktuelle Wert nicht überschrieben wird, ist der Variable `_r` die aktuelle Feldvariable (`_mo` bzw. `_ja` zugewiesen.).
+
+Im Codefeld wird der aufsummierte Wert der temporären Variable der Variable `_c` des Zeilensettings zugewiesen und in der folgenden «Res»ultatszeile ausgegeben. 
+
+In der Spalte «Bz» werden keine Berechnungen ausgeführt, dort steht normaler Text. Daher kann dort problemlos in die mit «Res» markierte Zeile als Bezeichnung «Total» geschrieben werden.
+
+
+|Type|Bz   |mo       |ja       |
+|----|-----|---------|---------|
+|    |     |_d=0 _t=0|_d=0 _t=0|
+|    |     |_t=_t+_mo+(_ja/12) _r=_mo|_t=_t+_ja+(_mo*12) _r=_ja|
+|    |dies |1500|0|
+|    |und  |0|2000|
+|    |das  |0|600|
+|    |und  |50|0|
+|    |jenes|0|5000|
+|Code|     |_c=_t|_c=_t
+|Res |Total|2183|26200|
+
+
 ### Sprechende Datumsangaben ableiten
 
-Datumsangeben werden in dbf-Tabellen grundsätzlich in der Formatierung <Jahr><Monat><Tag> gespeichert. Hinter diesen Angaben stecken aber wesentlich mehr Informationen, die sich z.B. mit einem einfachen Ausdruck abrufen und in ein neues Textfeld schreiben lassen:
+Datumsangaben werden in dbf-Tabellen grundsätzlich in der Formatierung <Jahr><Monat><Tag> gespeichert. Hinter diesen Angaben stecken aber wesentlich mehr Informationen, die sich z.B. mit einem einfachen Ausdruck abrufen und in ein neues Textfeld schreiben lassen:
 
 Mittels der Methode `.SetFormat` werden hier die vom System zur Verfügung gestellten *date components* genutzt, welche folgende Bedeutung haben:
 * `dddd`: Name des Tages
