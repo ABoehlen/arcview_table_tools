@@ -2,8 +2,8 @@
 '#
 '# Filename:     TableTools_CalculateTable.ave
 '# Author:       Adrian Boehlen
-'# Date:         28.05.2017
-'# Version:      1.0
+'# Date:         01.02.2026
+'# Version:      1.1
 '#
 '# Purpose:      ermoeglicht Berechnungen in einer Tabelle.
 '#               Dazu muss die Expression in der zweiten Zeile
@@ -20,6 +20,8 @@
 '#               muss die betreffende Zeile mit "Code" gekennzeichnet
 '#               werden. Das Resultat dieser Berechnung wird in die
 '#               Zeile geschrieben, die mit "Res" gekennzeichnet ist.
+'#               Zeilen, die mit "Lab" gekennzeichnet sind, werden bei
+'#               der Berechnung ignoriert
 '#
 '#               Die erste und zweite Zeile werden durch
 '#               die Berechnung nicht beeinflusst
@@ -30,9 +32,13 @@
 '#               und - falls Zeilensetting genutzt - Zeilen der
 '#               Definition "Code" im Feld "Type".
 '#
+'#               Undo ist nicht moeglich, daher wird die Tabelle vor 
+'#               jeder Berechnung unter dem Namem bak1, bak2 etc.
+'#               exportiert.
+'#
 '#####################################################################
 
-'# die Tabelle muss aktiv und im Edit-Modus sein
+'### die Tabelle muss aktiv und im Edit-Modus sein
 
 _theTable = av.GetActiveDoc
 
@@ -63,11 +69,29 @@ if (_theTable.GetActiveField = nil) then
   return nil
 end
 
-'# Backup-Tabelle anlegen
+'### Backup-Tabelle anlegen
+
+theAliasList = {}
 theCWD = FileName.getCWD
+
+'# Alias-Namen in Liste speichern und zuruecksetzen
+theFields = _theVTab.GetFields
+for each theField in theFields
+  theAliasList.Add(theField.GetAlias)
+  theField.SetAlias(theField.GetName.AsString)
+end
+
+'# Tabelle als bak1, bak2 etc exportieren
 _theVTab.Export(theCWD.MakeTmp("bak", "dbf"), dBase, False)
 
-'# wenn Shift gedrueckt ist, sollen alle Dateneintraege geloescht werden
+'# Alias-Namen wieder zuweisen
+i = 0
+for each theField in theFields
+  theField.SetAlias(theAliasList.Get(i).AsString)
+  i = i + 1
+end
+
+'### wenn Shift gedrueckt ist, sollen alle Dateneintraege geloescht werden
 
 if (System.IsShiftKeyDown) then
   for each rec in _theVTab
@@ -77,6 +101,8 @@ if (System.IsShiftKeyDown) then
         '# Zeilensetting ueberspringen
         if (feld.AsString = "Type") then
           if (_theVTab.ReturnValue(feld, rec).AsString = "Code") then
+            continue
+          elseif (_theVTab.ReturnValue(feld, rec).AsString = "Lab") then
             continue
           else
             _theVTab.SetValue(_theTable.GetActiveField, rec, "")
@@ -89,7 +115,7 @@ if (System.IsShiftKeyDown) then
   return nil
 end
 
-'# diverse Variablen initialisieren
+'### diverse Variablen initialisieren
 
 _theField = _theTable.GetActiveField
 _theFieldName = _theField.GetName
@@ -272,7 +298,9 @@ for each z in 1.._a
         Av.Run(script2.AsString,"")
         'MsgBox.Report(_theExpr.AsString,"Calculation Script") '# nur aktivieren zur Komtrolle 
         Av.GetProject.RemoveDoc(script2)
-      
+      '# Label-Zeilen ueberspringen
+      elseif (_Type = "Lab") then
+        continue
       '# Code fuer Zeilensetting
       elseif (_Type = "Code") then
         '# Zeilensetting lesen

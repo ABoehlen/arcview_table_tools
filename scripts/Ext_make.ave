@@ -17,7 +17,7 @@ TableTools = Extension.Make("$AVHOME\projects\table_tools\TableTools.avx".AsFile
 TableTools.SetExtVersion(1)
 
 '# Beschreibung (Version jeweils anpassen)
-TableTools.SetAbout("TableTools Toolbar (v1.7) ")'Beschreibung
+TableTools.SetAbout("TableTools Toolbar (v1.8) ")'Beschreibung
 TableTools.SetUnloadScript(av.FindScript("Ext.Unload"))
 
 '# Schaltflaeche und Dialoge hinzufuegen
