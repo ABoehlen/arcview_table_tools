@@ -476,21 +476,21 @@ Da frei programmierbarer Avenue-Code verwendet wird, kann es aber durchaus auch 
 ### Speicherbedarfsabschätzung
 
 **Gerüst einer Tabelle**
-|Aktion|Bytes pro Aktion|Total Bytes|
-|------|----------------|-----------|
-|neue, leere Tabelle|34|34|
-|erstes Feld|+31|65|
-|zweites Feld|+32|97|
-|drittes Feld|+32|129|
-|pro weiteres Feld|+32| |
+|Aktion             |Bytes pro Aktion|Total Bytes|
+|-------------------|----------------|-----------|
+|neue, leere Tabelle|34              |34         |
+|erstes Feld        |+31             |65         |
+|zweites Feld       |+32             |97         |
+|drittes Feld       |+32             |129        |
+|pro weiteres Feld  |+32             |           |
 
 **Inhalt der Tabelle (zusätzliche Bytes)**
-|Aktion|1 Zeichen|2 Zeichen|8 Zeichen|16 Zeichen|254 Zeichen|
-|------|---------|---------|---------|----------|-----------|
-|1. Zeile|+3|+4|+10|+18|+256|
-|2. Zeile|+2|+3|+9|+17|+255|
-|3. Zeile|+2|+3|+9|+17|+255|
-|pro weitere Zeile|+2|+3|+9|+17|+255|
+|Aktion           |1 Zeichen|2 Zeichen|8 Zeichen|16 Zeichen|254 Zeichen|
+|-----------------|---------|---------|---------|----------|-----------|
+|1. Zeile         |+3       |+4       |+10      |+18       |+256       |
+|2. Zeile         |+2       |+3       |+9       |+17       |+255       |
+|3. Zeile         |+2       |+3       |+9       |+17       |+255       |
+|pro weitere Zeile|+2       |+3       |+9       |+17       |+255       |
 
 ***
 
